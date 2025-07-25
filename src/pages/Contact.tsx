@@ -1,4 +1,3 @@
-
 import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -21,7 +20,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
-  const whatsappNumber = "+916395520698";
+  const whatsappNumber = "+917906601283";
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -31,6 +30,33 @@ const Contact = () => {
     program: "",
     message: ""
   });
+
+  const contactInfo = [
+    {
+      icon: Phone,
+      title: "Phone",
+      details: ["+91 790 660 1283"],
+      description: "Mon-Fri 8AM-8PM, Sat-Sun 9AM-5PM"
+    },
+    {
+      icon: Mail,
+      title: "Email",
+      details: ["neeraj.suyal@gmail.com"],
+      description: "We respond within 24 hours"
+    },
+    {
+      icon: MapPin,
+      title: "Office",
+      details: ["Online Tutoring Platform", "Available Worldwide"],
+      description: "Virtual consultations available"
+    },
+    {
+      icon: MessageCircle,
+      title: "WhatsApp",
+      details: [whatsappNumber.replace("+", "")],
+      description: "Quick responses during business hours"
+    }
+  ];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -79,33 +105,6 @@ ${formData.message}
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
-
-  const contactInfo = [
-    {
-      icon: Phone,
-      title: "Phone",
-      details: ["+91 639 552 0698"],
-      description: "Mon-Fri 8AM-8PM, Sat-Sun 9AM-5PM"
-    },
-    {
-      icon: Mail,
-      title: "Email",
-      details: ["neeraj.suyal@gmail.com"],
-      description: "We respond within 24 hours"
-    },
-    {
-      icon: MapPin,
-      title: "Office",
-      details: ["Online Tutoring Platform", "Available Worldwide"],
-      description: "Virtual consultations available"
-    },
-    {
-      icon: MessageCircle,
-      title: "WhatsApp",
-      details: [whatsappNumber.replace("+", "")],
-      description: "Quick responses during business hours"
-    }
-  ];
 
   const faqs = [
     {
