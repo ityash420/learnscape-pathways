@@ -1,3 +1,4 @@
+
 import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -10,38 +11,46 @@ import {
   Star, 
   Users, 
   Clock,
-  BookOpen
+  BookOpen,
+  Code,
+  AlertCircle
 } from "lucide-react";
 
 const Pricing = () => {
   const whatsappNumber = "+916395520698";
 
-  const pricingPlans = [
+  const showPaymentNotification = () => {
+    alert("Full upfront payment is required for all packages.");
+  };
+
+  const mathEnglishPlans = [
     {
       name: "3 Month Package",
       price: "$2,400",
       duration: "3 months",
-      description: "Intensive short-term preparation for quick results",
+      description: "Intensive Math & English preparation for quick results",
       popular: false,
       features: [
-        "36 hours of tutoring",
+        "36 hours of Math tutoring",
+        "36 hours of English tutoring",
         "Personalized study plan",
         "Weekly progress assessments",
         "Practice tests and materials",
         "Email support",
         "Performance tracking"
       ],
-      sessions: "3 sessions/week",
-      hourlyRate: "$67/hour"
+      sessions: "3 sessions/week each subject",
+      hourlyRate: "$33/hour per subject"
     },
     {
       name: "6 Month Package", 
       price: "$4,200",
       duration: "6 months",
-      description: "Comprehensive preparation with balanced pace",
+      description: "Comprehensive Math & English preparation with balanced pace",
       popular: true,
       features: [
-        "72 hours of tutoring",
+        "72 hours of Math tutoring",
+        "72 hours of English tutoring",
         "Detailed curriculum coverage",
         "Monthly progress reports",
         "Mock exams included",
@@ -49,17 +58,18 @@ const Pricing = () => {
         "Flexible scheduling",
         "Revision sessions"
       ],
-      sessions: "3 sessions/week",
-      hourlyRate: "$58/hour"
+      sessions: "3 sessions/week each subject",
+      hourlyRate: "$29/hour per subject"
     },
     {
       name: "Full Year Package",
       price: "$7,200", 
       duration: "12 months",
-      description: "Complete academic year support with maximum value",
+      description: "Complete Math & English academic year support with maximum value",
       popular: false,
       features: [
-        "144 hours of tutoring",
+        "144 hours of Math tutoring",
+        "144 hours of English tutoring",
         "Full curriculum mastery",
         "Continuous assessment",
         "University prep guidance",
@@ -68,8 +78,62 @@ const Pricing = () => {
         "Guaranteed improvement",
         "Additional resources"
       ],
+      sessions: "3 sessions/week each subject",
+      hourlyRate: "$25/hour per subject"
+    }
+  ];
+
+  const codingPlans = [
+    {
+      name: "Basic Coding",
+      price: "$1,800",
+      duration: "3 months",
+      description: "Introduction to programming fundamentals",
+      features: [
+        "Python programming basics",
+        "HTML/CSS fundamentals",
+        "JavaScript introduction",
+        "Basic algorithms",
+        "Project-based learning",
+        "Code review sessions"
+      ],
+      sessions: "2 sessions/week",
+      hourlyRate: "$75/hour"
+    },
+    {
+      name: "Advanced Coding",
+      price: "$3,600",
+      duration: "6 months",
+      description: "Advanced programming concepts and web development",
+      features: [
+        "Advanced Python/JavaScript",
+        "React framework",
+        "Database management",
+        "API development",
+        "Portfolio projects",
+        "Industry best practices",
+        "Career guidance"
+      ],
+      sessions: "2 sessions/week",
+      hourlyRate: "$75/hour"
+    },
+    {
+      name: "Full Stack Developer",
+      price: "$6,000",
+      duration: "12 months",
+      description: "Complete web development bootcamp",
+      features: [
+        "Frontend & Backend development",
+        "Modern frameworks (React, Node.js)",
+        "Database design & management",
+        "Cloud deployment",
+        "Real-world projects",
+        "Interview preparation",
+        "Job placement assistance",
+        "Continuous mentorship"
+      ],
       sessions: "3 sessions/week",
-      hourlyRate: "$50/hour"
+      hourlyRate: "$69/hour"
     }
   ];
 
@@ -135,9 +199,9 @@ const Pricing = () => {
       description: "Complete guidance for university applications"
     },
     {
-      service: "Study Materials Package",
-      price: "$200",
-      description: "Comprehensive textbooks and digital resources"
+      service: "Homework Support Service",
+      price: "$40/hour",
+      description: "Daily homework help and assignment assistance"
     }
   ];
 
@@ -145,8 +209,8 @@ const Pricing = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Pricing Plans | Pupilenroll - Affordable Online Tutoring</title>
-        <meta name="description" content="Explore Pupilenroll's transparent pricing plans for SAT, IB, IGCSE, and Common Core preparation. Choose from 3-month, 6-month, or full-year packages with expert tutoring." />
-        <meta name="keywords" content="tutoring pricing, online tutoring cost, SAT prep pricing, IB tutoring rates, IGCSE preparation cost, affordable tutoring" />
+        <meta name="description" content="Explore Pupilenroll's transparent pricing plans for Math, English, Coding, SAT, IB, IGCSE, and Common Core preparation. Choose from 3-month, 6-month, or full-year packages with expert tutoring." />
+        <meta name="keywords" content="tutoring pricing, online tutoring cost, math tutoring rates, english tutoring pricing, coding bootcamp cost, SAT prep pricing, IB tutoring rates, IGCSE preparation cost, affordable tutoring" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://pupilenroll.com/pricing" />
         <meta property="og:title" content="Pricing Plans | Pupilenroll - Affordable Online Tutoring" />
@@ -183,20 +247,20 @@ const Pricing = () => {
         </div>
       </section>
 
-      {/* General Pricing Plans */}
+      {/* Math & English Packages */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Choose Your Learning Journey
+              Math & English Packages
             </h2>
             <p className="text-lg text-gray-600">
-              Flexible duration options to match your learning goals and timeline
+              Comprehensive tutoring packages for Math and English subjects
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {mathEnglishPlans.map((plan, index) => (
               <Card key={index} className={`relative hover:shadow-lg transition-shadow ${plan.popular ? 'border-2 border-blue-500 shadow-lg' : ''}`}>
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -239,7 +303,10 @@ const Pricing = () => {
 
                   <Button 
                     className={`w-full ${plan.popular ? 'bg-blue-600 hover:bg-blue-700' : ''}`}
-                    onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in the ${plan.name}. Can you provide more details?`, '_blank')}
+                    onClick={() => {
+                      showPaymentNotification();
+                      window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in the ${plan.name} for Math & English. Can you provide more details?`, '_blank');
+                    }}
                   >
                     <MessageCircle className="h-4 w-4 mr-2" />
                     Get Started
@@ -251,8 +318,70 @@ const Pricing = () => {
         </div>
       </section>
 
-      {/* Exam-Specific Packages */}
+      {/* Coding Plans */}
       <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Coding Programs
+            </h2>
+            <p className="text-lg text-gray-600">
+              Learn programming from basics to advanced web development
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {codingPlans.map((plan, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-xl text-purple-600 flex items-center">
+                    <Code className="h-5 w-5 mr-2" />
+                    {plan.name}
+                  </CardTitle>
+                  <div className="space-y-1 text-sm text-gray-600">
+                    <div className="flex items-center">
+                      <Clock className="h-4 w-4 mr-2" />
+                      Duration: {plan.duration}
+                    </div>
+                    <div className="flex items-center">
+                      <Users className="h-4 w-4 mr-2" />
+                      Sessions: {plan.sessions}
+                    </div>
+                  </div>
+                  <div className="text-3xl font-bold text-gray-900">{plan.price}</div>
+                  <div className="text-sm text-gray-500">{plan.hourlyRate} effective rate</div>
+                </CardHeader>
+
+                <CardContent>
+                  <p className="text-gray-600 mb-4">{plan.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {plan.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start space-x-2 text-sm">
+                        <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Button 
+                    className="w-full bg-purple-600 hover:bg-purple-700"
+                    onClick={() => {
+                      showPaymentNotification();
+                      window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in the ${plan.name} coding program. Can you provide more details about enrollment?`, '_blank');
+                    }}
+                  >
+                    <MessageCircle className="h-4 w-4 mr-2" />
+                    Start Coding Journey
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Exam-Specific Packages */}
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -293,7 +422,10 @@ const Pricing = () => {
 
                   <Button 
                     className="w-full"
-                    onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in the ${pkg.exam} package. Can you provide more details about enrollment?`, '_blank')}
+                    onClick={() => {
+                      showPaymentNotification();
+                      window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in the ${pkg.exam} package. Can you provide more details about enrollment?`, '_blank');
+                    }}
                   >
                     <MessageCircle className="h-4 w-4 mr-2" />
                     Enroll Now
@@ -306,7 +438,7 @@ const Pricing = () => {
       </section>
 
       {/* Add-On Services */}
-      <section className="py-16">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -332,7 +464,10 @@ const Pricing = () => {
                     size="sm" 
                     variant="outline" 
                     className="w-full"
-                    onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'd like to add ${addon.service} to my plan. Can you help?`, '_blank')}
+                    onClick={() => {
+                      showPaymentNotification();
+                      window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'd like to add ${addon.service} to my plan. Can you help?`, '_blank');
+                    }}
                   >
                     Add to Plan
                   </Button>
