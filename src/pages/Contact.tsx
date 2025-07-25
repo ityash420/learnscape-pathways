@@ -1,4 +1,5 @@
 
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -20,7 +21,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
-  const whatsappNumber = "+1234567890";
+  const whatsappNumber = "+916395520698";
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -31,23 +32,48 @@ const Contact = () => {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would send this data to your backend
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you within 24 hours.",
-    });
     
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      subject: "",
-      program: "",
-      message: ""
-    });
+    try {
+      // Create mailto link with form data
+      const emailBody = `
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Program of Interest: ${formData.program}
+Subject: ${formData.subject}
+
+Message:
+${formData.message}
+      `;
+      
+      const mailtoLink = `mailto:neeraj.suyal@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
+      
+      // Open default email client
+      window.location.href = mailtoLink;
+      
+      toast({
+        title: "Email Client Opened!",
+        description: "Please send the email from your email client to complete your inquiry.",
+      });
+      
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        program: "",
+        message: ""
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to open email client. Please try again or contact us directly.",
+        variant: "destructive"
+      });
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -58,20 +84,20 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+1 (555) 123-4567", "+1 (555) 123-4568"],
+      details: ["+91 639 552 0698"],
       description: "Mon-Fri 8AM-8PM, Sat-Sun 9AM-5PM"
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["info@eduexcel.com", "support@eduexcel.com"],
+      details: ["neeraj.suyal@gmail.com"],
       description: "We respond within 24 hours"
     },
     {
       icon: MapPin,
       title: "Office",
-      details: ["123 Education Street", "Learning City, LC 12345"],
-      description: "Visit us for in-person consultations"
+      details: ["Online Tutoring Platform", "Available Worldwide"],
+      description: "Virtual consultations available"
     },
     {
       icon: MessageCircle,
@@ -102,6 +128,18 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Contact Us | Pupilenroll - Get in Touch with Expert Tutors</title>
+        <meta name="description" content="Contact Pupilenroll for expert online tutoring services. Get personalized academic support for SAT, IB, IGCSE, and more. Free consultation available." />
+        <meta name="keywords" content="contact tutoring, online tutor consultation, academic support contact, tutoring inquiry" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://pupilenroll.com/contact" />
+        <meta property="og:title" content="Contact Us | Pupilenroll - Get in Touch with Expert Tutors" />
+        <meta property="og:description" content="Ready to start your academic success journey? Contact our expert tutors for personalized support." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://pupilenroll.com/contact" />
+      </Helmet>
+
       <Navigation />
       
       {/* Hero Section */}
@@ -311,7 +349,7 @@ const Contact = () => {
                     variant="outline" 
                     className="w-full justify-start" 
                     size="lg"
-                    onClick={() => window.location.href = 'tel:+15551234567'}
+                    onClick={() => window.location.href = `tel:${whatsappNumber}`}
                   >
                     <Phone className="mr-2 h-5 w-5" />
                     Call Now
@@ -344,7 +382,7 @@ const Contact = () => {
                     <div className="pt-2 mt-2 border-t text-xs text-gray-600">
                       <div className="flex items-center">
                         <Globe className="mr-1 h-3 w-3" />
-                        All times EST. Online sessions available globally.
+                        All times IST. Online sessions available globally.
                       </div>
                     </div>
                   </div>

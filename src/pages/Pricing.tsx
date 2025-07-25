@@ -1,4 +1,4 @@
-
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -14,58 +14,62 @@ import {
 } from "lucide-react";
 
 const Pricing = () => {
-  const whatsappNumber = "+1234567890";
+  const whatsappNumber = "+916395520698";
 
   const pricingPlans = [
     {
-      name: "Individual Tutoring",
-      price: "$80/hour",
-      description: "One-on-one personalized sessions with expert tutors",
+      name: "3 Month Package",
+      price: "$2,400",
+      duration: "3 months",
+      description: "Intensive short-term preparation for quick results",
       popular: false,
       features: [
-        "Personalized learning plan",
-        "Flexible scheduling",
-        "Progress tracking",
-        "Homework support",
-        "Exam preparation materials",
-        "Monthly progress reports"
+        "36 hours of tutoring",
+        "Personalized study plan",
+        "Weekly progress assessments",
+        "Practice tests and materials",
+        "Email support",
+        "Performance tracking"
       ],
-      subjects: "All subjects available",
-      sessions: "Minimum 4 hours/month"
+      sessions: "3 sessions/week",
+      hourlyRate: "$67/hour"
     },
     {
-      name: "Small Group Classes",
-      price: "$45/hour",
-      description: "Interactive learning in groups of 3-5 students",
+      name: "6 Month Package", 
+      price: "$4,200",
+      duration: "6 months",
+      description: "Comprehensive preparation with balanced pace",
       popular: true,
       features: [
-        "Collaborative learning environment",
-        "Peer interaction and support",
-        "Cost-effective solution",
-        "Regular assessments",
-        "Study materials included",
-        "Group projects and activities",
-        "Flexible make-up sessions"
+        "72 hours of tutoring",
+        "Detailed curriculum coverage",
+        "Monthly progress reports",
+        "Mock exams included",
+        "Priority support",
+        "Flexible scheduling",
+        "Revision sessions"
       ],
-      subjects: "Subject-specific groups",
-      sessions: "2-3 sessions/week"
+      sessions: "3 sessions/week",
+      hourlyRate: "$58/hour"
     },
     {
-      name: "Intensive Bootcamp",
-      price: "$1,200/month",
-      description: "Accelerated preparation for upcoming exams",
+      name: "Full Year Package",
+      price: "$7,200", 
+      duration: "12 months",
+      description: "Complete academic year support with maximum value",
       popular: false,
       features: [
-        "Daily intensive sessions",
-        "Comprehensive study materials",
-        "Mock exams and practice tests",
-        "Expert instructor guidance",
-        "Progress monitoring",
-        "Guaranteed score improvement",
-        "Certificate of completion"
+        "144 hours of tutoring",
+        "Full curriculum mastery",
+        "Continuous assessment",
+        "University prep guidance",
+        "24/7 support access",
+        "Family progress meetings",
+        "Guaranteed improvement",
+        "Additional resources"
       ],
-      subjects: "Exam-specific focus",
-      sessions: "15-20 hours/week"
+      sessions: "3 sessions/week",
+      hourlyRate: "$50/hour"
     }
   ];
 
@@ -139,6 +143,18 @@ const Pricing = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Pricing Plans | Pupilenroll - Affordable Online Tutoring</title>
+        <meta name="description" content="Explore Pupilenroll's transparent pricing plans for SAT, IB, IGCSE, and Common Core preparation. Choose from 3-month, 6-month, or full-year packages with expert tutoring." />
+        <meta name="keywords" content="tutoring pricing, online tutoring cost, SAT prep pricing, IB tutoring rates, IGCSE preparation cost, affordable tutoring" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://pupilenroll.com/pricing" />
+        <meta property="og:title" content="Pricing Plans | Pupilenroll - Affordable Online Tutoring" />
+        <meta property="og:description" content="Transparent pricing for expert tutoring services. Choose the perfect plan for your academic success." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://pupilenroll.com/pricing" />
+      </Helmet>
+
       <Navigation />
       
       {/* Hero Section */}
@@ -172,10 +188,10 @@ const Pricing = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              General Tutoring Plans
+              Choose Your Learning Journey
             </h2>
             <p className="text-lg text-gray-600">
-              Flexible options to match your learning style and schedule
+              Flexible duration options to match your learning goals and timeline
             </p>
           </div>
 
@@ -194,6 +210,7 @@ const Pricing = () => {
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl">{plan.name}</CardTitle>
                   <div className="text-4xl font-bold text-blue-600 my-4">{plan.price}</div>
+                  <div className="text-sm text-gray-500 mb-2">{plan.hourlyRate} effective rate</div>
                   <CardDescription className="text-gray-600">
                     {plan.description}
                   </CardDescription>
@@ -202,11 +219,11 @@ const Pricing = () => {
                 <CardContent className="space-y-4">
                   <div className="space-y-2">
                     <div className="flex items-center text-sm text-gray-600">
-                      <BookOpen className="h-4 w-4 mr-2" />
-                      {plan.subjects}
+                      <Clock className="h-4 w-4 mr-2" />
+                      Duration: {plan.duration}
                     </div>
                     <div className="flex items-center text-sm text-gray-600">
-                      <Clock className="h-4 w-4 mr-2" />
+                      <Users className="h-4 w-4 mr-2" />
                       {plan.sessions}
                     </div>
                   </div>
@@ -222,7 +239,7 @@ const Pricing = () => {
 
                   <Button 
                     className={`w-full ${plan.popular ? 'bg-blue-600 hover:bg-blue-700' : ''}`}
-                    onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in the ${plan.name} plan. Can you provide more details?`, '_blank')}
+                    onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in the ${plan.name}. Can you provide more details?`, '_blank')}
                   >
                     <MessageCircle className="h-4 w-4 mr-2" />
                     Get Started

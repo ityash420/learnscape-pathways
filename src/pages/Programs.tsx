@@ -1,4 +1,4 @@
-
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 
 const Programs = () => {
-  const whatsappNumber = "+1234567890";
+  const whatsappNumber = "+916395520698";
 
   const programs = [
     {
@@ -130,6 +130,18 @@ const Programs = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Academic Programs | Pupilenroll - SAT, IB, IGCSE & More</title>
+        <meta name="description" content="Explore Pupilenroll's comprehensive academic programs including SAT prep, IB support, IGCSE excellence, and Common Core mastery. Expert tutoring for grades 6-12." />
+        <meta name="keywords" content="SAT preparation, IB program support, IGCSE tutoring, Common Core, high school tutoring, middle school support" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://pupilenroll.com/programs" />
+        <meta property="og:title" content="Academic Programs | Pupilenroll - SAT, IB, IGCSE & More" />
+        <meta property="og:description" content="Comprehensive academic programs designed for excellence in SAT, IB, IGCSE, and grade-level support." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://pupilenroll.com/programs" />
+      </Helmet>
+
       <Navigation />
       
       {/* Hero Section */}

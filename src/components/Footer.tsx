@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <BookOpen className="h-8 w-8 text-blue-400" />
-              <span className="text-xl font-bold">EduExcel Academy</span>
+              <span className="text-xl font-bold">Pupilenroll</span>
             </div>
             <p className="text-gray-300 mb-4">
               Empowering students to excel in their academic journey through personalized learning experiences and expert guidance.
@@ -18,11 +18,11 @@ const Footer = () => {
             <div className="flex space-x-4">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91 639 552 0698</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>info@eduexcel.com</span>
+                <span>neeraj.suyal@gmail.com</span>
               </div>
             </div>
           </div>
@@ -53,7 +53,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 EduExcel Academy. All rights reserved.
+            © 2024 Pupilenroll. All rights reserved.
           </p>
         </div>
       </div>
