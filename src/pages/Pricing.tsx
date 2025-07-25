@@ -1,4 +1,3 @@
-
 import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -13,7 +12,9 @@ import {
   Clock,
   BookOpen,
   Code,
-  AlertCircle
+  AlertCircle,
+  Calculator,
+  PenTool
 } from "lucide-react";
 
 const Pricing = () => {
@@ -23,63 +24,123 @@ const Pricing = () => {
     alert("Full upfront payment is required for all packages.");
   };
 
-  const mathEnglishPlans = [
+  const mathPlans = [
     {
       name: "3 Month Package",
-      price: "$2,400",
+      price: "$1,200",
       duration: "3 months",
-      description: "Intensive Math & English preparation for quick results",
+      description: "Intensive Math preparation for quick results",
       popular: false,
       features: [
         "36 hours of Math tutoring",
-        "36 hours of English tutoring",
         "Personalized study plan",
         "Weekly progress assessments",
         "Practice tests and materials",
         "Email support",
-        "Performance tracking"
+        "Performance tracking",
+        "Homework assistance"
       ],
-      sessions: "3 sessions/week each subject",
-      hourlyRate: "$33/hour per subject"
+      sessions: "3 sessions/week",
+      hourlyRate: "$33/hour"
     },
     {
       name: "6 Month Package", 
-      price: "$4,200",
+      price: "$2,100",
       duration: "6 months",
-      description: "Comprehensive Math & English preparation with balanced pace",
+      description: "Comprehensive Math preparation with balanced pace",
       popular: true,
       features: [
         "72 hours of Math tutoring",
-        "72 hours of English tutoring",
         "Detailed curriculum coverage",
         "Monthly progress reports",
         "Mock exams included",
         "Priority support",
         "Flexible scheduling",
-        "Revision sessions"
+        "Revision sessions",
+        "Advanced problem solving"
       ],
-      sessions: "3 sessions/week each subject",
-      hourlyRate: "$29/hour per subject"
+      sessions: "3 sessions/week",
+      hourlyRate: "$29/hour"
     },
     {
       name: "Full Year Package",
-      price: "$7,200", 
+      price: "$3,600", 
       duration: "12 months",
-      description: "Complete Math & English academic year support with maximum value",
+      description: "Complete Math academic year support with maximum value",
       popular: false,
       features: [
         "144 hours of Math tutoring",
-        "144 hours of English tutoring",
         "Full curriculum mastery",
         "Continuous assessment",
         "University prep guidance",
         "24/7 support access",
         "Family progress meetings",
         "Guaranteed improvement",
-        "Additional resources"
+        "Additional resources",
+        "Competition prep"
       ],
-      sessions: "3 sessions/week each subject",
-      hourlyRate: "$25/hour per subject"
+      sessions: "3 sessions/week",
+      hourlyRate: "$25/hour"
+    }
+  ];
+
+  const englishPlans = [
+    {
+      name: "3 Month Package",
+      price: "$1,200",
+      duration: "3 months",
+      description: "Intensive English preparation for quick results",
+      popular: false,
+      features: [
+        "36 hours of English tutoring",
+        "Reading comprehension focus",
+        "Writing skills development",
+        "Grammar and vocabulary",
+        "Speaking practice sessions",
+        "Email support",
+        "Performance tracking"
+      ],
+      sessions: "3 sessions/week",
+      hourlyRate: "$33/hour"
+    },
+    {
+      name: "6 Month Package", 
+      price: "$2,100",
+      duration: "6 months",
+      description: "Comprehensive English preparation with balanced pace",
+      popular: true,
+      features: [
+        "72 hours of English tutoring",
+        "Literature analysis",
+        "Essay writing mastery",
+        "Monthly progress reports",
+        "Mock exams included",
+        "Priority support",
+        "Flexible scheduling",
+        "Creative writing skills"
+      ],
+      sessions: "3 sessions/week",
+      hourlyRate: "$29/hour"
+    },
+    {
+      name: "Full Year Package",
+      price: "$3,600", 
+      duration: "12 months",
+      description: "Complete English academic year support with maximum value",
+      popular: false,
+      features: [
+        "144 hours of English tutoring",
+        "Full curriculum mastery",
+        "Advanced composition",
+        "University prep guidance",
+        "24/7 support access",
+        "Family progress meetings",
+        "Guaranteed improvement",
+        "Additional resources",
+        "Public speaking training"
+      ],
+      sessions: "3 sessions/week",
+      hourlyRate: "$25/hour"
     }
   ];
 
@@ -247,20 +308,21 @@ const Pricing = () => {
         </div>
       </section>
 
-      {/* Math & English Packages */}
+      {/* Math Packages */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Math & English Packages
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center">
+              <Calculator className="h-8 w-8 mr-3 text-blue-600" />
+              Math Tutoring Packages
             </h2>
             <p className="text-lg text-gray-600">
-              Comprehensive tutoring packages for Math and English subjects
+              Comprehensive math tutoring from basic concepts to advanced problem solving
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {mathEnglishPlans.map((plan, index) => (
+            {mathPlans.map((plan, index) => (
               <Card key={index} className={`relative hover:shadow-lg transition-shadow ${plan.popular ? 'border-2 border-blue-500 shadow-lg' : ''}`}>
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -272,7 +334,7 @@ const Pricing = () => {
                 )}
                 
                 <CardHeader className="text-center">
-                  <CardTitle className="text-2xl">{plan.name}</CardTitle>
+                  <CardTitle className="text-2xl text-blue-600">{plan.name}</CardTitle>
                   <div className="text-4xl font-bold text-blue-600 my-4">{plan.price}</div>
                   <div className="text-sm text-gray-500 mb-2">{plan.hourlyRate} effective rate</div>
                   <CardDescription className="text-gray-600">
@@ -305,7 +367,79 @@ const Pricing = () => {
                     className={`w-full ${plan.popular ? 'bg-blue-600 hover:bg-blue-700' : ''}`}
                     onClick={() => {
                       showPaymentNotification();
-                      window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in the ${plan.name} for Math & English. Can you provide more details?`, '_blank');
+                      window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in the ${plan.name} for Math tutoring. Can you provide more details?`, '_blank');
+                    }}
+                  >
+                    <MessageCircle className="h-4 w-4 mr-2" />
+                    Get Started
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* English Packages */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center">
+              <PenTool className="h-8 w-8 mr-3 text-green-600" />
+              English Tutoring Packages
+            </h2>
+            <p className="text-lg text-gray-600">
+              Comprehensive English tutoring from grammar basics to advanced composition
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {englishPlans.map((plan, index) => (
+              <Card key={index} className={`relative hover:shadow-lg transition-shadow ${plan.popular ? 'border-2 border-green-500 shadow-lg' : ''}`}>
+                {plan.popular && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <Badge className="bg-green-500 text-white px-4 py-1">
+                      <Star className="h-3 w-3 mr-1" />
+                      Most Popular
+                    </Badge>
+                  </div>
+                )}
+                
+                <CardHeader className="text-center">
+                  <CardTitle className="text-2xl text-green-600">{plan.name}</CardTitle>
+                  <div className="text-4xl font-bold text-green-600 my-4">{plan.price}</div>
+                  <div className="text-sm text-gray-500 mb-2">{plan.hourlyRate} effective rate</div>
+                  <CardDescription className="text-gray-600">
+                    {plan.description}
+                  </CardDescription>
+                </CardHeader>
+
+                <CardContent className="space-y-4">
+                  <div className="space-y-2">
+                    <div className="flex items-center text-sm text-gray-600">
+                      <Clock className="h-4 w-4 mr-2" />
+                      Duration: {plan.duration}
+                    </div>
+                    <div className="flex items-center text-sm text-gray-600">
+                      <Users className="h-4 w-4 mr-2" />
+                      {plan.sessions}
+                    </div>
+                  </div>
+
+                  <ul className="space-y-2">
+                    {plan.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start space-x-2 text-sm">
+                        <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Button 
+                    className={`w-full ${plan.popular ? 'bg-green-600 hover:bg-green-700' : 'bg-green-600 hover:bg-green-700'}`}
+                    onClick={() => {
+                      showPaymentNotification();
+                      window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in the ${plan.name} for English tutoring. Can you provide more details?`, '_blank');
                     }}
                   >
                     <MessageCircle className="h-4 w-4 mr-2" />
@@ -319,7 +453,7 @@ const Pricing = () => {
       </section>
 
       {/* Coding Plans */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -381,7 +515,7 @@ const Pricing = () => {
       </section>
 
       {/* Exam-Specific Packages */}
-      <section className="py-16">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -437,8 +571,8 @@ const Pricing = () => {
         </div>
       </section>
 
-      {/* Add-On Services */}
-      <section className="py-16 bg-gray-50">
+      {/* Additional Services */}
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
