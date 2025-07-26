@@ -41,7 +41,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      details: ["neeraj.suyal@gmail.com"],
+      details: ["pupilenroll@gmail.com"],
       description: "We respond within 24 hours"
     },
     {
@@ -74,7 +74,7 @@ Message:
 ${formData.message}
       `;
       
-      const mailtoLink = `mailto:neeraj.suyal@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
+      const mailtoLink = `mailto:pupilenroll@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
       
       // Open default email client
       window.location.href = mailtoLink;

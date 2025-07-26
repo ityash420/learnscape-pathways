@@ -16,6 +16,9 @@ import {
   Award,
   TrendingUp
 } from "lucide-react";
+import childrenStudying from "@/assets/children-studying.jpg";
+import onlineLearningChild from "@/assets/online-learning-child.jpg";
+import studentsSuccess from "@/assets/students-success.jpg";
 
 const Index = () => {
   const whatsappNumber = "+917906601283";
@@ -135,8 +138,13 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-20"
+          style={{ backgroundImage: `url(${childrenStudying})` }}
+        ></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Excel in Your Academic Journey
@@ -149,14 +157,14 @@ const Index = () => {
                 Book Your Free Class
               </Button>
               <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-blue-600 relative group"
-              onClick={() => window.open(`https://wa.me/${whatsappNumber}`, '_blank')}
-            >
-              <MessageCircle className="mr-2 h-5 w-5" />
-              <span className="group-hover:opacity-100 opacity-100">WhatsApp Us</span>
-            </Button>
+                size="lg" 
+                variant="outline" 
+                className="border-white text-white hover:bg-white hover:text-blue-600 relative group"
+                onClick={() => window.open(`https://wa.me/${whatsappNumber}`, '_blank')}
+              >
+                <MessageCircle className="mr-2 h-5 w-5" />
+                <span className="group-hover:opacity-100 opacity-100">WhatsApp Us</span>
+              </Button>
             </div>
           </div>
         </div>
@@ -218,14 +226,18 @@ const Index = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {gradePrograms.map((program, index) => (
-              <Card key={index} className={`border-2 ${program.color}`}>
-                <CardHeader>
+              <Card key={index} className={`border-2 ${program.color} relative overflow-hidden`}>
+                <div 
+                  className="absolute inset-0 bg-cover bg-center opacity-10"
+                  style={{ backgroundImage: `url(${onlineLearningChild})` }}
+                ></div>
+                <CardHeader className="relative z-10">
                   <CardTitle className="text-2xl">{program.title}</CardTitle>
                   <CardDescription className="text-gray-600">
                     {program.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="relative z-10">
                   <div className="space-y-3">
                     <h4 className="font-semibold text-gray-900">Key Subjects:</h4>
                     <div className="flex flex-wrap gap-2">
@@ -365,8 +377,13 @@ const Index = () => {
       </section>
 
       {/* Book Your Class Section */}
-      <section className="py-16 bg-blue-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-16 bg-blue-600 text-white relative overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-20"
+          style={{ backgroundImage: `url(${studentsSuccess})` }}
+        ></div>
+        <div className="absolute inset-0 bg-blue-600 bg-opacity-80"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Start Your Success Journey?
           </h2>
