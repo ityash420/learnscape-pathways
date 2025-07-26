@@ -676,40 +676,6 @@ const Pricing = () => {
         </div>
       </section>
 
-      {/* US States Section for SEO */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Online Tutoring Available Across All US States
-            </h2>
-            <p className="text-lg text-gray-600">
-              Professional tutoring services available for students nationwide
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {usStates.map((state, index) => (
-              <div key={index} className="text-center">
-                <a 
-                  href={`#tutor-${state.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="block p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow text-sm text-blue-600 hover:text-blue-800"
-                  title={`Online Tutoring in ${state}`}
-                >
-                  Tutor in {state}
-                </a>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-8 text-center">
-            <p className="text-sm text-gray-600">
-              Our certified tutors provide online math, English, and coding courses to students across all 50 US states. 
-              Get personalized tutoring from anywhere in the United States.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* FAQ/Guarantee Section */}
       <section className="py-16 bg-blue-600 text-white">

@@ -9,6 +9,7 @@ import Programs from "./pages/Programs";
 import Pricing from "./pages/Pricing";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import StateTutoring from "./pages/StateTutoring";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ function App() {
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/tutoring/:state" element={<StateTutoring />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

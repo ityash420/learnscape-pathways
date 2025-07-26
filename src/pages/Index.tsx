@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 
 const Index = () => {
-  const whatsappNumber = "+1234567890"; // Replace with actual WhatsApp number
+  const whatsappNumber = "+917906601283";
 
   const examSections = [
     {
@@ -149,14 +149,14 @@ const Index = () => {
                 Book Your Free Class
               </Button>
               <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-blue-600"
-                onClick={() => window.open(`https://wa.me/${whatsappNumber}`, '_blank')}
-              >
-                <MessageCircle className="mr-2 h-5 w-5" />
-                WhatsApp Us
-              </Button>
+              size="lg" 
+              variant="outline" 
+              className="border-white text-white hover:bg-white hover:text-blue-600 relative group"
+              onClick={() => window.open(`https://wa.me/${whatsappNumber}`, '_blank')}
+            >
+              <MessageCircle className="mr-2 h-5 w-5" />
+              <span className="group-hover:opacity-100 opacity-100">WhatsApp Us</span>
+            </Button>
             </div>
           </div>
         </div>
@@ -256,7 +256,15 @@ const Index = () => {
           </div>
 
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+            {/* Mobile-friendly header */}
+            <div className="md:hidden">
+              <div className="bg-gray-100 p-4 font-semibold text-gray-900 text-center">
+                Why Choose PupilEnroll Way?
+              </div>
+            </div>
+            
+            {/* Desktop header */}
+            <div className="hidden md:grid grid-cols-3 gap-0">
               <div className="bg-gray-100 p-6 font-semibold text-gray-900">
                 Comparison Aspect
               </div>
@@ -269,17 +277,40 @@ const Index = () => {
             </div>
             
             {comparisonData.map((item, index) => (
-              <div key={index} className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t">
-                <div className="p-6 font-medium text-gray-900 bg-gray-50">
-                  {item.aspect}
+              <div key={index} className="border-t">
+                {/* Mobile layout */}
+                <div className="md:hidden p-4 space-y-4">
+                  <div className="font-medium text-gray-900 text-lg">
+                    {item.aspect}
+                  </div>
+                  <div className="space-y-3">
+                    <div className="bg-red-50 p-3 rounded-lg">
+                      <div className="text-sm font-medium text-red-800 mb-1">Traditional Tutoring</div>
+                      <div className="text-gray-700 text-sm">{item.traditional}</div>
+                    </div>
+                    <div className="bg-green-50 p-3 rounded-lg">
+                      <div className="text-sm font-medium text-green-800 mb-1">PupilEnroll Way</div>
+                      <div className="flex items-start space-x-2">
+                        <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700 text-sm">{item.pupilenroll}</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="p-6 text-gray-700 bg-red-25">
-                  {item.traditional}
-                </div>
-                <div className="p-6 text-gray-700 bg-green-25">
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span>{item.pupilenroll}</span>
+                
+                {/* Desktop layout */}
+                <div className="hidden md:grid grid-cols-3 gap-0">
+                  <div className="p-6 font-medium text-gray-900 bg-gray-50">
+                    {item.aspect}
+                  </div>
+                  <div className="p-6 text-gray-700 bg-red-25">
+                    {item.traditional}
+                  </div>
+                  <div className="p-6 text-gray-700 bg-green-25">
+                    <div className="flex items-center space-x-2">
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                      <span>{item.pupilenroll}</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -352,11 +383,11 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-blue-600"
+              className="border-white text-white hover:bg-white hover:text-blue-600 relative group"
               onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in booking a class. Can you help me get started?`, '_blank')}
             >
               <MessageCircle className="mr-2 h-5 w-5" />
-              Contact via WhatsApp
+              <span className="group-hover:opacity-100 opacity-100">WhatsApp Us</span>
             </Button>
           </div>
 
