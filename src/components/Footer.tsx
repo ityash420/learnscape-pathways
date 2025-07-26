@@ -74,7 +74,7 @@ const Footer = () => {
             ].map((state, index) => (
               <div key={index} className="text-center">
                 <Link 
-                  to={`/tutoring/${state.toLowerCase().replace(/\s+/g, '-')}`}
+                  to="/"
                   className="block p-2 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors text-xs text-gray-300 hover:text-white"
                   title={`Online Math, English & Coding Tutoring in ${state} - Expert Tutors Available`}
                 >
