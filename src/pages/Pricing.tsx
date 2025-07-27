@@ -90,20 +90,21 @@ const Pricing = () => {
     }
   ];
 
-  const englishPlans = [
+  const sciencePlans = [
     {
       name: "3 Month Package",
       price: "$899",
       originalPrice: "$1,200",
       duration: "3 months",
-      description: "Intensive English preparation for quick results",
+      description: "Intensive Science preparation for quick results",
       popular: false,
       features: [
-        "36 hours of English tutoring",
-        "Reading comprehension focus",
-        "Writing skills development",
-        "Grammar and vocabulary",
-        "Speaking practice sessions",
+        "36 hours of Science tutoring",
+        "Physics, Chemistry, Biology",
+        "Laboratory concepts explained",
+        "Scientific method training",
+        "Weekly progress assessments",
+        "Practice tests and materials",
         "Email support",
         "Performance tracking"
       ],
@@ -115,17 +116,18 @@ const Pricing = () => {
       price: "$1,599",
       originalPrice: "$2,100",
       duration: "6 months",
-      description: "Comprehensive English preparation with balanced pace",
+      description: "Comprehensive Science preparation with balanced pace",
       popular: true,
       features: [
-        "72 hours of English tutoring",
-        "Literature analysis",
-        "Essay writing mastery",
+        "72 hours of Science tutoring",
+        "All science subjects covered",
+        "Advanced problem solving",
         "Monthly progress reports",
         "Mock exams included",
         "Priority support",
         "Flexible scheduling",
-        "Creative writing skills"
+        "Revision sessions",
+        "Research project guidance"
       ],
       sessions: "3 sessions/week",
       hourlyRate: "$22/hour"
@@ -135,89 +137,33 @@ const Pricing = () => {
       price: "$2,699",
       originalPrice: "$3,600",
       duration: "12 months",
-      description: "Complete English academic year support with maximum value",
+      description: "Complete Science academic year support with maximum value",
       popular: false,
       features: [
-        "144 hours of English tutoring",
+        "144 hours of Science tutoring",
         "Full curriculum mastery",
-        "Advanced composition",
+        "Advanced experiments explained",
         "University prep guidance",
         "24/7 support access",
         "Family progress meetings",
         "Guaranteed improvement",
         "Additional resources",
-        "Public speaking training"
+        "Science fair preparation"
       ],
       sessions: "3 sessions/week",
       hourlyRate: "$19/hour"
     }
   ];
 
-  const codingPlans = [
-    {
-      name: "Basic Coding",
-      price: "$1,299",
-      originalPrice: "$1,800",
-      duration: "3 months",
-      description: "Introduction to programming fundamentals",
-      features: [
-        "Python programming basics",
-        "HTML/CSS fundamentals",
-        "JavaScript introduction",
-        "Basic algorithms",
-        "Project-based learning",
-        "Code review sessions"
-      ],
-      sessions: "2 sessions/week",
-      hourlyRate: "$54/hour"
-    },
-    {
-      name: "Advanced Coding",
-      price: "$2,499",
-      originalPrice: "$3,600",
-      duration: "6 months",
-      description: "Advanced programming concepts and web development",
-      features: [
-        "Advanced Python/JavaScript",
-        "React framework",
-        "Database management",
-        "API development",
-        "Portfolio projects",
-        "Industry best practices",
-        "Career guidance"
-      ],
-      sessions: "2 sessions/week",
-      hourlyRate: "$52/hour"
-    },
-    {
-      name: "Full Stack Developer",
-      price: "$3,999",
-      originalPrice: "$6,000",
-      duration: "12 months",
-      description: "Complete web development bootcamp",
-      features: [
-        "Frontend & Backend development",
-        "Modern frameworks (React, Node.js)",
-        "Database design & management",
-        "Cloud deployment",
-        "Real-world projects",
-        "Interview preparation",
-        "Job placement assistance",
-        "Continuous mentorship"
-      ],
-      sessions: "3 sessions/week",
-      hourlyRate: "$46/hour"
-    }
-  ];
-
   const examPackages = [
     {
-      exam: "SAT Preparation",
+      exam: "SAT Math & Science Preparation",
       duration: "3 months",
       price: "$1,299",
       originalPrice: "$1,800",
       sessions: "36 hours total",
       features: [
+        "Math & Science sections focus",
         "Diagnostic assessment",
         "Personalized study plan",
         "Practice tests (8 full-length)",
@@ -227,28 +173,28 @@ const Pricing = () => {
       ]
     },
     {
-      exam: "IB Program Support",
+      exam: "IB Math & Science Support",
       duration: "Full year",
       price: "$2,999",
       originalPrice: "$4,500",
       sessions: "120 hours total",
       features: [
-        "All IB subjects covered",
-        "Extended Essay guidance",
-        "TOK support",
+        "IB Math & Science subjects",
+        "Extended Essay guidance (Math/Science)",
         "Internal Assessment help",
-        "CAS activity planning",
-        "University application support"
+        "Laboratory report writing",
+        "University application support",
+        "Research project assistance"
       ]
     },
     {
-      exam: "IGCSE Package",
+      exam: "IGCSE Math & Science Package",
       duration: "2 years",
       price: "$4,999",
       originalPrice: "$7,200",
       sessions: "240 hours total",
       features: [
-        "Core and Extended subjects",
+        "Math & Science subjects focus",
         "Coursework assistance",
         "Practical exam preparation",
         "Mock examinations",
@@ -298,13 +244,13 @@ const Pricing = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Affordable Online Tutoring Packages | Pupilenroll - Math, English, Coding Courses</title>
-        <meta name="description" content="Discover affordable online tutoring packages for Math, English, and Coding. Expert tutors offering SAT, IB, IGCSE preparation with guaranteed results. Special pricing for parents." />
-        <meta name="keywords" content="online tutoring packages, math tutoring courses, english tutoring programs, coding courses, SAT preparation, IB tutoring, IGCSE classes, affordable tutoring, online learning packages" />
+        <title>Math & Science Tutoring Packages | Pupilenroll - Expert Online Learning</title>
+        <meta name="description" content="Discover affordable Math & Science tutoring packages. Expert tutors offering specialized preparation with guaranteed results. Full upfront payment required for all packages." />
+        <meta name="keywords" content="math tutoring packages, science tutoring courses, physics tutoring, chemistry tutoring, biology tutoring, SAT math science preparation, IB math science support, IGCSE math science classes, affordable tutoring, online learning packages" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://pupilenroll.com/pricing" />
-        <meta property="og:title" content="Affordable Online Tutoring Packages | Pupilenroll - Math, English, Coding Courses" />
-        <meta property="og:description" content="Expert online tutoring courses with special pricing. Choose from Math, English, and Coding packages designed for student success." />
+        <meta property="og:title" content="Math & Science Tutoring Packages | Pupilenroll - Expert Online Learning" />
+        <meta property="og:description" content="Expert Math & Science tutoring with special pricing. Choose from comprehensive packages designed for student success in Math and Science subjects." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://pupilenroll.com/pricing" />
         <script type="application/ld+json">
@@ -312,14 +258,14 @@ const Pricing = () => {
             {
               "@context": "https://schema.org",
               "@type": "Course",
-              "name": "Online Tutoring Packages",
-              "description": "Comprehensive online tutoring packages for Math, English, and Coding",
+              "name": "Math & Science Tutoring Packages",
+              "description": "Comprehensive online tutoring packages for Math and Science subjects",
               "provider": {
                 "@type": "Organization",
                 "name": "Pupilenroll",
                 "url": "https://pupilenroll.com"
               },
-              "courseCode": "MATH-ENG-CODE",
+              "courseCode": "MATH-SCIENCE",
               "educationalCredentialAwarded": "Certificate of Completion"
             }
           `}
@@ -335,10 +281,10 @@ const Pricing = () => {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Affordable Online Tutoring Packages
+            Math & Science Tutoring Packages
           </h1>
           <p className="text-xl text-blue-100 mb-8">
-            Special pricing for parents - Choose the perfect course package for your child's success
+            Expert Math & Science tutoring with special pricing for parents
           </p>
           <div className="flex justify-center space-x-8 text-sm">
             <div className="flex items-center space-x-2">
@@ -384,11 +330,14 @@ const Pricing = () => {
                 
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl text-blue-600">{plan.name}</CardTitle>
-                  <div className="space-y-2">
-                    <div className="text-4xl font-bold text-blue-600">{plan.price}</div>
-                    <div className="text-lg text-gray-500 line-through">{plan.originalPrice}</div>
-                    <div className="text-sm text-green-600 font-semibold">Special Parent Pricing!</div>
-                  </div>
+                   <div className="space-y-2">
+                     <div className="text-4xl font-bold text-blue-600">{plan.price}</div>
+                     <div className="text-lg text-gray-500 line-through">{plan.originalPrice}</div>
+                     <div className="text-sm text-green-600 font-semibold">Special Parent Pricing!</div>
+                     <div className="text-xs text-red-600 font-bold border border-red-200 bg-red-50 p-2 rounded">
+                       Full upfront payment is required for all packages
+                     </div>
+                   </div>
                   <div className="text-sm text-gray-500 mb-2">{plan.hourlyRate} effective rate</div>
                   <CardDescription className="text-gray-600">
                     {plan.description}
@@ -433,21 +382,21 @@ const Pricing = () => {
         </div>
       </section>
 
-      {/* English Packages */}
+      {/* Science Packages */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center">
-              <PenTool className="h-8 w-8 mr-3 text-green-600" />
-              English Tutoring Course Packages
+              <BookOpen className="h-8 w-8 mr-3 text-green-600" />
+              Science Tutoring Course Packages
             </h2>
             <p className="text-lg text-gray-600">
-              Comprehensive English tutoring courses from grammar basics to advanced composition
+              Comprehensive Science tutoring courses covering Physics, Chemistry, and Biology
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {englishPlans.map((plan, index) => (
+            {sciencePlans.map((plan, index) => (
               <Card key={index} className={`relative hover:shadow-lg transition-shadow ${plan.popular ? 'border-2 border-green-500 shadow-lg' : ''}`}>
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -464,6 +413,9 @@ const Pricing = () => {
                     <div className="text-4xl font-bold text-green-600">{plan.price}</div>
                     <div className="text-lg text-gray-500 line-through">{plan.originalPrice}</div>
                     <div className="text-sm text-green-600 font-semibold">Special Parent Pricing!</div>
+                    <div className="text-xs text-red-600 font-bold border border-red-200 bg-red-50 p-2 rounded">
+                      Full upfront payment is required for all packages
+                    </div>
                   </div>
                   <div className="text-sm text-gray-500 mb-2">{plan.hourlyRate} effective rate</div>
                   <CardDescription className="text-gray-600">
@@ -496,7 +448,7 @@ const Pricing = () => {
                     className={`w-full ${plan.popular ? 'bg-green-600 hover:bg-green-700' : 'bg-green-600 hover:bg-green-700'}`}
                     onClick={() => {
                       showPaymentNotification();
-                      window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in the ${plan.name} English course package. Can you provide more details?`, '_blank');
+                      window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in the ${plan.name} Science course package. Can you provide more details?`, '_blank');
                     }}
                   >
                     <MessageCircle className="h-4 w-4 mr-2" />
@@ -509,81 +461,15 @@ const Pricing = () => {
         </div>
       </section>
 
-      {/* Coding Plans */}
+      {/* Exam-Specific Packages */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Coding Course Programs
+              Math & Science Exam Preparation Packages
             </h2>
             <p className="text-lg text-gray-600">
-              Learn programming from basics to advanced web development
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {codingPlans.map((plan, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <CardTitle className="text-xl text-purple-600 flex items-center">
-                    <Code className="h-5 w-5 mr-2" />
-                    {plan.name}
-                  </CardTitle>
-                  <div className="space-y-1 text-sm text-gray-600">
-                    <div className="flex items-center">
-                      <Clock className="h-4 w-4 mr-2" />
-                      Duration: {plan.duration}
-                    </div>
-                    <div className="flex items-center">
-                      <Users className="h-4 w-4 mr-2" />
-                      Sessions: {plan.sessions}
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="text-3xl font-bold text-gray-900">{plan.price}</div>
-                    <div className="text-lg text-gray-500 line-through">{plan.originalPrice}</div>
-                    <div className="text-sm text-green-600 font-semibold">Special Parent Pricing!</div>
-                  </div>
-                  <div className="text-sm text-gray-500">{plan.hourlyRate} effective rate</div>
-                </CardHeader>
-
-                <CardContent>
-                  <p className="text-gray-600 mb-4">{plan.description}</p>
-                  <ul className="space-y-2 mb-6">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start space-x-2 text-sm">
-                        <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <Button 
-                    className="w-full bg-purple-600 hover:bg-purple-700"
-                    onClick={() => {
-                      showPaymentNotification();
-                      window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in the ${plan.name} coding course program. Can you provide more details about enrollment?`, '_blank');
-                    }}
-                  >
-                    <MessageCircle className="h-4 w-4 mr-2" />
-                    Start Coding Journey
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Exam-Specific Packages */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Exam Preparation Course Packages
-            </h2>
-            <p className="text-lg text-gray-600">
-              Comprehensive preparation course packages for major examinations
+              Specialized Math & Science preparation for major examinations
             </p>
           </div>
 
@@ -606,6 +492,9 @@ const Pricing = () => {
                     <div className="text-3xl font-bold text-gray-900">{pkg.price}</div>
                     <div className="text-lg text-gray-500 line-through">{pkg.originalPrice}</div>
                     <div className="text-sm text-green-600 font-semibold">Special Parent Pricing!</div>
+                    <div className="text-xs text-red-600 font-bold border border-red-200 bg-red-50 p-2 rounded">
+                      Full upfront payment is required for all packages
+                    </div>
                   </div>
                 </CardHeader>
 
@@ -657,6 +546,9 @@ const Pricing = () => {
                     <div className="text-2xl font-bold text-blue-600">{addon.price}</div>
                     <div className="text-sm text-gray-500 line-through">{addon.originalPrice}</div>
                     <div className="text-xs text-green-600 font-semibold">Special Rate!</div>
+                    <div className="text-xs text-red-600 font-bold border border-red-200 bg-red-50 p-1 rounded">
+                      Full payment required
+                    </div>
                   </div>
                 </CardHeader>
                 <CardContent>
