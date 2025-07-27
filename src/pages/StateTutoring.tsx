@@ -16,6 +16,8 @@ import {
   PenTool,
   Code
 } from "lucide-react";
+import collaborativeLearningImage from "@/assets/collaborative-learning.jpg";
+import excellentGradesImage from "@/assets/excellent-grades.jpg";
 
 const StateTutoring = () => {
   const { state } = useParams();
@@ -118,8 +120,11 @@ const StateTutoring = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img src={collaborativeLearningImage} alt="Students learning together" className="w-full h-full object-cover" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <div className="flex items-center justify-center mb-4">
               <MapPin className="h-8 w-8 mr-3" />
@@ -210,6 +215,44 @@ const StateTutoring = () => {
                 <span className="text-gray-700">{benefit}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Success Stories Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                {stateName} Students Achieving Excellence
+              </h2>
+              <p className="text-lg text-gray-600 mb-6">
+                Students across {stateName} are excelling with our personalized tutoring approach. 
+                From improved test scores to increased confidence, see how we're making a difference.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span className="text-gray-700">500+ {stateName} students served</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span className="text-gray-700">Average 25% grade improvement</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span className="text-gray-700">Flexible online scheduling for busy families</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img 
+                src={excellentGradesImage} 
+                alt="Student celebrating excellent grades" 
+                className="w-full h-80 object-cover rounded-lg shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </section>

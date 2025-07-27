@@ -17,6 +17,8 @@ import {
   Calculator,
   PenTool
 } from "lucide-react";
+import collaborativeLearningImage from "@/assets/collaborative-learning.jpg";
+import excellentGradesImage from "@/assets/excellent-grades.jpg";
 
 const Pricing = () => {
   const whatsappNumber = "+917906601283";
@@ -327,8 +329,11 @@ const Pricing = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img src={collaborativeLearningImage} alt="Children learning together" className="w-full h-full object-cover" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Affordable Online Tutoring Packages
           </h1>
@@ -676,6 +681,44 @@ const Pricing = () => {
         </div>
       </section>
 
+
+      {/* Student Success Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Celebrating Every Success
+              </h2>
+              <p className="text-lg text-gray-600 mb-6">
+                Our students consistently achieve excellent results with our structured course packages. 
+                See how our comprehensive approach leads to improved grades and increased confidence.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span className="text-gray-700">Average 30% grade improvement</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span className="text-gray-700">98% course completion rate</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span className="text-gray-700">Affordable parent-friendly pricing</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img 
+                src={excellentGradesImage} 
+                alt="Student with excellent grades celebrating success" 
+                className="w-full h-80 object-cover rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* FAQ/Guarantee Section */}
       <section className="py-16 bg-blue-600 text-white">

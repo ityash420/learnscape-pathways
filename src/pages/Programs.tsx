@@ -14,6 +14,8 @@ import {
   CheckCircle,
   MessageCircle
 } from "lucide-react";
+import studentSuccessImage from "@/assets/student-success-celebration.jpg";
+import studentAchievementImage from "@/assets/student-achievement.jpg";
 
 const Programs = () => {
   const whatsappNumber = "+916395520698";
@@ -145,8 +147,11 @@ const Programs = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white py-16 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img src={studentSuccessImage} alt="Students celebrating success" className="w-full h-full object-cover" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Our Academic Programs
           </h1>
@@ -285,6 +290,44 @@ const Programs = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Success Story Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src={studentAchievementImage} 
+                alt="Student achieving academic success" 
+                className="w-full h-80 object-cover rounded-lg shadow-lg"
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Success Stories That Inspire
+              </h2>
+              <p className="text-lg text-gray-600 mb-6">
+                Over 5,000 students have achieved their academic dreams with our personalized programs. 
+                From improved grades to college admissions, our students consistently exceed expectations.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span className="text-gray-700">95% improvement in student grades</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span className="text-gray-700">Average 200+ point SAT score increase</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span className="text-gray-700">98% college acceptance rate</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

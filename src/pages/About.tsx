@@ -14,6 +14,8 @@ import {
   TrendingUp,
   CheckCircle
 } from "lucide-react";
+import studentSuccessImage from "@/assets/student-success-celebration.jpg";
+import studentAchievementImage from "@/assets/student-achievement.jpg";
 
 const About = () => {
   const whatsappNumber = "+916395520698";
@@ -85,8 +87,11 @@ const About = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img src={studentSuccessImage} alt="Students celebrating academic success" className="w-full h-full object-cover" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               About Pupilenroll
@@ -217,6 +222,44 @@ const About = () => {
                 </Card>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Success Achievement Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Proven Track Record of Success
+              </h2>
+              <p className="text-lg text-gray-600 mb-6">
+                Our commitment to excellence has resulted in thousands of success stories. 
+                From struggling students to academic achievers, we've helped transform educational journeys worldwide.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span className="text-gray-700">Over 5,000 students successfully tutored</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span className="text-gray-700">95% achieve their target grades</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span className="text-gray-700">Recognized globally for educational excellence</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img 
+                src={studentAchievementImage} 
+                alt="Student celebrating academic achievement" 
+                className="w-full h-80 object-cover rounded-lg shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </section>
