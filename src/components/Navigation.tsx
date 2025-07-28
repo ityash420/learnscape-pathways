@@ -1,13 +1,20 @@
 
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, BookOpen } from "lucide-react";
+import { Menu, X, BookOpen, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch";
 import { Helmet } from "react-helmet-async";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
   const location = useLocation();
+
+  const toggleDarkMode = () => {
+    setIsDark(!isDark);
+    document.documentElement.classList.toggle('dark', !isDark);
+  };
 
   const navItems = [
     { path: "/", label: "Home" },
@@ -32,7 +39,8 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+          <div className="ml-10 flex items-center space-x-4">
+            <div className="flex items-baseline space-x-4">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
@@ -47,10 +55,33 @@ const Navigation = () => {
                 </Link>
               ))}
             </div>
+            
+            {/* Dark Theme Toggle */}
+            <div className="flex items-center space-x-2 ml-4">
+              <Sun className="h-4 w-4 text-gray-600" />
+              <Switch 
+                checked={isDark} 
+                onCheckedChange={toggleDarkMode}
+                className="data-[state=checked]:bg-gray-800"
+              />
+              <Moon className="h-4 w-4 text-gray-600" />
+            </div>
+          </div>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="flex items-center space-x-2">
+            {/* Mobile Dark Theme Toggle */}
+            <div className="flex items-center space-x-1">
+              <Sun className="h-4 w-4 text-gray-600" />
+              <Switch 
+                checked={isDark} 
+                onCheckedChange={toggleDarkMode}
+                className="data-[state=checked]:bg-gray-800 scale-75"
+              />
+              <Moon className="h-4 w-4 text-gray-600" />
+            </div>
+            
             <Button
               variant="ghost"
               size="sm"

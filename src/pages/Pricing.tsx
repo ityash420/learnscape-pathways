@@ -32,11 +32,10 @@ const Pricing = () => {
   const [isUSD, setIsUSD] = useState(true);
   const [isDark, setIsDark] = useState(false);
 
-  // Exchange rate: 1 USD = 0.79 GBP (approximate)
+  // Exchange rate: 1 USD = 1 GBP (1:1 conversion as requested)
   const convertPrice = (usdPrice: string) => {
     const numericPrice = parseFloat(usdPrice.replace('$', ''));
-    const gbpPrice = Math.round(numericPrice * 0.79);
-    return isUSD ? usdPrice : `£${gbpPrice}`;
+    return isUSD ? usdPrice : `£${numericPrice}`;
   };
 
   const showPaymentNotification = () => {
@@ -244,6 +243,12 @@ const Pricing = () => {
       price: "$349",
       originalPrice: "$500",
       description: "Complete guidance for university applications"
+    },
+    {
+      service: "1-to-1 Personal Tutoring",
+      price: "$60/hour",
+      originalPrice: "$80/hour",
+      description: "Individual one-on-one sessions with expert tutors"
     },
     {
       service: "Homework Support Service",
