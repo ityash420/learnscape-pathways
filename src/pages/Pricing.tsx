@@ -5,6 +5,9 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Switch } from "@/components/ui/switch";
+import { Label } from "@/components/ui/label";
+import { useState } from "react";
 import { 
   CheckCircle, 
   MessageCircle, 
@@ -15,16 +18,35 @@ import {
   Code,
   AlertCircle,
   Calculator,
-  PenTool
+  PenTool,
+  DollarSign,
+  PoundSterling,
+  Moon,
+  Sun
 } from "lucide-react";
 import collaborativeLearningImage from "@/assets/collaborative-learning.jpg";
 import excellentGradesImage from "@/assets/excellent-grades.jpg";
 
 const Pricing = () => {
   const whatsappNumber = "+917906601283";
+  const [isUSD, setIsUSD] = useState(true);
+  const [isDark, setIsDark] = useState(false);
+
+  // Exchange rate: 1 USD = 0.79 GBP (approximate)
+  const convertPrice = (usdPrice: string) => {
+    const numericPrice = parseFloat(usdPrice.replace('$', ''));
+    const gbpPrice = Math.round(numericPrice * 0.79);
+    return isUSD ? usdPrice : `£${gbpPrice}`;
+  };
 
   const showPaymentNotification = () => {
     alert("Full upfront payment is required for all packages.");
+  };
+
+  // Toggle dark mode
+  const toggleDarkMode = () => {
+    setIsDark(!isDark);
+    document.documentElement.classList.toggle('dark', !isDark);
   };
 
   const mathPlans = [
@@ -242,7 +264,7 @@ const Pricing = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className={`min-h-screen transition-colors duration-200 ${isDark ? 'dark bg-gray-900' : 'bg-white'}`}>
       <Helmet>
         <title>Math & Science Tutoring Packages | Pupilenroll - Expert Online Learning</title>
         <meta name="description" content="Discover affordable Math & Science tutoring packages. Expert tutors offering specialized preparation with guaranteed results. Full upfront payment required for all packages." />
@@ -286,7 +308,7 @@ const Pricing = () => {
           <p className="text-xl text-blue-100 mb-8">
             Expert Math & Science tutoring with special pricing for parents
           </p>
-          <div className="flex justify-center space-x-8 text-sm">
+          <div className="flex justify-center space-x-8 text-sm mb-8">
             <div className="flex items-center space-x-2">
               <CheckCircle className="h-5 w-5" />
               <span>Parent-Friendly Pricing</span>
@@ -298,6 +320,35 @@ const Pricing = () => {
             <div className="flex items-center space-x-2">
               <CheckCircle className="h-5 w-5" />
               <span>Expert Tutors</span>
+            </div>
+          </div>
+          
+          {/* Currency and Theme Controls */}
+          <div className="flex justify-center items-center space-x-8">
+            <div className="flex items-center space-x-3">
+              <DollarSign className="h-5 w-5" />
+              <Switch 
+                checked={!isUSD} 
+                onCheckedChange={(checked) => setIsUSD(!checked)}
+                id="currency-toggle"
+              />
+              <PoundSterling className="h-5 w-5" />
+              <Label htmlFor="currency-toggle" className="text-sm font-medium">
+                {isUSD ? 'USD' : 'GBP'}
+              </Label>
+            </div>
+            
+            <div className="flex items-center space-x-3">
+              <Sun className="h-5 w-5" />
+              <Switch 
+                checked={isDark} 
+                onCheckedChange={toggleDarkMode}
+                id="theme-toggle"
+              />
+              <Moon className="h-5 w-5" />
+              <Label htmlFor="theme-toggle" className="text-sm font-medium">
+                {isDark ? 'Dark' : 'Light'}
+              </Label>
             </div>
           </div>
         </div>
@@ -331,14 +382,14 @@ const Pricing = () => {
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl text-blue-600">{plan.name}</CardTitle>
                    <div className="space-y-2">
-                     <div className="text-4xl font-bold text-blue-600">{plan.price}</div>
-                     <div className="text-lg text-gray-500 line-through">{plan.originalPrice}</div>
+                     <div className="text-4xl font-bold text-blue-600">{convertPrice(plan.price)}</div>
+                     <div className="text-lg text-gray-500 line-through">{convertPrice(plan.originalPrice)}</div>
                      <div className="text-sm text-green-600 font-semibold">Special Parent Pricing!</div>
                      <div className="text-xs text-red-600 font-bold border border-red-200 bg-red-50 p-2 rounded">
                        Full upfront payment is required for all packages
                      </div>
                    </div>
-                  <div className="text-sm text-gray-500 mb-2">{plan.hourlyRate} effective rate</div>
+                  <div className="text-sm text-gray-500 mb-2">{convertPrice(plan.hourlyRate)} effective rate</div>
                   <CardDescription className="text-gray-600">
                     {plan.description}
                   </CardDescription>
@@ -410,14 +461,14 @@ const Pricing = () => {
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl text-green-600">{plan.name}</CardTitle>
                   <div className="space-y-2">
-                    <div className="text-4xl font-bold text-green-600">{plan.price}</div>
-                    <div className="text-lg text-gray-500 line-through">{plan.originalPrice}</div>
+                    <div className="text-4xl font-bold text-green-600">{convertPrice(plan.price)}</div>
+                    <div className="text-lg text-gray-500 line-through">{convertPrice(plan.originalPrice)}</div>
                     <div className="text-sm text-green-600 font-semibold">Special Parent Pricing!</div>
                     <div className="text-xs text-red-600 font-bold border border-red-200 bg-red-50 p-2 rounded">
                       Full upfront payment is required for all packages
                     </div>
                   </div>
-                  <div className="text-sm text-gray-500 mb-2">{plan.hourlyRate} effective rate</div>
+                  <div className="text-sm text-gray-500 mb-2">{convertPrice(plan.hourlyRate)} effective rate</div>
                   <CardDescription className="text-gray-600">
                     {plan.description}
                   </CardDescription>
@@ -489,8 +540,8 @@ const Pricing = () => {
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <div className="text-3xl font-bold text-gray-900">{pkg.price}</div>
-                    <div className="text-lg text-gray-500 line-through">{pkg.originalPrice}</div>
+                    <div className="text-3xl font-bold text-gray-900">{convertPrice(pkg.price)}</div>
+                    <div className="text-lg text-gray-500 line-through">{convertPrice(pkg.originalPrice)}</div>
                     <div className="text-sm text-green-600 font-semibold">Special Parent Pricing!</div>
                     <div className="text-xs text-red-600 font-bold border border-red-200 bg-red-50 p-2 rounded">
                       Full upfront payment is required for all packages
@@ -543,8 +594,8 @@ const Pricing = () => {
                 <CardHeader className="text-center">
                   <CardTitle className="text-lg">{addon.service}</CardTitle>
                   <div className="space-y-1">
-                    <div className="text-2xl font-bold text-blue-600">{addon.price}</div>
-                    <div className="text-sm text-gray-500 line-through">{addon.originalPrice}</div>
+                    <div className="text-2xl font-bold text-blue-600">{convertPrice(addon.price)}</div>
+                    <div className="text-sm text-gray-500 line-through">{convertPrice(addon.originalPrice)}</div>
                     <div className="text-xs text-green-600 font-semibold">Special Rate!</div>
                     <div className="text-xs text-red-600 font-bold border border-red-200 bg-red-50 p-1 rounded">
                       Full payment required

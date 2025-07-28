@@ -51,43 +51,11 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* US States Section */}
         <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="text-center mb-8">
-            <h3 className="text-xl font-semibold text-white mb-4">
-              Online Tutoring Available Across All US States
-            </h3>
-            <p className="text-gray-300 mb-6">
-              Professional tutoring services available for students nationwide
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-8">
-            {[
-              "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware",
-              "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky",
-              "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi",
-              "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico",
-              "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania",
-              "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont",
-              "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"
-            ].map((state, index) => (
-              <div key={index} className="text-center">
-                <Link 
-                  to="/"
-                  className="block p-2 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors text-xs text-gray-300 hover:text-white"
-                  title={`Online Math, English & Coding Tutoring in ${state} - Expert Tutors Available`}
-                >
-                  Tutor in {state}
-                </Link>
-              </div>
-            ))}
-          </div>
-
           <div className="text-center">
             <p className="text-sm text-gray-400 mb-4">
-              Our certified tutors provide online math, English, and coding courses to students across all 50 US states. 
-              Get personalized tutoring from anywhere in the United States.
+              Our certified tutors provide online Math and Science courses to students in the US and UK. 
+              Get personalized tutoring from anywhere with internet connection.
             </p>
             <p className="text-gray-400">
               © 2024 Pupilenroll. All rights reserved.
