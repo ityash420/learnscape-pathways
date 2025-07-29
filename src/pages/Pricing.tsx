@@ -21,6 +21,7 @@ const Pricing = () => {
   const [selectedLessons, setSelectedLessons] = useState<number>(1);
   const [selectedDuration, setSelectedDuration] = useState<number>(6);
   const [selectedSubject, setSelectedSubject] = useState<string>("Math");
+  const [selectedProgram, setSelectedProgram] = useState<string>("SAT Preparation");
 
   const lessonOptions = [
     { value: 1, label: "1 lesson per week" },
@@ -41,8 +42,17 @@ const Pricing = () => {
     "Coding"
   ];
 
+  const programOptions = [
+    "SAT Preparation",
+    "IB Program",
+    "IGCSE Support",
+    "Common Core",
+    "High School (9-12)",
+    "Middle School (6-8)"
+  ];
+
   const handleGetPricing = () => {
-    const message = `Hi! I'm interested in 1-to-1 tutoring for ${selectedSubject} with ${selectedLessons} lesson${selectedLessons > 1 ? 's' : ''} per week for ${selectedDuration} months. Can you provide me with pricing details?`;
+    const message = `Hi! I'm interested in 1-to-1 tutoring for ${selectedProgram} - ${selectedSubject} with ${selectedLessons} lesson${selectedLessons > 1 ? 's' : ''} per week for ${selectedDuration} months. Can you provide me with pricing details?`;
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
@@ -115,6 +125,27 @@ const Pricing = () => {
             </CardHeader>
 
             <CardContent className="space-y-8">
+              {/* Program selection */}
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                  Choose your program:
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {programOptions.map((program) => (
+                    <Button
+                      key={program}
+                      variant={selectedProgram === program ? "default" : "outline"}
+                      className="h-auto py-3 px-4"
+                      onClick={() => setSelectedProgram(program)}
+                    >
+                      <div className="text-center">
+                        <div className="text-sm font-medium">{program}</div>
+                      </div>
+                    </Button>
+                  ))}
+                </div>
+              </div>
+
               {/* Subject selection */}
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">
