@@ -112,9 +112,6 @@ const Pricing = () => {
               <div className="text-4xl font-bold text-green-600 mb-2">
                 From $30/hour*
               </div>
-              <p className="text-gray-600">
-                Get prices for exceptional tutors from an unbeatable $30 per hour*!
-              </p>
             </CardHeader>
 
             <CardContent className="space-y-8">
