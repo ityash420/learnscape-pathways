@@ -101,6 +101,40 @@ const Pricing = () => {
         </div>
       </section>
 
+      {/* Special Offer Banner */}
+      <section className="py-8 bg-gradient-to-r from-orange-500 to-red-500">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center text-white relative">
+            <div className="absolute inset-0 bg-black opacity-10 rounded-lg"></div>
+            <div className="relative z-10 py-6">
+              <Badge className="bg-yellow-400 text-orange-900 font-bold text-sm mb-4 animate-pulse">
+                LIMITED TIME OFFER
+              </Badge>
+              <h2 className="text-2xl md:text-4xl font-bold mb-3">
+                🎉 Special Launch Discount! 🎉
+              </h2>
+              <p className="text-lg md:text-xl mb-4 text-orange-100">
+                Get <span className="font-bold text-yellow-300">25% OFF</span> your first month of tutoring
+              </p>
+              <div className="flex justify-center items-center space-x-4 text-sm">
+                <div className="flex items-center space-x-2">
+                  <Star className="h-5 w-5 text-yellow-300" />
+                  <span>No Setup Fees</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Star className="h-5 w-5 text-yellow-300" />
+                  <span>Free Trial Session</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Star className="h-5 w-5 text-yellow-300" />
+                  <span>Money-Back Guarantee</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Main Pricing Section */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -119,9 +153,6 @@ const Pricing = () => {
                 <Users className="h-8 w-8 mx-auto mb-2" />
                 1-to-1 Personalized Tutoring
               </CardTitle>
-              <div className="text-4xl font-bold text-green-600 mb-2">
-                From $30/hour*
-              </div>
             </CardHeader>
 
             <CardContent className="space-y-8">
