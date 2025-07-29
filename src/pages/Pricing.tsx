@@ -20,6 +20,7 @@ const Pricing = () => {
   const whatsappNumber = "+917906601283";
   const [selectedLessons, setSelectedLessons] = useState<number>(1);
   const [selectedDuration, setSelectedDuration] = useState<number>(6);
+  const [selectedSubject, setSelectedSubject] = useState<string>("Math");
 
   const lessonOptions = [
     { value: 1, label: "1 lesson per week" },
@@ -32,8 +33,16 @@ const Pricing = () => {
     { value: 12, label: "12 months" }
   ];
 
+  const subjectOptions = [
+    "Math",
+    "Physics", 
+    "Chemistry",
+    "Biology",
+    "Coding"
+  ];
+
   const handleGetPricing = () => {
-    const message = `Hi! I'm interested in 1-to-1 tutoring with ${selectedLessons} lesson${selectedLessons > 1 ? 's' : ''} per week for ${selectedDuration} months. Can you provide me with pricing details?`;
+    const message = `Hi! I'm interested in 1-to-1 tutoring for ${selectedSubject} with ${selectedLessons} lesson${selectedLessons > 1 ? 's' : ''} per week for ${selectedDuration} months. Can you provide me with pricing details?`;
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
@@ -109,6 +118,27 @@ const Pricing = () => {
             </CardHeader>
 
             <CardContent className="space-y-8">
+              {/* Subject selection */}
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                  Choose your subject:
+                </h3>
+                <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                  {subjectOptions.map((subject) => (
+                    <Button
+                      key={subject}
+                      variant={selectedSubject === subject ? "default" : "outline"}
+                      className="h-auto py-4 px-4"
+                      onClick={() => setSelectedSubject(subject)}
+                    >
+                      <div className="text-center">
+                        <div className="text-sm font-medium">{subject}</div>
+                      </div>
+                    </Button>
+                  ))}
+                </div>
+              </div>
+
               {/* Lessons per week selection */}
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">
