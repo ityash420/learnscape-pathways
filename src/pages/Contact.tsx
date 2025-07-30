@@ -6,19 +6,26 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Badge } from "@/components/ui/badge";
 import { 
   Phone, 
   Mail, 
   MapPin, 
   MessageCircle, 
   Clock,
-  Globe,
   Send,
-  Calendar
+  CheckCircle,
+  Star,
+  Target,
+  BookOpen,
+  Users,
+  Lock,
+  Zap,
+  Heart
 } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import studentSuccessImage from "@/assets/student-success-celebration.jpg";
+import collaborativeLearningImage from "@/assets/collaborative-learning.jpg";
 
 const Contact = () => {
   const whatsappNumber = "+917906601283";
@@ -32,110 +39,78 @@ const Contact = () => {
     message: ""
   });
 
-  const contactInfo = [
-    {
-      icon: Phone,
-      title: "Phone",
-      details: ["+91 790 660 1283"],
-      description: "Mon-Fri 8AM-8PM, Sat-Sun 9AM-5PM"
-    },
-    {
-      icon: Mail,
-      title: "Email",
-      details: ["pupilenroll@gmail.com"],
-      description: "We respond within 24 hours"
-    },
-    {
-      icon: MapPin,
-      title: "Office",
-      details: ["Online Tutoring Platform", "Available Worldwide"],
-      description: "Virtual consultations available"
-    },
-    {
-      icon: MessageCircle,
-      title: "WhatsApp",
-      details: [whatsappNumber.replace("+", "")],
-      description: "Quick responses during business hours"
-    }
-  ];
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    try {
-      // Create mailto link with form data
-      const emailBody = `
+    const message = `Hi! I'd like to schedule a personalized academic strategy session. 
+
 Name: ${formData.name}
 Email: ${formData.email}
 Phone: ${formData.phone}
-Program of Interest: ${formData.program}
+Program Interest: ${formData.program}
 Subject: ${formData.subject}
 
-Message:
-${formData.message}
-      `;
-      
-      const mailtoLink = `mailto:pupilenroll@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
-      
-      // Open default email client
-      window.location.href = mailtoLink;
-      
-      toast({
-        title: "Email Client Opened!",
-        description: "Please send the email from your email client to complete your inquiry.",
-      });
-      
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        program: "",
-        message: ""
-      });
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to open email client. Please try again or contact us directly.",
-        variant: "destructive"
-      });
-    }
+Message: ${formData.message}
+
+Please contact me to discuss my academic goals and how you can help me achieve excellence.`;
+    
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
+    
+    toast({
+      title: "Redirecting to WhatsApp",
+      description: "Complete your strategy session request on WhatsApp for a 4-hour response!",
+    });
+    
+    // Reset form
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      program: "",
+      message: ""
+    });
   };
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const faqs = [
+  const strategySteps = [
     {
-      question: "How do I schedule a free consultation?",
-      answer: "You can schedule a free consultation by filling out the contact form, calling us, or messaging us on WhatsApp. We'll arrange a convenient time to discuss your academic goals."
+      number: "1",
+      title: "Academic Assessment",
+      description: "Analyze your current level and target goals"
     },
     {
-      question: "What programs do you offer?",
-      answer: "We offer comprehensive preparation for SAT, IB, IGCSE, Common Core, and grade-level support for middle and high school students (grades 6-12)."
+      number: "2", 
+      title: "Personalized Learning Plan",
+      description: "Custom roadmap to reach your targets"
     },
     {
-      question: "Do you offer online classes?",
-      answer: "Yes! We offer both online and in-person classes. Our online platform is interactive and just as effective as in-person sessions."
-    },
-    {
-      question: "What are your class timings?",
-      answer: "We offer flexible scheduling including weekday evenings, weekends, and holiday intensives to accommodate different time zones and schedules."
+      number: "3",
+      title: "Expert Guidance", 
+      description: "Direct access to our master educators"
     }
+  ];
+
+  const stats = [
+    { number: "180+", label: "Average SAT Improvement" },
+    { number: "95%", label: "Success Rate" },
+    { number: "5+", label: "Years Experience" },
+    { number: "Top Unis", label: "Harvard, MIT, Stanford" }
   ];
 
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Contact Us | Pupilenroll - Get in Touch with Expert Tutors</title>
-        <meta name="description" content="Contact Pupilenroll for expert online tutoring services. Get personalized academic support for SAT, IB, IGCSE, and more. Free consultation available." />
-        <meta name="keywords" content="contact tutoring, online tutor consultation, academic support contact, tutoring inquiry" />
+        <title>Contact Us | Pupilenroll - Get Your Personalized Academic Strategy Session</title>
+        <meta name="description" content="Schedule your free personalized academic strategy session. Join 1,000+ students who've achieved 180+ point SAT improvements through expert mentorship." />
+        <meta name="keywords" content="academic strategy session, SAT improvement, personalized tutoring, expert educators, free consultation" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://pupilenroll.com/contact" />
-        <meta property="og:title" content="Contact Us | Pupilenroll - Get in Touch with Expert Tutors" />
-        <meta property="og:description" content="Ready to start your academic success journey? Contact our expert tutors for personalized support." />
+        <meta property="og:title" content="Contact Us | Pupilenroll - Get Your Personalized Academic Strategy Session" />
+        <meta property="og:description" content="Schedule your free personalized academic strategy session with expert educators." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://pupilenroll.com/contact" />
       </Helmet>
@@ -143,271 +118,281 @@ ${formData.message}
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <img src={studentSuccessImage} alt="Students celebrating success together" className="w-full h-full object-cover" />
+      <section className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <img src={collaborativeLearningImage} alt="Professional handshake" className="w-full h-full object-cover" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Get In Touch
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Contact Us
           </h1>
-          <p className="text-xl text-blue-100 mb-8">
-            Ready to start your academic success journey? We're here to help!
+          <p className="text-xl md:text-2xl text-purple-100 mb-8 max-w-3xl mx-auto">
+            Reach out anytime — whether you want to book a demo, ask a question, or just say hello. We're here to help.
           </p>
         </div>
       </section>
 
-      {/* Contact Information */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Contact Information
-            </h2>
-            <p className="text-lg text-gray-600">
-              Multiple ways to reach us - choose what works best for you
-            </p>
-          </div>
+      {/* Strategy Session Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Card className="shadow-2xl border-0">
+            <CardContent className="p-12">
+              <div className="text-center mb-12">
+                <div className="flex items-center justify-center mb-6">
+                  <BookOpen className="h-8 w-8 text-orange-500 mr-3" />
+                  <h2 className="text-4xl font-bold text-gray-900">
+                    Get Your Personalized Academic Strategy Session
+                  </h2>
+                </div>
+                <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+                  Join 1,000+ students who've achieved 180+ point SAT improvements through our proven Socratic method and expert mentorship.
+                </p>
+              </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactInfo.map((info, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <info.icon className="h-8 w-8 text-blue-600" />
-                  </div>
-                  <CardTitle className="text-xl">{info.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-2">
-                    {info.details.map((detail, idx) => (
-                      <div key={idx} className="font-semibold text-gray-900">
-                        {info.title === "WhatsApp" ? (
-                          <Button
-                            variant="link"
-                            className="p-0 h-auto text-blue-600"
-                            onClick={() => window.open(`https://wa.me/${whatsappNumber}`, '_blank')}
-                          >
-                            {detail}
-                          </Button>
-                        ) : info.title === "Email" ? (
-                          <a href={`mailto:${detail}`} className="text-blue-600 hover:underline">
-                            {detail}
-                          </a>
-                        ) : info.title === "Phone" ? (
-                          <a href={`tel:${detail}`} className="text-blue-600 hover:underline">
-                            {detail}
-                          </a>
-                        ) : (
-                          detail
-                        )}
+              {/* Strategy Steps */}
+              <div className="mb-12">
+                <div className="flex items-center justify-center mb-8">
+                  <Star className="h-6 w-6 text-yellow-500 mr-2" />
+                  <h3 className="text-2xl font-bold text-gray-900">What Your Free Strategy Session Includes</h3>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {strategySteps.map((step, index) => (
+                    <div key={index} className="text-center">
+                      <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                        {step.number}
                       </div>
-                    ))}
-                    <p className="text-sm text-gray-600 mt-2">{info.description}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h4>
+                      <p className="text-gray-600">{step.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Stats */}
+              <div className="mb-12">
+                <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
+                  Join Students Who've Achieved Excellence
+                </h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                  {stats.map((stat, index) => (
+                    <div key={index} className="text-center">
+                      <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
+                      <div className="text-sm text-gray-600">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Take Action */}
+              <div className="text-center mb-8">
+                <div className="flex items-center justify-center mb-6">
+                  <Target className="h-6 w-6 text-purple-500 mr-2" />
+                  <h3 className="text-2xl font-bold text-gray-900">Take the First Step Toward Excellence</h3>
+                </div>
+                <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+                  Complete the form below to schedule your free strategy session. Our education experts will contact you within 4 hours with your personalized academic roadmap.
+                </p>
+                
+                <div className="flex flex-wrap justify-center gap-6 mb-8">
+                  <Badge className="bg-green-100 text-green-800 px-4 py-2 text-sm font-medium">
+                    <Lock className="h-4 w-4 mr-2" />
+                    100% Confidential
+                  </Badge>
+                  <Badge className="bg-blue-100 text-blue-800 px-4 py-2 text-sm font-medium">
+                    <Zap className="h-4 w-4 mr-2" />
+                    4-Hour Response
+                  </Badge>
+                  <Badge className="bg-purple-100 text-purple-800 px-4 py-2 text-sm font-medium">
+                    <Heart className="h-4 w-4 mr-2" />
+                    No Pressure Consultation
+                  </Badge>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
-      {/* Contact Form */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Form */}
-            <Card className="shadow-lg">
-              <CardHeader>
-                <CardTitle className="text-2xl">Send Us a Message</CardTitle>
-                <CardDescription>
-                  Fill out the form below and we'll get back to you within 24 hours
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Full Name *
-                      </label>
-                      <Input
-                        required
-                        value={formData.name}
-                        onChange={(e) => handleInputChange("name", e.target.value)}
-                        placeholder="Enter your full name"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Email Address *
-                      </label>
-                      <Input
-                        type="email"
-                        required
-                        value={formData.email}
-                        onChange={(e) => handleInputChange("email", e.target.value)}
-                        placeholder="Enter your email"
-                      />
-                    </div>
-                  </div>
+      {/* Contact Form Section */}
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Connect with Our Education Experts
+            </h2>
+            <p className="text-lg text-gray-600">
+              Choose your preferred way to connect — whether through our detailed consultation form or direct contact methods. Our team responds quickly with personalized guidance.
+            </p>
+          </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Phone Number
-                      </label>
-                      <Input
-                        type="tel"
-                        value={formData.phone}
-                        onChange={(e) => handleInputChange("phone", e.target.value)}
-                        placeholder="Enter your phone number"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Program of Interest
-                      </label>
-                      <Select value={formData.program} onValueChange={(value) => handleInputChange("program", value)}>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select a program" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="sat">SAT Preparation</SelectItem>
-                          <SelectItem value="ib">IB Program Support</SelectItem>
-                          <SelectItem value="igcse">IGCSE Excellence</SelectItem>
-                          <SelectItem value="common-core">Common Core Mastery</SelectItem>
-                          <SelectItem value="high-school">High School (Grades 9-12)</SelectItem>
-                          <SelectItem value="middle-school">Middle School (Grades 6-8)</SelectItem>
-                          <SelectItem value="other">Other/General Inquiry</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                  </div>
-
+          <Card className="shadow-xl">
+            <CardHeader className="text-center bg-gradient-to-r from-blue-50 to-purple-50">
+              <div className="flex items-center justify-center mb-4">
+                <Send className="h-6 w-6 text-blue-600 mr-2" />
+                <CardTitle className="text-2xl">Schedule Your Strategy Session</CardTitle>
+              </div>
+              <CardDescription className="text-base">
+                Complete this form for a comprehensive consultation. We'll analyze your goals and create a personalized academic roadmap within 4 hours.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="p-8">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Subject *
+                      Full Name *
                     </label>
                     <Input
                       required
-                      value={formData.subject}
-                      onChange={(e) => handleInputChange("subject", e.target.value)}
-                      placeholder="What can we help you with?"
+                      value={formData.name}
+                      onChange={(e) => handleInputChange("name", e.target.value)}
+                      placeholder="Enter your full name"
+                      className="h-12"
                     />
                   </div>
-
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Message *
+                      Email Address *
                     </label>
-                    <Textarea
+                    <Input
+                      type="email"
                       required
-                      value={formData.message}
-                      onChange={(e) => handleInputChange("message", e.target.value)}
-                      placeholder="Tell us more about your academic goals and how we can help..."
-                      rows={5}
+                      value={formData.email}
+                      onChange={(e) => handleInputChange("email", e.target.value)}
+                      placeholder="Enter your email"
+                      className="h-12"
                     />
                   </div>
+                </div>
 
-                  <Button type="submit" className="w-full" size="lg">
-                    <Send className="mr-2 h-5 w-5" />
-                    Send Message
-                  </Button>
-                </form>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Phone Number *
+                    </label>
+                    <Input
+                      type="tel"
+                      required
+                      value={formData.phone}
+                      onChange={(e) => handleInputChange("phone", e.target.value)}
+                      placeholder="Enter your phone number"
+                      className="h-12"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Program of Interest *
+                    </label>
+                    <Select value={formData.program} onValueChange={(value) => handleInputChange("program", value)} required>
+                      <SelectTrigger className="h-12">
+                        <SelectValue placeholder="Select a program" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="sat">SAT Preparation</SelectItem>
+                        <SelectItem value="ib">IB Program Support</SelectItem>
+                        <SelectItem value="igcse">IGCSE Excellence</SelectItem>
+                        <SelectItem value="common-core">Common Core Mastery</SelectItem>
+                        <SelectItem value="high-school">High School (Grades 9-12)</SelectItem>
+                        <SelectItem value="middle-school">Middle School (Grades 6-8)</SelectItem>
+                        <SelectItem value="other">Other/General Inquiry</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Current Academic Goals *
+                  </label>
+                  <Input
+                    required
+                    value={formData.subject}
+                    onChange={(e) => handleInputChange("subject", e.target.value)}
+                    placeholder="What are your specific academic targets?"
+                    className="h-12"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Tell us about your academic challenges and goals *
+                  </label>
+                  <Textarea
+                    required
+                    value={formData.message}
+                    onChange={(e) => handleInputChange("message", e.target.value)}
+                    placeholder="Share your current academic level, target scores, timeline, and any specific challenges you're facing..."
+                    rows={5}
+                    className="resize-none"
+                  />
+                </div>
+
+                <Button type="submit" className="w-full h-14 text-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                  <MessageCircle className="mr-2 h-6 w-6" />
+                  Schedule My Free Strategy Session
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+
+          {/* Contact Info */}
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="text-center border-blue-200 hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Phone className="h-8 w-8 text-blue-600" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">Call Us</h3>
+                <p className="text-blue-600 font-medium">+91 790 660 1283</p>
+                <p className="text-sm text-gray-600 mt-1">Mon-Fri 8AM-8PM IST</p>
               </CardContent>
             </Card>
 
-            {/* Quick Actions & FAQ */}
-            <div className="space-y-8">
-              {/* Quick Actions */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-xl">Quick Actions</CardTitle>
-                  <CardDescription>
-                    Get started immediately with these options
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <Button 
-                    className="w-full justify-start" 
-                    size="lg"
-                    onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'd like to schedule a free consultation to discuss my academic goals.`, '_blank')}
-                  >
-                    <Calendar className="mr-2 h-5 w-5" />
-                    Schedule Free Consultation
-                  </Button>
-                  
-                  <Button 
-                    variant="outline" 
-                    className="w-full justify-start" 
-                    size="lg"
-                    onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I have some questions about your programs. Can you help?`, '_blank')}
-                  >
-                    <MessageCircle className="mr-2 h-5 w-5" />
-                    WhatsApp Chat
-                  </Button>
-                  
-                  <Button 
-                    variant="outline" 
-                    className="w-full justify-start" 
-                    size="lg"
-                    onClick={() => window.location.href = `tel:${whatsappNumber}`}
-                  >
-                    <Phone className="mr-2 h-5 w-5" />
-                    Call Now
-                  </Button>
-                </CardContent>
-              </Card>
+            <Card className="text-center border-green-200 hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <MessageCircle className="h-8 w-8 text-green-600" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">WhatsApp</h3>
+                <Button 
+                  variant="link" 
+                  className="text-green-600 font-medium p-0 h-auto"
+                  onClick={() => window.open(`https://wa.me/${whatsappNumber}`, '_blank')}
+                >
+                  Start Chat
+                </Button>
+                <p className="text-sm text-gray-600 mt-1">Quick responses</p>
+              </CardContent>
+            </Card>
 
-              {/* Office Hours */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-xl flex items-center">
-                    <Clock className="mr-2 h-5 w-5" />
-                    Office Hours
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span className="font-medium">Monday - Friday</span>
-                      <span>8:00 AM - 8:00 PM</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="font-medium">Saturday</span>
-                      <span>9:00 AM - 5:00 PM</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="font-medium">Sunday</span>
-                      <span>10:00 AM - 4:00 PM</span>
-                    </div>
-                    <div className="pt-2 mt-2 border-t text-xs text-gray-600">
-                      <div className="flex items-center">
-                        <Globe className="mr-1 h-3 w-3" />
-                        All times IST. Online sessions available globally.
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            <Card className="text-center border-purple-200 hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Mail className="h-8 w-8 text-purple-600" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
+                <a href="mailto:pupilenroll@gmail.com" className="text-purple-600 font-medium hover:underline">
+                  pupilenroll@gmail.com
+                </a>
+                <p className="text-sm text-gray-600 mt-1">24-hour response</p>
+              </CardContent>
+            </Card>
+          </div>
 
-              {/* FAQ */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-xl">Frequently Asked Questions</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    {faqs.map((faq, index) => (
-                      <div key={index} className="border-b pb-4 last:border-b-0">
-                        <h4 className="font-semibold text-gray-900 mb-2">{faq.question}</h4>
-                        <p className="text-sm text-gray-600">{faq.answer}</p>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+          {/* Location Info */}
+          <div className="mt-12 text-center bg-blue-50 p-8 rounded-lg">
+            <div className="flex items-center justify-center mb-4">
+              <MapPin className="h-6 w-6 text-blue-600 mr-2" />
+              <h3 className="text-xl font-semibold text-gray-900">Our Location</h3>
+            </div>
+            <p className="text-gray-600 mb-2">
+              While we primarily serve students online worldwide, our <strong>main office</strong> is located in Visakhapatnam, Andhra Pradesh.
+            </p>
+            <div className="bg-blue-100 p-4 rounded-lg inline-block">
+              <p className="text-sm text-blue-800">
+                <strong>Business Update:</strong> We've enhanced our programs! <strong>Pupilenroll</strong> continues to provide the same expert tutoring services with our enhanced curriculum and personalized approach.
+              </p>
             </div>
           </div>
         </div>
