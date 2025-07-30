@@ -123,7 +123,7 @@ const Pricing = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <Star className="h-5 w-5 text-yellow-300" />
-                  <span>Free Trial Session</span>
+                  <span>30 min Free Trial Session</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Star className="h-5 w-5 text-yellow-300" />
