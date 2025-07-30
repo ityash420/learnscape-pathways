@@ -114,7 +114,7 @@ const Pricing = () => {
                 🎉 Special Launch Discount! 🎉
               </h2>
               <p className="text-lg md:text-xl mb-4 text-orange-100">
-                Get <span className="font-bold text-yellow-300">25% OFF</span> your first month of tutoring
+                Get <span className="font-bold text-yellow-300">30% OFF</span> your first month of tutoring
               </p>
               <div className="flex justify-center items-center space-x-4 text-sm">
                 <div className="flex items-center space-x-2">
