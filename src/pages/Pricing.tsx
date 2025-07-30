@@ -280,7 +280,7 @@ const Pricing = () => {
                 onClick={handleGetPricing}
               >
                 <MessageCircle className="h-5 w-5 mr-2" />
-                Get Prices for Exceptional Tutors
+                Get Special Price
               </Button>
 
               <p className="text-xs text-gray-500 text-center">
