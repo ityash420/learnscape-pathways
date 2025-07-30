@@ -127,7 +127,7 @@ const Pricing = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <Star className="h-5 w-5 text-yellow-300" />
-                  <span>Money-Back Guarantee</span>
+                  <span>Full Support</span>
                 </div>
               </div>
             </div>
