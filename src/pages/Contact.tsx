@@ -76,29 +76,29 @@ Please contact me to discuss my academic goals and how you can help me achieve e
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const strategySteps = [
+  const learningSteps = [
     {
       number: "1",
-      title: "Academic Assessment",
-      description: "Analyze your current level and target goals"
+      title: "Skill Gap Analysis",
+      description: "Identify strengths and areas for improvement through comprehensive assessment"
     },
     {
       number: "2", 
-      title: "Personalized Learning Plan",
-      description: "Custom roadmap to reach your targets"
+      title: "Custom Study Plan",
+      description: "Tailored learning pathway designed specifically for your goals and timeline"
     },
     {
       number: "3",
-      title: "Expert Guidance", 
-      description: "Direct access to our master educators"
+      title: "1-on-1 Mentorship", 
+      description: "Weekly sessions with experienced tutors who track your progress"
     }
   ];
 
-  const stats = [
-    { number: "180+", label: "Average SAT Improvement" },
-    { number: "95%", label: "Success Rate" },
-    { number: "5+", label: "Years Experience" },
-    { number: "Top Unis", label: "Harvard, MIT, Stanford" }
+  const achievements = [
+    { number: "500+", label: "Students Mentored" },
+    { number: "92%", label: "Grade Improvement" },
+    { number: "3x", label: "Faster Learning" },
+    { number: "24/7", label: "Support Available" }
   ];
 
   return (
@@ -124,10 +124,10 @@ Please contact me to discuss my academic goals and how you can help me achieve e
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Contact Us
+            Let's Unlock Your Academic Excellence
           </h1>
           <p className="text-xl md:text-2xl text-purple-100 mb-8 max-w-3xl mx-auto">
-            Reach out anytime — whether you want to book a demo, ask a question, or just say hello. We're here to help.
+            Ready to transform your grades? Connect with our expert tutors and start your journey to academic success today.
           </p>
         </div>
       </section>
@@ -141,11 +141,11 @@ Please contact me to discuss my academic goals and how you can help me achieve e
                 <div className="flex items-center justify-center mb-6">
                   <BookOpen className="h-8 w-8 text-orange-500 mr-3" />
                   <h2 className="text-4xl font-bold text-gray-900">
-                    Get Your Personalized Academic Strategy Session
+                    Start Your Academic Transformation Journey
                   </h2>
                 </div>
                 <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-                  Join 1,000+ students who've achieved 180+ point SAT improvements through our proven Socratic method and expert mentorship.
+                  Experience proven learning methods that boost confidence and deliver real results. Our expert tutors create customized roadmaps that turn academic challenges into victories.
                 </p>
               </div>
 
@@ -157,7 +157,7 @@ Please contact me to discuss my academic goals and how you can help me achieve e
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {strategySteps.map((step, index) => (
+                  {learningSteps.map((step, index) => (
                     <div key={index} className="text-center">
                       <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-4">
                         {step.number}
@@ -172,10 +172,10 @@ Please contact me to discuss my academic goals and how you can help me achieve e
               {/* Stats */}
               <div className="mb-12">
                 <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
-                  Join Students Who've Achieved Excellence
+                  Real Results from Real Students
                 </h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                  {stats.map((stat, index) => (
+                  {achievements.map((stat, index) => (
                     <div key={index} className="text-center">
                       <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
                       <div className="text-sm text-gray-600">{stat.label}</div>
