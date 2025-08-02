@@ -171,55 +171,56 @@ const Index = () => {
       </section>
 
       {/* Free Demo Session Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Experience Our Teaching Excellence
-            </h2>
-            <p className="text-lg text-gray-600">
-              Book a free demo session and discover personalized learning that works
-            </p>
-          </div>
-
+      <section className="py-20 bg-gradient-to-br from-orange-50 to-red-50 relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute top-10 right-10 w-20 h-20 bg-orange-200 rounded-full opacity-30"></div>
+        <div className="absolute bottom-20 left-10 w-16 h-16 bg-yellow-200 rounded-full opacity-40"></div>
+        <div className="absolute top-1/2 left-1/4 w-8 h-8 bg-red-200 rounded-full opacity-25"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Demo Session Content */}
-            <div className="space-y-6">
-              <div className="space-y-4">
-                <Badge className="bg-green-100 text-green-800 border-green-200">
-                  100% Free • No Commitment
-                </Badge>
-                <h3 className="text-2xl font-bold text-gray-900">
-                  Try Before You Enroll
-                </h3>
-                <p className="text-gray-600 text-lg">
-                  Get a taste of our personalized teaching approach with a completely free 60-minute demo session. 
-                  Meet your potential tutor, experience our interactive platform, and see the difference quality education makes.
+            {/* Left Content */}
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+                  Book your{" "}
+                  <span className="relative">
+                    <span className="text-orange-500">Free Demo</span>
+                    <div className="absolute bottom-0 left-0 w-full h-3 bg-yellow-300 opacity-40 -z-10 rounded"></div>
+                  </span>{" "}
+                  session
+                </h2>
+                <p className="text-xl text-gray-600 leading-relaxed">
+                  Get a free academic counselling session with our expert tutors
                 </p>
               </div>
 
-              <div className="space-y-4">
-                <h4 className="font-semibold text-gray-900 text-lg">What's Included in Your Free Demo:</h4>
-                <div className="space-y-3">
+              <div className="space-y-6">
+                <h3 className="text-lg font-semibold text-gray-900">What you'll get in your demo:</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700">One-on-one session with expert tutor</span>
+                    <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center">
+                      <CheckCircle className="h-4 w-4 text-orange-600" />
+                    </div>
+                    <span className="text-gray-700">1-on-1 expert session</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700">Personalized learning assessment</span>
+                    <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center">
+                      <CheckCircle className="h-4 w-4 text-orange-600" />
+                    </div>
+                    <span className="text-gray-700">Learning assessment</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700">Custom study plan recommendation</span>
+                    <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center">
+                      <CheckCircle className="h-4 w-4 text-orange-600" />
+                    </div>
+                    <span className="text-gray-700">Custom study plan</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700">Interactive whiteboard experience</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700">Q&A with academic counselor</span>
+                    <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center">
+                      <CheckCircle className="h-4 w-4 text-orange-600" />
+                    </div>
+                    <span className="text-gray-700">Interactive experience</span>
                   </div>
                 </div>
               </div>
@@ -227,77 +228,69 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  className="bg-green-600 hover:bg-green-700 text-white"
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
                   onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'd like to book a FREE demo session. Please let me know the available time slots.`, '_blank')}
                 >
-                  <Clock className="mr-2 h-5 w-5" />
-                  Book Free Demo Now
+                  Book a free demo
                 </Button>
-                <Button size="lg" variant="outline">
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="border-2 border-orange-200 text-orange-600 hover:bg-orange-50 px-8 py-4 rounded-xl text-lg font-semibold"
+                  onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I have some questions about your tutoring services.`, '_blank')}
+                >
                   <MessageCircle className="mr-2 h-5 w-5" />
                   Ask Questions
                 </Button>
               </div>
 
-              <div className="grid grid-cols-3 gap-4 pt-4">
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-6 pt-6">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">500+</div>
-                  <div className="text-sm text-gray-600">Demo Sessions</div>
+                  <div className="text-3xl font-bold text-orange-600">500+</div>
+                  <div className="text-sm text-gray-600 font-medium">Demo Sessions</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">98%</div>
-                  <div className="text-sm text-gray-600">Enrollment Rate</div>
+                  <div className="text-3xl font-bold text-green-600">98%</div>
+                  <div className="text-sm text-gray-600 font-medium">Success Rate</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-600">4.9★</div>
-                  <div className="text-sm text-gray-600">Demo Rating</div>
+                  <div className="text-3xl font-bold text-blue-600">4.9★</div>
+                  <div className="text-sm text-gray-600 font-medium">Rating</div>
                 </div>
               </div>
             </div>
 
-            {/* Demo Session Images */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4">
-                <div className="relative rounded-lg overflow-hidden shadow-lg">
+            {/* Right Image */}
+            <div className="relative">
+              <div className="relative">
+                {/* Main image with uploaded photo */}
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                    alt="Student using laptop for online learning"
-                    className="w-full h-48 object-cover"
+                    src="/lovable-uploads/ffa6e0e0-deb1-4787-a131-1138d52a6370.png" 
+                    alt="Student and teacher in demo session"
+                    className="w-full h-auto object-cover"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
-                    <p className="text-white text-sm font-medium">Interactive Online Sessions</p>
+                </div>
+                
+                {/* Floating badges */}
+                <div className="absolute -top-4 -left-4 bg-white rounded-full p-4 shadow-lg">
+                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                    <Clock className="h-6 w-6 text-orange-600" />
                   </div>
                 </div>
-                <div className="relative rounded-lg overflow-hidden shadow-lg">
-                  <img 
-                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                    alt="Student learning with tutor"
-                    className="w-full h-40 object-cover"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
-                    <p className="text-white text-sm font-medium">One-on-One Attention</p>
+                
+                <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-4 shadow-lg">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    <span className="text-sm font-medium text-gray-700">Live Session</span>
                   </div>
                 </div>
-              </div>
-              <div className="space-y-4 mt-8">
-                <div className="relative rounded-lg overflow-hidden shadow-lg">
-                  <img 
-                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                    alt="Coding and technology learning"
-                    className="w-full h-40 object-cover"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
-                    <p className="text-white text-sm font-medium">Advanced Learning Tools</p>
-                  </div>
-                </div>
-                <div className="relative rounded-lg overflow-hidden shadow-lg">
-                  <img 
-                    src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                    alt="Student success and achievement"
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
-                    <p className="text-white text-sm font-medium">Proven Success Methods</p>
+
+                <div className="absolute top-1/2 -right-8 bg-white rounded-xl p-3 shadow-lg transform -translate-y-1/2">
+                  <div className="flex items-center space-x-2">
+                    <Star className="h-4 w-4 text-yellow-500 fill-current" />
+                    <span className="text-sm font-bold text-gray-800">4.9</span>
                   </div>
                 </div>
               </div>
