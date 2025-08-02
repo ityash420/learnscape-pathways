@@ -170,6 +170,142 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Free Demo Session Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Experience Our Teaching Excellence
+            </h2>
+            <p className="text-lg text-gray-600">
+              Book a free demo session and discover personalized learning that works
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Demo Session Content */}
+            <div className="space-y-6">
+              <div className="space-y-4">
+                <Badge className="bg-green-100 text-green-800 border-green-200">
+                  100% Free • No Commitment
+                </Badge>
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Try Before You Enroll
+                </h3>
+                <p className="text-gray-600 text-lg">
+                  Get a taste of our personalized teaching approach with a completely free 60-minute demo session. 
+                  Meet your potential tutor, experience our interactive platform, and see the difference quality education makes.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="font-semibold text-gray-900 text-lg">What's Included in Your Free Demo:</h4>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <span className="text-gray-700">One-on-one session with expert tutor</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <span className="text-gray-700">Personalized learning assessment</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <span className="text-gray-700">Custom study plan recommendation</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <span className="text-gray-700">Interactive whiteboard experience</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <span className="text-gray-700">Q&A with academic counselor</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  size="lg" 
+                  className="bg-green-600 hover:bg-green-700 text-white"
+                  onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'd like to book a FREE demo session. Please let me know the available time slots.`, '_blank')}
+                >
+                  <Clock className="mr-2 h-5 w-5" />
+                  Book Free Demo Now
+                </Button>
+                <Button size="lg" variant="outline">
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  Ask Questions
+                </Button>
+              </div>
+
+              <div className="grid grid-cols-3 gap-4 pt-4">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-600">500+</div>
+                  <div className="text-sm text-gray-600">Demo Sessions</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-600">98%</div>
+                  <div className="text-sm text-gray-600">Enrollment Rate</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-600">4.9★</div>
+                  <div className="text-sm text-gray-600">Demo Rating</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Demo Session Images */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-4">
+                <div className="relative rounded-lg overflow-hidden shadow-lg">
+                  <img 
+                    src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                    alt="Student using laptop for online learning"
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                    <p className="text-white text-sm font-medium">Interactive Online Sessions</p>
+                  </div>
+                </div>
+                <div className="relative rounded-lg overflow-hidden shadow-lg">
+                  <img 
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                    alt="Student learning with tutor"
+                    className="w-full h-40 object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                    <p className="text-white text-sm font-medium">One-on-One Attention</p>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-4 mt-8">
+                <div className="relative rounded-lg overflow-hidden shadow-lg">
+                  <img 
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                    alt="Coding and technology learning"
+                    className="w-full h-40 object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                    <p className="text-white text-sm font-medium">Advanced Learning Tools</p>
+                  </div>
+                </div>
+                <div className="relative rounded-lg overflow-hidden shadow-lg">
+                  <img 
+                    src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                    alt="Student success and achievement"
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                    <p className="text-white text-sm font-medium">Proven Success Methods</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Exam Preparation Sections */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
