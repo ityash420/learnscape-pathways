@@ -171,11 +171,11 @@ const Index = () => {
       </section>
 
       {/* Free Demo Session Section */}
-      <section className="py-20 bg-gradient-to-br from-orange-50 to-red-50 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50 relative overflow-hidden">
         {/* Background decorative elements */}
-        <div className="absolute top-10 right-10 w-20 h-20 bg-orange-200 rounded-full opacity-30"></div>
-        <div className="absolute bottom-20 left-10 w-16 h-16 bg-yellow-200 rounded-full opacity-40"></div>
-        <div className="absolute top-1/2 left-1/4 w-8 h-8 bg-red-200 rounded-full opacity-25"></div>
+        <div className="absolute top-10 right-10 w-20 h-20 bg-blue-200 rounded-full opacity-30"></div>
+        <div className="absolute bottom-20 left-10 w-16 h-16 bg-indigo-200 rounded-full opacity-40"></div>
+        <div className="absolute top-1/2 left-1/4 w-8 h-8 bg-blue-300 rounded-full opacity-25"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -185,8 +185,8 @@ const Index = () => {
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
                   Book your{" "}
                   <span className="relative">
-                    <span className="text-orange-500">Free Demo</span>
-                    <div className="absolute bottom-0 left-0 w-full h-3 bg-yellow-300 opacity-40 -z-10 rounded"></div>
+                    <span className="text-blue-600">Free Demo</span>
+                    <div className="absolute bottom-0 left-0 w-full h-3 bg-blue-300 opacity-40 -z-10 rounded"></div>
                   </span>{" "}
                   session
                 </h2>
@@ -199,26 +199,26 @@ const Index = () => {
                 <h3 className="text-lg font-semibold text-gray-900">What you'll get in your demo:</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center">
-                      <CheckCircle className="h-4 w-4 text-orange-600" />
+                    <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+                      <CheckCircle className="h-4 w-4 text-blue-600" />
                     </div>
                     <span className="text-gray-700">1-on-1 expert session</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center">
-                      <CheckCircle className="h-4 w-4 text-orange-600" />
+                    <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+                      <CheckCircle className="h-4 w-4 text-blue-600" />
                     </div>
                     <span className="text-gray-700">Learning assessment</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center">
-                      <CheckCircle className="h-4 w-4 text-orange-600" />
+                    <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+                      <CheckCircle className="h-4 w-4 text-blue-600" />
                     </div>
                     <span className="text-gray-700">Custom study plan</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center">
-                      <CheckCircle className="h-4 w-4 text-orange-600" />
+                    <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+                      <CheckCircle className="h-4 w-4 text-blue-600" />
                     </div>
                     <span className="text-gray-700">Interactive experience</span>
                   </div>
@@ -228,7 +228,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
                   onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'd like to book a FREE demo session. Please let me know the available time slots.`, '_blank')}
                 >
                   Book a free demo
@@ -236,7 +236,7 @@ const Index = () => {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="border-2 border-orange-200 text-orange-600 hover:bg-orange-50 px-8 py-4 rounded-xl text-lg font-semibold"
+                  className="border-2 border-blue-200 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl text-lg font-semibold"
                   onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I have some questions about your tutoring services.`, '_blank')}
                 >
                   <MessageCircle className="mr-2 h-5 w-5" />
@@ -247,7 +247,7 @@ const Index = () => {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-6 pt-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-orange-600">500+</div>
+                  <div className="text-3xl font-bold text-blue-600">500+</div>
                   <div className="text-sm text-gray-600 font-medium">Demo Sessions</div>
                 </div>
                 <div className="text-center">
@@ -255,28 +255,33 @@ const Index = () => {
                   <div className="text-sm text-gray-600 font-medium">Success Rate</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600">4.9★</div>
+                  <div className="text-3xl font-bold text-indigo-600">4.9★</div>
                   <div className="text-sm text-gray-600 font-medium">Rating</div>
                 </div>
               </div>
             </div>
 
-            {/* Right Image */}
+            {/* Right Visual Content */}
             <div className="relative">
               <div className="relative">
-                {/* Main image with uploaded photo */}
+                {/* Main visual with existing assets */}
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                   <img 
-                    src="/lovable-uploads/ffa6e0e0-deb1-4787-a131-1138d52a6370.png" 
-                    alt="Student and teacher in demo session"
-                    className="w-full h-auto object-cover"
+                    src={onlineLearningChild}
+                    alt="Student in online learning session"
+                    className="w-full h-96 object-cover"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <h3 className="text-xl font-bold mb-2">Experience Interactive Learning</h3>
+                    <p className="text-blue-100">Join thousands of successful students</p>
+                  </div>
                 </div>
                 
                 {/* Floating badges */}
                 <div className="absolute -top-4 -left-4 bg-white rounded-full p-4 shadow-lg">
-                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-                    <Clock className="h-6 w-6 text-orange-600" />
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                    <Clock className="h-6 w-6 text-blue-600" />
                   </div>
                 </div>
                 
