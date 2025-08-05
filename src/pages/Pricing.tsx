@@ -139,9 +139,13 @@ const Pricing = () => {
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="mb-4">
-              <span className="text-lg text-gray-500 line-through">$30</span>
-              <span className="ml-2 text-xl font-semibold text-green-600">Special Price</span>
+            <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-4 rounded-lg shadow-lg mx-auto max-w-md mb-6">
+              <div className="flex items-center justify-center space-x-3">
+                <span className="text-xl font-bold line-through text-red-200">$30 per hour</span>
+                <span className="text-2xl font-bold text-yellow-300 animate-pulse">→</span>
+                <span className="text-2xl font-bold text-yellow-300">Special Price!</span>
+              </div>
+              <p className="text-sm text-orange-100 mt-2">Limited time offer - Save big!</p>
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Choose Your Perfect Learning Plan
