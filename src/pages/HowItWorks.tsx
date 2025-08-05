@@ -25,28 +25,32 @@ const HowItWorks = () => {
       title: "Find Your Perfect Tutor",
       description: "Browse through our verified tutors, filter by subject, grade level, and availability. Read reviews and check qualifications to find the perfect match.",
       icon: Search,
-      color: "from-primary to-primary/80"
+      color: "from-info to-primary",
+      iconColor: "text-info"
     },
     {
       step: "02", 
       title: "Book Your Session",
       description: "Schedule a session at your preferred time. Choose between one-time sessions or ongoing weekly tutoring based on your needs.",
       icon: Calendar,
-      color: "from-secondary to-secondary/80"
+      color: "from-success to-secondary",
+      iconColor: "text-success"
     },
     {
       step: "03",
       title: "Start Learning",
       description: "Connect with your tutor through our secure platform. Enjoy personalized lessons designed specifically for your learning goals.",
       icon: Video,
-      color: "from-accent to-accent/80"
+      color: "from-warning to-accent",
+      iconColor: "text-warning"
     },
     {
       step: "04",
       title: "Track Progress",
       description: "Monitor your improvement with regular assessments and feedback. Watch your confidence and grades grow week by week.",
       icon: BookOpen,
-      color: "from-primary to-accent"
+      color: "from-purple to-primary",
+      iconColor: "text-purple"
     }
   ];
 
@@ -54,22 +58,30 @@ const HowItWorks = () => {
     {
       icon: Clock,
       title: "Flexible Scheduling",
-      description: "Book sessions that fit your busy schedule - evenings, weekends, or after school."
+      description: "Book sessions that fit your busy schedule - evenings, weekends, or after school.",
+      iconColor: "text-warning",
+      bgColor: "bg-warning/10"
     },
     {
       icon: Users,
       title: "Verified Tutors",
-      description: "All our tutors are background-checked, qualified, and experienced professionals."
+      description: "All our tutors are background-checked, qualified, and experienced professionals.",
+      iconColor: "text-success",
+      bgColor: "bg-success/10"
     },
     {
       icon: Shield,
       title: "Safe & Secure",
-      description: "Protected online environment with parental controls and session monitoring."
+      description: "Protected online environment with parental controls and session monitoring.",
+      iconColor: "text-info",
+      bgColor: "bg-info/10"
     },
     {
       icon: MessageCircle,
       title: "24/7 Support",
-      description: "Our support team is always available to help with any questions or concerns."
+      description: "Our support team is always available to help with any questions or concerns.",
+      iconColor: "text-purple",
+      bgColor: "bg-purple/10"
     }
   ];
 
@@ -93,13 +105,13 @@ const HowItWorks = () => {
         <Navigation />
         
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <section className="py-16 bg-gradient-to-br from-info/10 via-success/5 to-warning/10">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <Badge variant="secondary" className="mb-4">
+            <Badge variant="secondary" className="mb-4 bg-info/10 text-info border-info/20">
               Simple Process
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              How It <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Works</span>
+              How It <span className="bg-gradient-to-r from-info via-success to-warning bg-clip-text text-transparent">Works</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               Getting started with personalized tutoring is easier than you think. Follow our simple 4-step process to connect with expert tutors and achieve your academic goals.
@@ -116,12 +128,12 @@ const HowItWorks = () => {
                   <div className={`absolute inset-0 bg-gradient-to-br ${step.color} opacity-5 group-hover:opacity-10 transition-opacity`} />
                   <CardContent className="p-6 relative">
                     <div className="flex items-center mb-4">
-                      <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${step.color} flex items-center justify-center text-white font-bold text-lg`}>
+                      <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${step.color} flex items-center justify-center text-white font-bold text-lg shadow-lg`}>
                         {step.step}
                       </div>
-                      <step.icon className="w-8 h-8 text-primary ml-auto" />
+                      <step.icon className={`w-8 h-8 ${step.iconColor} ml-auto`} />
                     </div>
-                    <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
+                    <h3 className="text-xl font-semibold mb-3 text-foreground">{step.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">{step.description}</p>
                   </CardContent>
                 </Card>
@@ -131,7 +143,7 @@ const HowItWorks = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-16 bg-gradient-to-r from-muted/50 via-background to-muted/30">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-foreground mb-4">
@@ -144,11 +156,11 @@ const HowItWorks = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {features.map((feature, index) => (
-                <Card key={index} className="text-center p-6 hover:shadow-md transition-shadow">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-primary" />
+                <Card key={index} className="text-center p-6 hover:shadow-md transition-all duration-300 hover:shadow-primary/5 border-l-4 border-l-transparent hover:border-l-primary">
+                  <div className={`w-16 h-16 ${feature.bgColor} rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm`}>
+                    <feature.icon className={`w-8 h-8 ${feature.iconColor}`} />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+                  <h3 className="text-lg font-semibold mb-2 text-foreground">{feature.title}</h3>
                   <p className="text-muted-foreground text-sm">{feature.description}</p>
                 </Card>
               ))}
@@ -161,7 +173,7 @@ const HowItWorks = () => {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <Badge variant="outline" className="mb-4">
+                <Badge variant="outline" className="mb-4 border-success/30 text-success">
                   Student Benefits
                 </Badge>
                 <h2 className="text-3xl font-bold text-foreground mb-6">
@@ -169,8 +181,8 @@ const HowItWorks = () => {
                 </h2>
                 <div className="space-y-4">
                   {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                    <div key={index} className="flex items-center space-x-3 group">
+                      <CheckCircle className="w-5 h-5 text-success flex-shrink-0 group-hover:scale-110 transition-transform" />
                       <span className="text-muted-foreground">{benefit}</span>
                     </div>
                   ))}
@@ -178,20 +190,20 @@ const HowItWorks = () => {
               </div>
               
               <div className="relative">
-                <Card className="p-6 bg-gradient-to-br from-primary/5 to-secondary/5">
-                  <div className="flex items-center mb-4">
-                    <Star className="w-6 h-6 text-yellow-500" />
-                    <Star className="w-6 h-6 text-yellow-500" />
-                    <Star className="w-6 h-6 text-yellow-500" />
-                    <Star className="w-6 h-6 text-yellow-500" />
-                    <Star className="w-6 h-6 text-yellow-500" />
+                <Card className="p-6 bg-gradient-to-br from-primary/5 via-info/5 to-success/5 border-primary/20">
+                  <div className="flex items-center mb-4 space-x-1">
+                    <Star className="w-6 h-6 text-warning fill-warning" />
+                    <Star className="w-6 h-6 text-warning fill-warning" />
+                    <Star className="w-6 h-6 text-warning fill-warning" />
+                    <Star className="w-6 h-6 text-warning fill-warning" />
+                    <Star className="w-6 h-6 text-warning fill-warning" />
                   </div>
                   <blockquote className="text-lg italic text-muted-foreground mb-4">
                     "My daughter's math grades improved from C to A+ in just 3 months. The personalized attention made all the difference!"
                   </blockquote>
                   <div className="flex items-center">
-                    <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mr-3">
-                      <span className="text-primary font-semibold">SJ</span>
+                    <div className="w-10 h-10 bg-gradient-to-r from-success to-info text-white rounded-full flex items-center justify-center mr-3">
+                      <span className="font-semibold">SJ</span>
                     </div>
                     <div>
                       <p className="font-semibold">Sarah Johnson</p>
@@ -205,7 +217,7 @@ const HowItWorks = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-primary to-secondary">
+        <section className="py-16 bg-gradient-to-r from-info via-primary to-success">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Start Your Learning Journey?
