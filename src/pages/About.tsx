@@ -1,4 +1,4 @@
-
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -83,13 +83,40 @@ const About = () => {
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>About Pupilenroll | Leading Online Tutoring Platform Since 2018</title>
+        <meta name="description" content="Learn about Pupilenroll's mission to provide world-class online education. Founded in 2018, we've helped 5,000+ students achieve 95% success rate with expert tutors." />
+        <meta name="keywords" content="about pupilenroll, online education history, expert tutors, educational excellence, academic success stories" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://pupilenroll.com/about" />
+        <meta property="og:title" content="About Pupilenroll | Leading Online Tutoring Platform Since 2018" />
+        <meta property="og:description" content="Founded in 2018, Pupilenroll has helped 5,000+ students achieve academic excellence with 95% success rate." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://pupilenroll.com/about" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "mainEntity": {
+              "@type": "EducationalOrganization",
+              "name": "Pupilenroll",
+              "foundingDate": "2018",
+              "description": "Leading online tutoring platform providing personalized education",
+              "numberOfEmployees": "50+",
+              "award": "Excellence in Online Education - International Education Council"
+            }
+          })}
+        </script>
+      </Helmet>
+      
     <div className="min-h-screen bg-white">
       <Navigation />
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <img src={studentSuccessImage} alt="Students celebrating academic success" className="w-full h-full object-cover" />
+          <img src={studentSuccessImage} alt="Students celebrating academic success" className="w-full h-full object-cover" loading="lazy" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
@@ -293,6 +320,7 @@ const About = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 

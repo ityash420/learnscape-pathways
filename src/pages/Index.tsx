@@ -1,4 +1,4 @@
-
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -134,6 +134,47 @@ const Index = () => {
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>Expert Online Tutoring | Pupilenroll - SAT, IB, IGCSE, Common Core Preparation</title>
+        <meta name="description" content="Get expert 1-on-1 online tutoring for SAT, IB, IGCSE, and Common Core. Achieve 200+ point SAT improvements with personalized learning plans. Free demo session available." />
+        <meta name="keywords" content="online tutoring, SAT preparation, IB tutoring, IGCSE support, Common Core tutoring, 1-on-1 tutoring, exam preparation, academic excellence" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://pupilenroll.com/" />
+        <meta property="og:title" content="Expert Online Tutoring | Pupilenroll - SAT, IB, IGCSE, Common Core" />
+        <meta property="og:description" content="Achieve academic excellence with expert 1-on-1 online tutoring. 98% success rate, 200+ SAT score improvements." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://pupilenroll.com/" />
+        <meta property="og:image" content="https://pupilenroll.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Expert Online Tutoring | Pupilenroll" />
+        <meta name="twitter:description" content="Achieve academic excellence with expert 1-on-1 online tutoring. 98% success rate." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            "name": "Pupilenroll",
+            "description": "Expert online tutoring platform specializing in SAT, IB, IGCSE, and Common Core preparation",
+            "url": "https://pupilenroll.com",
+            "telephone": "+917906601283",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Visakhapatnam",
+              "addressRegion": "Andhra Pradesh",
+              "addressCountry": "India"
+            },
+            "sameAs": [
+              "https://wa.me/917906601283"
+            ],
+            "offers": {
+              "@type": "Offer",
+              "name": "1-on-1 Online Tutoring",
+              "description": "Personalized online tutoring sessions"
+            }
+          })}
+        </script>
+      </Helmet>
+      
     <div className="min-h-screen bg-white">
       <Navigation />
       
@@ -270,6 +311,7 @@ const Index = () => {
                     src={onlineLearningChild}
                     alt="Student in online learning session"
                     className="w-full h-96 object-cover"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 text-white">
@@ -561,6 +603,7 @@ const Index = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 
