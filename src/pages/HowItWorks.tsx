@@ -78,7 +78,7 @@ const HowItWorks = () => {
     },
     {
       icon: MessageCircle,
-      title: "24/7 Support",
+      title: "Support",
       description: "Our support team is always available to help with any questions or concerns.",
       iconColor: "text-purple",
       bgColor: "bg-purple/10"
