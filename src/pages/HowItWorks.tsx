@@ -5,9 +5,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { 
-  Search, 
+  DollarSign, 
+  Phone, 
   Calendar, 
-  Video, 
   BookOpen, 
   Clock, 
   Users, 
@@ -22,32 +22,32 @@ const HowItWorks = () => {
   const steps = [
     {
       step: "01",
-      title: "Find Your Perfect Tutor",
-      description: "Browse through our verified tutors, filter by subject, grade level, and availability. Read reviews and check qualifications to find the perfect match.",
-      icon: Search,
+      title: "Submit Your Request",
+      description: "Visit our pricing page and submit your tutoring requirements. Select your preferred subjects, grade level, and schedule preferences to get started.",
+      icon: DollarSign,
       color: "from-info to-primary",
       iconColor: "text-info"
     },
     {
       step: "02", 
-      title: "Book Your Session",
-      description: "Schedule a session at your preferred time. Choose between one-time sessions or ongoing weekly tutoring based on your needs.",
-      icon: Calendar,
+      title: "We Connect With You",
+      description: "Our dedicated representative will reach out to you within 4 hours via WhatsApp, email, or phone call to discuss your specific needs and answer any questions.",
+      icon: Phone,
       color: "from-success to-secondary",
       iconColor: "text-success"
     },
     {
       step: "03",
-      title: "Start Learning",
-      description: "Connect with your tutor through our secure platform. Enjoy personalized lessons designed specifically for your learning goals.",
-      icon: Video,
+      title: "Free Demo Session",
+      description: "Schedule a complimentary 30-minute demo session with a qualified tutor. Experience our teaching methodology and ensure it's the perfect fit for your learning style.",
+      icon: Calendar,
       color: "from-warning to-accent",
       iconColor: "text-warning"
     },
     {
       step: "04",
-      title: "Track Progress",
-      description: "Monitor your improvement with regular assessments and feedback. Watch your confidence and grades grow week by week.",
+      title: "Begin Regular Sessions",
+      description: "Once you're satisfied with the demo session, book your regular tutoring sessions and start your journey towards academic excellence with our expert tutors.",
       icon: BookOpen,
       color: "from-purple to-primary",
       iconColor: "text-purple"
