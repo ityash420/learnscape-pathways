@@ -119,14 +119,15 @@ Please contact me to discuss my academic goals and how you can help me achieve e
       
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-20 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-30">
           <img src={collaborativeLearningImage} alt="Professional handshake" className="w-full h-full object-cover" />
         </div>
+        <div className="absolute inset-0 bg-black/40"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
             Let's Unlock Your Academic Excellence
           </h1>
-          <p className="text-xl md:text-2xl text-purple-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto drop-shadow-md">
             Ready to transform your grades? Connect with our expert tutors and start your journey to academic success today.
           </p>
         </div>
@@ -343,9 +344,9 @@ Please contact me to discuss my academic goals and how you can help me achieve e
                 <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Phone className="h-8 w-8 text-blue-600" />
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Call Us</h3>
-                <p className="text-blue-600 font-medium">+91 790 660 1283</p>
-                <p className="text-sm text-gray-600 mt-1">Mon-Fri 8AM-8PM IST</p>
+                <h3 className="font-semibold text-gray-900 mb-2 text-lg">Call Us</h3>
+                <p className="text-blue-600 font-medium text-base">+91 790 660 1283</p>
+                <p className="text-sm text-gray-600 mt-1 font-medium">Mon-Fri 8AM-8PM IST</p>
               </CardContent>
             </Card>
 
@@ -354,15 +355,15 @@ Please contact me to discuss my academic goals and how you can help me achieve e
                 <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <MessageCircle className="h-8 w-8 text-green-600" />
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">WhatsApp</h3>
+                <h3 className="font-semibold text-gray-900 mb-2 text-lg">WhatsApp</h3>
                 <Button 
                   variant="link" 
-                  className="text-green-600 font-medium p-0 h-auto"
+                  className="text-green-600 font-medium p-0 h-auto text-base"
                   onClick={() => window.open(`https://wa.me/${whatsappNumber}`, '_blank')}
                 >
                   Start Chat
                 </Button>
-                <p className="text-sm text-gray-600 mt-1">Quick responses</p>
+                <p className="text-sm text-gray-600 mt-1 font-medium">Quick responses</p>
               </CardContent>
             </Card>
 
@@ -371,30 +372,15 @@ Please contact me to discuss my academic goals and how you can help me achieve e
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Mail className="h-8 w-8 text-purple-600" />
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
-                <a href="mailto:support@mathbeam.com" className="text-purple-600 font-medium hover:underline">
+                <h3 className="font-semibold text-gray-900 mb-2 text-lg">Email</h3>
+                <a href="mailto:support@mathbeam.com" className="text-purple-600 font-medium hover:underline text-base">
                   support@mathbeam.com
                 </a>
-                <p className="text-sm text-gray-600 mt-1">24-hour response</p>
+                <p className="text-sm text-gray-600 mt-1 font-medium">24-hour response</p>
               </CardContent>
             </Card>
           </div>
 
-          {/* Location Info */}
-          <div className="mt-12 text-center bg-blue-50 p-8 rounded-lg">
-            <div className="flex items-center justify-center mb-4">
-              <MapPin className="h-6 w-6 text-blue-600 mr-2" />
-              <h3 className="text-xl font-semibold text-gray-900">Our Location</h3>
-            </div>
-            <p className="text-gray-600 mb-2">
-              While we primarily serve students online worldwide, our <strong>main office</strong> is located in Visakhapatnam, Andhra Pradesh.
-            </p>
-            <div className="bg-blue-100 p-4 rounded-lg inline-block">
-              <p className="text-sm text-blue-800">
-                <strong>Business Update:</strong> We've enhanced our programs! <strong>MathBeam.com</strong> continues to provide the same expert tutoring services with our enhanced curriculum and personalized approach.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
