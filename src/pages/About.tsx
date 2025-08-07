@@ -53,7 +53,7 @@ const About = () => {
     {
       year: "2018",
       title: "Foundation",
-      description: "Pupilenroll was founded with a mission to make quality education accessible to all students."
+      description: "MathBeam was founded with a mission to make quality education accessible to all students."
     },
     {
       year: "2019",
@@ -85,22 +85,22 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Pupilenroll | Leading Online Tutoring Platform Since 2018</title>
-        <meta name="description" content="Learn about Pupilenroll's mission to provide world-class online education. Founded in 2018, we've helped 5,000+ students achieve 95% success rate with expert tutors." />
-        <meta name="keywords" content="about pupilenroll, online education history, expert tutors, educational excellence, academic success stories" />
+        <title>About MathBeam | Leading Online Math & Science Tutoring Platform Since 2018</title>
+        <meta name="description" content="Learn about MathBeam.com's mission to provide world-class online math and science education. Founded in 2018, we've helped 5,000+ students achieve 95% success rate with expert tutors." />
+        <meta name="keywords" content="about mathbeam, online math education, online science tutoring, expert tutors, educational excellence, academic success stories" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://pupilenroll.com/about" />
-        <meta property="og:title" content="About Pupilenroll | Leading Online Tutoring Platform Since 2018" />
-        <meta property="og:description" content="Founded in 2018, Pupilenroll has helped 5,000+ students achieve academic excellence with 95% success rate." />
+        <link rel="canonical" href="https://mathbeam.com/about" />
+        <meta property="og:title" content="About MathBeam | Leading Online Math & Science Tutoring Platform Since 2018" />
+        <meta property="og:description" content="Founded in 2018, MathBeam.com has helped 5,000+ students achieve academic excellence with 95% success rate." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://pupilenroll.com/about" />
+        <meta property="og:url" content="https://mathbeam.com/about" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "AboutPage",
             "mainEntity": {
               "@type": "EducationalOrganization",
-              "name": "Pupilenroll",
+              "name": "MathBeam",
               "foundingDate": "2018",
               "description": "Leading online tutoring platform providing personalized education",
               "numberOfEmployees": "50+",
@@ -121,7 +121,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              About Pupilenroll
+              About MathBeam
             </h1>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Empowering students worldwide to achieve academic excellence through personalized, 
@@ -309,7 +309,7 @@ const About = () => {
               size="lg" 
               variant="outline" 
               className="border-white text-white hover:bg-white hover:text-blue-600"
-              onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'd like to learn more about Pupilenroll and how you can help me achieve my academic goals.`, '_blank')}
+              onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'd like to learn more about MathBeam.com and how you can help me achieve my academic goals.`, '_blank')}
             >
               <MessageCircle className="mr-2 h-5 w-5" />
               Contact Us

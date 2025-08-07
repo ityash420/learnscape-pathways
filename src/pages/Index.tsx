@@ -104,58 +104,58 @@ const Index = () => {
     {
       aspect: "Learning Approach",
       traditional: "One-size-fits-all methodology",
-      pupilenroll: "Personalized learning paths tailored to individual needs"
+      mathbeam: "Personalized learning paths tailored to individual needs"
     },
     {
       aspect: "Schedule Flexibility",
       traditional: "Fixed time slots, limited rescheduling",
-      pupilenroll: "Flexible scheduling, 24/7 online support available"
+      mathbeam: "Flexible scheduling, 24/7 online support available"
     },
     {
       aspect: "Progress Tracking",
       traditional: "Basic progress reports",
-      pupilenroll: "Real-time analytics and detailed performance insights"
+      mathbeam: "Real-time analytics and detailed performance insights"
     },
     {
       aspect: "Teacher Quality",
       traditional: "Variable instructor experience",
-      pupilenroll: "Certified experts with proven track records"
+      mathbeam: "Certified experts with proven track records"
     },
     {
       aspect: "Technology Integration",
       traditional: "Limited use of educational technology",
-      pupilenroll: "AI-powered learning tools and interactive platforms"
+      mathbeam: "AI-powered learning tools and interactive platforms"
     },
     {
       aspect: "Cost Effectiveness",
       traditional: "Higher costs for premium tutoring",
-      pupilenroll: "Competitive pricing with better value proposition"
+      mathbeam: "Competitive pricing with better value proposition"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Expert Online Tutoring | Pupilenroll - SAT, IB, IGCSE, Common Core Preparation</title>
-        <meta name="description" content="Get expert 1-on-1 online tutoring for SAT, IB, IGCSE, and Common Core. Achieve 200+ point SAT improvements with personalized learning plans. Free demo session available." />
-        <meta name="keywords" content="online tutoring, SAT preparation, IB tutoring, IGCSE support, Common Core tutoring, 1-on-1 tutoring, exam preparation, academic excellence" />
+        <title>Expert Online Math & Science Tutoring | MathBeam.com - SAT, IB, IGCSE, Common Core Preparation</title>
+        <meta name="description" content="Get expert 1-on-1 online math and science tutoring for SAT, IB, IGCSE, and Common Core. Achieve 200+ point SAT improvements with personalized learning plans. Free demo session available." />
+        <meta name="keywords" content="online math tutoring, online science tutoring, SAT preparation, IB tutoring, IGCSE support, Common Core tutoring, 1-on-1 tutoring, exam preparation, academic excellence" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://pupilenroll.com/" />
-        <meta property="og:title" content="Expert Online Tutoring | Pupilenroll - SAT, IB, IGCSE, Common Core" />
-        <meta property="og:description" content="Achieve academic excellence with expert 1-on-1 online tutoring. 98% success rate, 200+ SAT score improvements." />
+        <link rel="canonical" href="https://mathbeam.com/" />
+        <meta property="og:title" content="Expert Online Math & Science Tutoring | MathBeam.com - SAT, IB, IGCSE, Common Core" />
+        <meta property="og:description" content="Achieve academic excellence with expert 1-on-1 online math and science tutoring. 98% success rate, 200+ SAT score improvements." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://pupilenroll.com/" />
-        <meta property="og:image" content="https://pupilenroll.com/og-image.jpg" />
+        <meta property="og:url" content="https://mathbeam.com/" />
+        <meta property="og:image" content="https://mathbeam.com/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Expert Online Tutoring | Pupilenroll" />
-        <meta name="twitter:description" content="Achieve academic excellence with expert 1-on-1 online tutoring. 98% success rate." />
+        <meta name="twitter:title" content="Expert Online Math & Science Tutoring | MathBeam.com" />
+        <meta name="twitter:description" content="Achieve academic excellence with expert 1-on-1 online math and science tutoring. 98% success rate." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "EducationalOrganization",
-            "name": "Pupilenroll",
-            "description": "Expert online tutoring platform specializing in SAT, IB, IGCSE, and Common Core preparation",
-            "url": "https://pupilenroll.com",
+            "name": "MathBeam",
+            "description": "Expert online math and science tutoring platform specializing in SAT, IB, IGCSE, and Common Core preparation",
+            "url": "https://mathbeam.com",
             "telephone": "+917906601283",
             "address": {
               "@type": "PostalAddress",
@@ -436,7 +436,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose PupilEnroll Way?
+              Why Choose MathBeam Way?
             </h2>
             <p className="text-lg text-gray-600">
               See how our modern approach compares to traditional tutoring methods
@@ -447,7 +447,7 @@ const Index = () => {
             {/* Mobile-friendly header */}
             <div className="md:hidden">
               <div className="bg-gray-100 p-4 font-semibold text-gray-900 text-center">
-                Why Choose PupilEnroll Way?
+                Why Choose MathBeam Way?
               </div>
             </div>
             
@@ -460,7 +460,7 @@ const Index = () => {
                 Traditional Tutoring
               </div>
               <div className="bg-green-50 p-6 font-semibold text-green-800 text-center">
-                PupilEnroll Way
+                MathBeam Way
               </div>
             </div>
             
@@ -477,10 +477,10 @@ const Index = () => {
                       <div className="text-gray-700 text-sm">{item.traditional}</div>
                     </div>
                     <div className="bg-green-50 p-3 rounded-lg">
-                      <div className="text-sm font-medium text-green-800 mb-1">PupilEnroll Way</div>
+                      <div className="text-sm font-medium text-green-800 mb-1">MathBeam Way</div>
                       <div className="flex items-start space-x-2">
                         <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700 text-sm">{item.pupilenroll}</span>
+                        <span className="text-gray-700 text-sm">{item.mathbeam}</span>
                       </div>
                     </div>
                   </div>
@@ -497,7 +497,7 @@ const Index = () => {
                   <div className="p-6 text-gray-700 bg-green-25">
                     <div className="flex items-center space-x-2">
                       <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                      <span>{item.pupilenroll}</span>
+                      <span>{item.mathbeam}</span>
                     </div>
                   </div>
                 </div>

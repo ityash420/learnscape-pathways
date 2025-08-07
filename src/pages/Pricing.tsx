@@ -59,15 +59,15 @@ const Pricing = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>1-to-1 Tutoring Pricing | Pupilenroll - Expert Online Learning</title>
-        <meta name="description" content="Get personalized 1-to-1 tutoring from exceptional tutors starting at $30 per hour. Choose your schedule and duration." />
-        <meta name="keywords" content="1-to-1 tutoring, personalized tutoring, online tutoring pricing, math tutoring, science tutoring, private tutoring" />
+        <title>1-to-1 Math & Science Tutoring Pricing | MathBeam.com - Expert Online Learning</title>
+        <meta name="description" content="Get personalized 1-to-1 math and science tutoring from exceptional tutors starting at $30 per hour. Choose your schedule and duration." />
+        <meta name="keywords" content="1-to-1 math tutoring, personalized science tutoring, online tutoring pricing, math tutoring, science tutoring, private tutoring" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://pupilenroll.com/pricing" />
-        <meta property="og:title" content="1-to-1 Tutoring Pricing | Pupilenroll - Expert Online Learning" />
-        <meta property="og:description" content="Get personalized 1-to-1 tutoring from exceptional tutors starting at $30 per hour." />
+        <link rel="canonical" href="https://mathbeam.com/pricing" />
+        <meta property="og:title" content="1-to-1 Math & Science Tutoring Pricing | MathBeam.com - Expert Online Learning" />
+        <meta property="og:description" content="Get personalized 1-to-1 math and science tutoring from exceptional tutors starting at $30 per hour." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://pupilenroll.com/pricing" />
+        <meta property="og:url" content="https://mathbeam.com/pricing" />
       </Helmet>
 
       <Navigation />

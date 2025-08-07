@@ -133,15 +133,15 @@ const Programs = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Academic Programs | Pupilenroll - SAT, IB, IGCSE & More</title>
-        <meta name="description" content="Explore Pupilenroll's comprehensive academic programs including SAT prep, IB support, IGCSE excellence, and Common Core mastery. Expert tutoring for grades 6-12." />
-        <meta name="keywords" content="SAT preparation, IB program support, IGCSE tutoring, Common Core, high school tutoring, middle school support" />
+        <title>Math & Science Academic Programs | MathBeam.com - SAT, IB, IGCSE & More</title>
+        <meta name="description" content="Explore MathBeam.com's comprehensive math and science academic programs including SAT prep, IB support, IGCSE excellence, and Common Core mastery. Expert tutoring for grades 6-12." />
+        <meta name="keywords" content="math programs, science programs, SAT preparation, IB program support, IGCSE tutoring, Common Core, high school tutoring, middle school support" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://pupilenroll.com/programs" />
-        <meta property="og:title" content="Academic Programs | Pupilenroll - SAT, IB, IGCSE & More" />
-        <meta property="og:description" content="Comprehensive academic programs designed for excellence in SAT, IB, IGCSE, and grade-level support." />
+        <link rel="canonical" href="https://mathbeam.com/programs" />
+        <meta property="og:title" content="Math & Science Academic Programs | MathBeam.com - SAT, IB, IGCSE & More" />
+        <meta property="og:description" content="Comprehensive math and science academic programs designed for excellence in SAT, IB, IGCSE, and grade-level support." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://pupilenroll.com/programs" />
+        <meta property="og:url" content="https://mathbeam.com/programs" />
       </Helmet>
 
       <Navigation />

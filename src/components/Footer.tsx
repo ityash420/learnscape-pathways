@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <BookOpen className="h-8 w-8 text-blue-400" />
-              <span className="text-xl font-bold">Pupilenroll</span>
+              <span className="text-xl font-bold">MathBeam</span>
             </div>
             <p className="text-gray-300 mb-4">
               Empowering students to excel in their academic journey through personalized learning experiences and expert guidance.
@@ -22,7 +22,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>pupilenroll@gmail.com</span>
+                <span>support@mathbeam.com</span>
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@ const Footer = () => {
               Get personalized tutoring from anywhere with internet connection.
             </p>
             <p className="text-gray-400">
-              © 2024 Pupilenroll. All rights reserved.
+              © 2024 MathBeam.com. All rights reserved.
             </p>
           </div>
         </div>

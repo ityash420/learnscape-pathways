@@ -104,15 +104,15 @@ Please contact me to discuss my academic goals and how you can help me achieve e
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Contact Us | Pupilenroll - Get Your Personalized Academic Strategy Session</title>
-        <meta name="description" content="Schedule your free personalized academic strategy session. Join 1,000+ students who've achieved 180+ point SAT improvements through expert mentorship." />
-        <meta name="keywords" content="academic strategy session, SAT improvement, personalized tutoring, expert educators, free consultation" />
+        <title>Contact Us | MathBeam.com - Get Your Personalized Math & Science Strategy Session</title>
+        <meta name="description" content="Schedule your free personalized math and science strategy session. Join 1,000+ students who've achieved 180+ point SAT improvements through expert mentorship." />
+        <meta name="keywords" content="math tutoring contact, science tutoring contact, academic strategy session, SAT improvement, personalized tutoring, expert educators, free consultation" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://pupilenroll.com/contact" />
-        <meta property="og:title" content="Contact Us | Pupilenroll - Get Your Personalized Academic Strategy Session" />
-        <meta property="og:description" content="Schedule your free personalized academic strategy session with expert educators." />
+        <link rel="canonical" href="https://mathbeam.com/contact" />
+        <meta property="og:title" content="Contact Us | MathBeam.com - Get Your Personalized Math & Science Strategy Session" />
+        <meta property="og:description" content="Schedule your free personalized math and science strategy session with expert educators." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://pupilenroll.com/contact" />
+        <meta property="og:url" content="https://mathbeam.com/contact" />
       </Helmet>
 
       <Navigation />
@@ -372,8 +372,8 @@ Please contact me to discuss my academic goals and how you can help me achieve e
                   <Mail className="h-8 w-8 text-purple-600" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
-                <a href="mailto:pupilenroll@gmail.com" className="text-purple-600 font-medium hover:underline">
-                  pupilenroll@gmail.com
+                <a href="mailto:support@mathbeam.com" className="text-purple-600 font-medium hover:underline">
+                  support@mathbeam.com
                 </a>
                 <p className="text-sm text-gray-600 mt-1">24-hour response</p>
               </CardContent>
@@ -391,7 +391,7 @@ Please contact me to discuss my academic goals and how you can help me achieve e
             </p>
             <div className="bg-blue-100 p-4 rounded-lg inline-block">
               <p className="text-sm text-blue-800">
-                <strong>Business Update:</strong> We've enhanced our programs! <strong>Pupilenroll</strong> continues to provide the same expert tutoring services with our enhanced curriculum and personalized approach.
+                <strong>Business Update:</strong> We've enhanced our programs! <strong>MathBeam.com</strong> continues to provide the same expert tutoring services with our enhanced curriculum and personalized approach.
               </p>
             </div>
           </div>

@@ -24,7 +24,7 @@ const HowItWorks = () => {
       step: "01",
       title: "Submit Your Request",
       description: "Visit our pricing page and submit your tutoring requirements. Select your preferred subjects, grade level, and schedule preferences to get started.",
-      icon: DollarSign,
+      icon: MessageCircle,
       color: "from-info to-primary",
       iconColor: "text-info"
     },
