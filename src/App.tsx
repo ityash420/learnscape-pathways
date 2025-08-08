@@ -15,6 +15,11 @@ import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CookiePolicy from "./pages/CookiePolicy";
 import TermsConditions from "./pages/TermsConditions";
+import LondonTutor from "./pages/LondonTutor";
+import ManchesterTutor from "./pages/ManchesterTutor";
+import BirminghamTutor from "./pages/BirminghamTutor";
+import LeedsTutor from "./pages/LeedsTutor";
+import BristolTutor from "./pages/BristolTutor";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +38,11 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/how-it-works" element={<HowItWorks />} />
               <Route path="/tutoring/:state" element={<StateTutoring />} />
+              <Route path="/london-maths-tutor" element={<LondonTutor />} />
+              <Route path="/manchester-maths-tutor" element={<ManchesterTutor />} />
+              <Route path="/birmingham-maths-tutor" element={<BirminghamTutor />} />
+              <Route path="/leeds-maths-tutor" element={<LeedsTutor />} />
+              <Route path="/bristol-maths-tutor" element={<BristolTutor />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/cookie-policy" element={<CookiePolicy />} />
               <Route path="/terms-conditions" element={<TermsConditions />} />

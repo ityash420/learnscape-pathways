@@ -137,7 +137,7 @@ const Index = () => {
     <>
       <Helmet>
         <title>Expert Online Math & Science Tutoring | MathBeam.com - SAT, IB, IGCSE, Common Core Preparation</title>
-        <meta name="description" content="Get expert 1-on-1 online math and science tutoring for SAT, IB, IGCSE, and Common Core. Achieve 200+ point SAT improvements with personalized learning plans. Free demo session available." />
+        <meta name="description" content="Learn maths online with top UK tutors for GCSE, A-Level & KS2–KS4. Flexible, affordable & results-driven. Book your free trial lesson today." />
         <meta name="keywords" content="online math tutoring, online science tutoring, SAT preparation, IB tutoring, IGCSE support, Common Core tutoring, 1-on-1 tutoring, exam preparation, academic excellence" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://mathbeam.com/" />
