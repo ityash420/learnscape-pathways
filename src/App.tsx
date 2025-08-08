@@ -12,6 +12,9 @@ import Contact from "./pages/Contact";
 import StateTutoring from "./pages/StateTutoring";
 import HowItWorks from "./pages/HowItWorks";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import CookiePolicy from "./pages/CookiePolicy";
+import TermsConditions from "./pages/TermsConditions";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +33,9 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/how-it-works" element={<HowItWorks />} />
               <Route path="/tutoring/:state" element={<StateTutoring />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/cookie-policy" element={<CookiePolicy />} />
+              <Route path="/terms-conditions" element={<TermsConditions />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

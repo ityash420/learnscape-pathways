@@ -39,14 +39,11 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Programs</h3>
-            <ul className="space-y-2 text-gray-300">
-              <li>SAT Preparation</li>
-              <li>IB Program</li>
-              <li>IGCSE Support</li>
-              <li>Common Core</li>
-              <li>High School (9-12)</li>
-              <li>Middle School (6-8)</li>
+            <h3 className="text-lg font-semibold mb-4">Legal</h3>
+            <ul className="space-y-2">
+              <li><Link to="/privacy-policy" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms-conditions" className="text-gray-300 hover:text-white transition-colors">Terms & Conditions</Link></li>
+              <li><Link to="/cookie-policy" className="text-gray-300 hover:text-white transition-colors">Cookie Policy</Link></li>
             </ul>
           </div>
         </div>
