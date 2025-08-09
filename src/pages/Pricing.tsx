@@ -60,12 +60,12 @@ const Pricing = () => {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>1-to-1 Math & Science Tutoring Pricing | MathBeam.com - Expert Online Learning</title>
-        <meta name="description" content="Get personalized 1-to-1 math and science tutoring from exceptional tutors starting at $30 per hour. Choose your schedule and duration." />
+        <meta name="description" content="Get personalized 1-to-1 math and science tutoring from exceptional tutors starting at £30 per hour. Choose your schedule and duration." />
         <meta name="keywords" content="1-to-1 math tutoring, personalized science tutoring, online tutoring pricing, math tutoring, science tutoring, private tutoring" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://mathbeam.com/pricing" />
         <meta property="og:title" content="1-to-1 Math & Science Tutoring Pricing | MathBeam.com - Expert Online Learning" />
-        <meta property="og:description" content="Get personalized 1-to-1 math and science tutoring from exceptional tutors starting at $30 per hour." />
+        <meta property="og:description" content="Get personalized 1-to-1 math and science tutoring from exceptional tutors starting at £30 per hour." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mathbeam.com/pricing" />
       </Helmet>
@@ -141,7 +141,7 @@ const Pricing = () => {
           <div className="text-center mb-12">
             <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-4 rounded-lg shadow-lg mx-auto max-w-md mb-6">
               <div className="flex items-center justify-center space-x-3">
-                <span className="text-xl font-bold line-through text-red-200">$30 per hour</span>
+                <span className="text-xl font-bold line-through text-red-200">£30 per hour</span>
                 <span className="text-2xl font-bold text-yellow-300 animate-pulse">→</span>
                 <span className="text-2xl font-bold text-yellow-300">Special Price!</span>
               </div>
