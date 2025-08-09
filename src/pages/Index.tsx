@@ -25,77 +25,77 @@ const Index = () => {
 
   const examSections = [
     {
-      title: "Common Core Exam",
-      description: "Comprehensive preparation for Common Core State Standards assessments, focusing on critical thinking and problem-solving skills.",
+      title: "GCSE Maths",
+      description: "Comprehensive GCSE maths preparation covering all key topics with exam-focused techniques and strategies.",
       icon: Target,
-      features: ["Math & English Language Arts", "Grade-specific curriculum alignment", "Practice assessments", "Progress tracking"]
+      features: ["Number & Algebra", "Geometry & Measures", "Statistics & Probability", "Exam Technique & Practice"]
     },
     {
-      title: "SAT Exam",
-      description: "Expert SAT preparation to maximize your college admission chances with proven strategies and practice tests.",
+      title: "A-Level Maths",
+      description: "Advanced A-Level mathematics support to help students excel in their further education and university applications.",
       icon: GraduationCap,
-      features: ["Evidence-Based Reading", "Writing & Language", "Math (Calculator & No Calculator)", "Optional Essay preparation"]
+      features: ["Core Mathematics", "Statistics", "Mechanics", "Further Mathematics"]
     },
     {
-      title: "IB Exam",
-      description: "International Baccalaureate program support for all subjects with experienced IB-certified instructors.",
+      title: "IB Maths",
+      description: "International Baccalaureate mathematics program support with experienced IB-qualified instructors.",
       icon: Award,
-      features: ["Higher Level (HL) subjects", "Standard Level (SL) subjects", "Extended Essay guidance", "Theory of Knowledge (TOK)"]
+      features: ["Mathematics: Analysis & Approaches", "Mathematics: Applications & Interpretation", "Internal Assessment", "Extended Essay Support"]
     },
     {
-      title: "IGCSE Exam",
-      description: "Cambridge IGCSE preparation covering all major subjects with international curriculum expertise.",
+      title: "Key Stage 2 & 3",
+      description: "Strong foundation building for younger students in preparation for GCSE success.",
       icon: BookOpen,
-      features: ["Core & Extended Mathematics", "Sciences (Biology, Chemistry, Physics)", "Languages & Literature", "Social Sciences"]
+      features: ["Number & Place Value", "Fractions & Decimals", "Geometry & Shape", "Problem Solving Skills"]
     }
   ];
 
   const gradePrograms = [
     {
-      title: "High School (Grades 9-12)",
-      description: "Comprehensive academic support for high school students preparing for college and standardized tests.",
-      subjects: ["Advanced Mathematics", "Sciences", "AP Courses", "College Prep", "SAT/ACT Preparation"],
+      title: "Secondary School (Years 7-13)",
+      description: "Comprehensive academic support for secondary students preparing for GCSEs, A-Levels and university applications.",
+      subjects: ["GCSE Mathematics", "A-Level Mathematics", "Further Mathematics", "University Preparation", "Exam Techniques"],
       color: "bg-blue-50 border-blue-200"
     },
     {
-      title: "Middle School (Grades 6-8)",
-      description: "Building strong foundations in core subjects while developing critical thinking and study skills.",
-      subjects: ["Algebra & Geometry", "Life Sciences", "Language Arts", "Social Studies", "Study Skills"],
+      title: "Primary School (Years 1-6)",
+      description: "Building strong foundations in mathematics while developing problem-solving and analytical thinking skills.",
+      subjects: ["Number & Calculation", "Geometry & Measurement", "Statistics & Data", "Problem Solving", "Mathematical Reasoning"],
       color: "bg-green-50 border-green-200"
     }
   ];
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      grade: "Grade 12",
-      exam: "SAT",
-      score: "1540/1600",
-      feedback: "The personalized attention and expert guidance helped me achieve my target score. I'm now attending my dream university!",
+      name: "Emma Thompson",
+      grade: "Year 13",
+      exam: "A-Level",
+      score: "A*",
+      feedback: "The personalised attention and expert guidance helped me achieve my target grade. I'm now studying at my dream university!",
       rating: 5
     },
     {
-      name: "Michael Chen",
-      grade: "Grade 11",
+      name: "James Mitchell",
+      grade: "Year 12",
       exam: "IB",
       score: "42/45",
-      feedback: "The IB program support was exceptional. My tutors understood the curriculum perfectly and helped me excel in all subjects.",
+      feedback: "The IB maths support was exceptional. My tutor understood the curriculum perfectly and helped me excel in all areas.",
       rating: 5
     },
     {
-      name: "Emily Rodriguez",
-      grade: "Grade 10",
-      exam: "IGCSE",
-      score: "8 A*s",
-      feedback: "Thanks to the structured approach and continuous feedback, I achieved outstanding results in my IGCSE exams.",
+      name: "Sophie Williams",
+      grade: "Year 11",
+      exam: "GCSE",
+      score: "Grade 9",
+      feedback: "Thanks to the structured approach and continuous feedback, I achieved outstanding results in my GCSE maths.",
       rating: 5
     },
     {
-      name: "David Wilson",
-      grade: "Grade 9",
-      exam: "Common Core",
-      score: "Advanced",
-      feedback: "The Common Core preparation helped me build strong analytical skills. I feel confident in my academic abilities now.",
+      name: "Oliver Brown",
+      grade: "Year 9",
+      exam: "KS3",
+      score: "Outstanding",
+      feedback: "The Key Stage 3 preparation helped me build strong analytical skills. I feel confident in my maths abilities now.",
       rating: 5
     }
   ];
@@ -191,7 +191,7 @@ const Index = () => {
               Excel in Your Academic Journey
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Expert tutoring for SAT, IB, IGCSE, Common Core, and all grade levels
+              Expert tutoring for GCSE, A-Level, IB, and all Key Stages across the UK
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
@@ -351,11 +351,17 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Comprehensive Exam Preparation
+              UK Exam Board Expertise
             </h2>
-            <p className="text-lg text-gray-600">
-              Specialized programs designed to help you excel in every major examination
+            <p className="text-lg text-gray-600 mb-8">
+              Specialised programmes designed to help you excel in every major UK examination board
             </p>
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+              <h3 className="text-xl font-semibold text-blue-900 mb-3">Exam Boards We Support</h3>
+              <p className="text-blue-800 text-lg">
+                Comprehensive coverage across all major UK examination boards including <strong>AQA</strong>, <strong>OCR</strong>, <strong>Edexcel</strong>, and <strong>WJEC</strong> - ensuring your child receives targeted preparation aligned with their specific curriculum and assessment requirements.
+              </p>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -393,10 +399,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Grade-Specific Programs
+              Year Group Programmes
             </h2>
             <p className="text-lg text-gray-600">
-              Tailored curriculum support for middle and high school students
+              Tailored curriculum support for primary and secondary school students across the UK
             </p>
           </div>
 

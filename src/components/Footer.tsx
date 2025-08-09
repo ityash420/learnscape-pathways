@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <BookOpen className="h-8 w-8 text-blue-400" />
@@ -39,6 +39,17 @@ const Footer = () => {
           </div>
 
           <div>
+            <h3 className="text-lg font-semibold mb-4">Popular Cities</h3>
+            <ul className="space-y-2">
+              <li><Link to="/london-maths-tutor" className="text-gray-300 hover:text-white transition-colors">London Maths Tutor</Link></li>
+              <li><Link to="/manchester-maths-tutor" className="text-gray-300 hover:text-white transition-colors">Manchester Maths Tutor</Link></li>
+              <li><Link to="/birmingham-maths-tutor" className="text-gray-300 hover:text-white transition-colors">Birmingham Maths Tutor</Link></li>
+              <li><Link to="/leeds-maths-tutor" className="text-gray-300 hover:text-white transition-colors">Leeds Maths Tutor</Link></li>
+              <li><Link to="/bristol-maths-tutor" className="text-gray-300 hover:text-white transition-colors">Bristol Maths Tutor</Link></li>
+            </ul>
+          </div>
+
+          <div>
             <h3 className="text-lg font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
               <li><Link to="/privacy-policy" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</Link></li>
@@ -51,8 +62,8 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="text-center">
             <p className="text-sm text-gray-400 mb-4">
-              Our certified tutors provide online Math and Science courses to students in the US and UK. 
-              Get personalized tutoring from anywhere with internet connection.
+              Our certified tutors provide online Maths and Science courses to students across the UK. 
+              Get personalised tutoring from anywhere with internet connection.
             </p>
             <p className="text-gray-400">
               © 2024 MathBeam.com. All rights reserved.
