@@ -22,110 +22,110 @@ const Programs = () => {
 
   const programs = [
     {
-      title: "SAT Preparation",
+      title: "GCSE Preparation",
       icon: GraduationCap,
-      duration: "12-16 weeks",
-      sessions: "2-3 sessions/week",
-      description: "Comprehensive SAT preparation covering all sections with proven strategies and practice tests.",
-      features: [
-        "Evidence-Based Reading and Writing",
-        "Mathematics (Calculator & No Calculator)",
-        "Essay Writing (Optional)",
-        "Full-length practice tests",
-        "Score improvement guarantee",
-        "College application guidance"
-      ],
-      targetScore: "1400+ SAT Score",
-      color: "border-blue-500 bg-blue-50"
-    },
-    {
-      title: "IB Program Support",
-      icon: Award,
-      duration: "Full academic year",
-      sessions: "3-4 sessions/week",
-      description: "Complete International Baccalaureate program support for all subjects and requirements.",
-      features: [
-        "Higher Level (HL) subjects",
-        "Standard Level (SL) subjects",
-        "Extended Essay guidance",
-        "Theory of Knowledge (TOK)",
-        "Creativity, Activity, Service (CAS)",
-        "Internal Assessment support"
-      ],
-      targetScore: "35+ IB Points",
-      color: "border-purple-500 bg-purple-50"
-    },
-    {
-      title: "IGCSE Excellence",
-      icon: BookOpen,
       duration: "2 academic years",
-      sessions: "2-4 sessions/week",
-      description: "Cambridge IGCSE preparation covering core and extended subjects with expert guidance.",
+      sessions: "2-3 sessions/week",
+      description: "Comprehensive GCSE preparation covering all major subjects with proven exam techniques and strategies.",
       features: [
-        "Core & Extended Mathematics",
+        "Mathematics (Foundation & Higher)",
         "Sciences (Biology, Chemistry, Physics)",
         "English Language & Literature",
         "Modern Foreign Languages",
         "Social Sciences",
-        "Coursework and practical support"
+        "Past paper practice and exam technique"
       ],
-      targetScore: "A*/A Grades",
+      targetScore: "Grade 7-9 Achievement",
+      color: "border-blue-500 bg-blue-50"
+    },
+    {
+      title: "A-Level Excellence",
+      icon: Award,
+      duration: "2 academic years",
+      sessions: "3-4 sessions/week",
+      description: "Advanced Level support covering all subjects with university preparation focus.",
+      features: [
+        "Further Mathematics",
+        "Advanced Sciences",
+        "Humanities subjects",
+        "Coursework guidance",
+        "UCAS application support",
+        "University interview preparation"
+      ],
+      targetScore: "A*-A Grades",
+      color: "border-purple-500 bg-purple-50"
+    },
+    {
+      title: "11+ Preparation",
+      icon: BookOpen,
+      duration: "6-12 months",
+      sessions: "2-3 sessions/week",
+      description: "Comprehensive 11+ exam preparation for grammar school and independent school entry.",
+      features: [
+        "Verbal Reasoning",
+        "Non-Verbal Reasoning",
+        "Mathematics",
+        "English Comprehension",
+        "Creative Writing",
+        "Practice papers and mock exams"
+      ],
+      targetScore: "Top 25% Performance",
       color: "border-green-500 bg-green-50"
     },
     {
-      title: "Common Core Mastery",
+      title: "Key Stage Support",
       icon: Target,
       duration: "Ongoing support",
       sessions: "2-3 sessions/week",
-      description: "Standards-aligned instruction focusing on critical thinking and problem-solving skills.",
+      description: "National Curriculum aligned instruction for Key Stage 2, 3 and 4 students.",
       features: [
-        "Mathematics (K-12 aligned)",
-        "English Language Arts",
-        "Critical thinking development",
+        "KS2 SATs preparation",
+        "KS3 foundation building",
+        "KS4 GCSE support",
         "Problem-solving strategies",
         "Assessment preparation",
         "Progress monitoring"
       ],
-      targetScore: "Proficient/Advanced",
+      targetScore: "Above Expected Progress",
       color: "border-orange-500 bg-orange-50"
     }
   ];
 
   const gradePrograms = [
     {
-      title: "High School Program (Grades 9-12)",
-      description: "College preparatory curriculum with focus on standardized test preparation and advanced coursework.",
+      title: "Secondary School Programme (Years 7-11)",
+      description: "Comprehensive support for GCSE preparation and Key Stage 3 & 4 curriculum mastery.",
       subjects: [
-        "Advanced Mathematics (Algebra II, Pre-Calculus, Calculus)",
-        "AP Courses (Multiple subjects available)",
-        "Sciences (Biology, Chemistry, Physics)",
-        "SAT/ACT Preparation",
-        "College Application Support",
-        "Academic Writing & Research"
+        "Advanced Mathematics (Algebra, Geometry, Statistics)",
+        "Triple Sciences (Biology, Chemistry, Physics)",
+        "English Language & Literature",
+        "Modern Foreign Languages (French, Spanish, German)",
+        "Humanities (History, Geography, Religious Studies)",
+        "Study Skills & Exam Technique"
       ],
       benefits: [
-        "College readiness preparation",
-        "Standardized test excellence",
-        "AP exam preparation",
-        "University admission guidance"
+        "GCSE grade improvement",
+        "University preparation",
+        "Exam technique mastery",
+        "Subject confidence building"
       ]
     },
     {
-      title: "Middle School Program (Grades 6-8)",
-      description: "Foundation building program focusing on core academic skills and study habits development.",
+      title: "Primary School Programme (Years 3-6)",
+      description: "Foundation building programme focusing on Key Stage 2 SATs and core academic skills development.",
       subjects: [
-        "Pre-Algebra & Geometry Foundations",
-        "Life Sciences & Physical Sciences",
-        "Language Arts & Reading Comprehension",
-        "Social Studies & Geography",
-        "Study Skills & Organization",
-        "Critical Thinking Development"
+        "Mathematics (Number, Algebra, Geometry, Statistics)",
+        "English (Reading, Writing, Grammar, Spelling)",
+        "Sciences (Biology, Chemistry, Physics basics)",
+        "Problem-solving & Reasoning",
+        "Study Skills Development",
+        "11+ Preparation (if required)"
       ],
       benefits: [
-        "Strong academic foundation",
-        "Study skills development",
+        "SATs achievement",
+        "Secondary school readiness",
         "Confidence building",
-        "High school preparation"
+        "Learning skills development"
       ]
     }
   ];
@@ -133,13 +133,13 @@ const Programs = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Math & Science Academic Programs | MathBeam.com - SAT, IB, IGCSE & More</title>
-        <meta name="description" content="Explore MathBeam.com's comprehensive math and science academic programs including SAT prep, IB support, IGCSE excellence, and Common Core mastery. Expert tutoring for grades 6-12." />
-        <meta name="keywords" content="math programs, science programs, SAT preparation, IB program support, IGCSE tutoring, Common Core, high school tutoring, middle school support" />
+        <title>UK Maths & Science Academic Programmes | MathBeam.com - GCSE, A-Level & 11+ Preparation</title>
+        <meta name="description" content="Explore MathBeam.com's comprehensive UK curriculum programmes including GCSE preparation, A-Level excellence, 11+ exam support, and Key Stage tutoring. Expert tutoring for Years 3-13." />
+        <meta name="keywords" content="GCSE maths tutoring, A-Level science support, 11+ preparation, Key Stage tutoring, UK curriculum, secondary school support, primary school tutoring" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://mathbeam.com/programs" />
-        <meta property="og:title" content="Math & Science Academic Programs | MathBeam.com - SAT, IB, IGCSE & More" />
-        <meta property="og:description" content="Comprehensive math and science academic programs designed for excellence in SAT, IB, IGCSE, and grade-level support." />
+        <meta property="og:title" content="UK Maths & Science Academic Programmes | MathBeam.com - GCSE, A-Level & 11+ Preparation" />
+        <meta property="og:description" content="Comprehensive UK curriculum programmes designed for excellence in GCSE, A-Level, 11+, and Key Stage support." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mathbeam.com/programs" />
       </Helmet>
@@ -153,10 +153,10 @@ const Programs = () => {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Our Academic Programs
+            Our UK Academic Programmes
           </h1>
           <p className="text-xl text-blue-100 mb-8">
-            Comprehensive preparation programs designed for academic excellence
+            Comprehensive preparation programmes designed for UK curriculum excellence
           </p>
         </div>
       </section>
@@ -166,10 +166,10 @@ const Programs = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Exam Preparation Programs
+              UK Exam Preparation Programmes
             </h2>
             <p className="text-lg text-gray-600">
-              Specialized preparation for major international examinations
+              Specialized preparation for GCSE, A-Level, 11+ and Key Stage assessments
             </p>
           </div>
 
@@ -238,10 +238,10 @@ const Programs = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Grade-Level Programs
+              Year Group Programmes
             </h2>
             <p className="text-lg text-gray-600">
-              Comprehensive academic support tailored to specific grade levels
+              Comprehensive academic support tailored to specific UK school years
             </p>
           </div>
 
@@ -320,11 +320,11 @@ const Programs = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-500" />
-                  <span className="text-gray-700">Average 200+ point SAT score increase</span>
+                  <span className="text-gray-700">Average 2+ GCSE grade improvement</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-green-500" />
-                  <span className="text-gray-700">98% college acceptance rate</span>
+                  <span className="text-gray-700">98% university acceptance rate</span>
                 </div>
               </div>
             </div>
