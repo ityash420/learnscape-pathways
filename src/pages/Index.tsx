@@ -200,11 +200,11 @@ const Index = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-blue-600 relative group"
+                className="border-white text-white hover:bg-white hover:text-blue-600"
                 onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in 1-to-1 tutoring sessions. Can you provide more details?`, '_blank')}
               >
                 <MessageCircle className="mr-2 h-5 w-5" />
-                <span className="group-hover:opacity-100 opacity-100">1-to-1 Tutoring</span>
+                <span>1-to-1 Tutoring</span>
               </Button>
             </div>
           </div>
@@ -582,11 +582,11 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-blue-600 relative group"
+              className="border-white text-white hover:bg-white hover:text-blue-600"
               onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in 1-to-1 tutoring sessions. Can you provide pricing and schedule?`, '_blank')}
             >
               <MessageCircle className="mr-2 h-5 w-5" />
-              <span className="group-hover:opacity-100 opacity-100">1-to-1 Tutoring</span>
+              <span>1-to-1 Tutoring</span>
             </Button>
           </div>
 
