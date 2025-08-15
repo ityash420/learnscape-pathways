@@ -97,7 +97,7 @@ const HowItWorks = () => {
   return (
     <>
       <Helmet>
-        <title>How It Works - TutorConnect</title>
+        <title>How It Works - MathBeam</title>
         <meta name="description" content="Learn how our tutoring platform works in 4 simple steps. Find verified tutors, book sessions, and start improving your grades today." />
       </Helmet>
       
