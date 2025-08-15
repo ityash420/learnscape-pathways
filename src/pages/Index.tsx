@@ -194,7 +194,11 @@ const Index = () => {
               Expert tutoring for GCSE, A-Level, IB, and all Key Stages across the UK
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+              <Button 
+                size="lg" 
+                className="bg-white text-blue-600 hover:bg-gray-100"
+                onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'd like to book a FREE demo session. Please let me know the available time slots.`, '_blank')}
+              >
                 Book Your Free Class - Connect with WhatsApp
               </Button>
               <Button 
@@ -204,7 +208,7 @@ const Index = () => {
                 onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in 1-to-1 tutoring sessions. Can you provide more details?`, '_blank')}
               >
                 <MessageCircle className="mr-2 h-5 w-5" />
-                <span>1-to-1 Tutoring</span>
+                1-to-1 Tutoring
               </Button>
             </div>
           </div>
