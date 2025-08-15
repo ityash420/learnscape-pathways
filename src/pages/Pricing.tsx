@@ -20,7 +20,7 @@ const Pricing = () => {
   const whatsappNumber = "+917906601283";
   const [selectedLessons, setSelectedLessons] = useState<number>(1);
   const [selectedDuration, setSelectedDuration] = useState<number>(6);
-  const [selectedSubject, setSelectedSubject] = useState<string>("Mathematics");
+  const [selectedSubject, setSelectedSubject] = useState<string>("Math");
   const [selectedProgram, setSelectedProgram] = useState<string>("GCSE (Key Stage 4)");
   const [selectedBoard, setSelectedBoard] = useState<string>("AQA");
 
@@ -36,13 +36,11 @@ const Pricing = () => {
   ];
 
   const subjectOptions = [
-    "Mathematics",
+    "Math",
     "Physics", 
     "Chemistry",
     "Biology",
-    "Computer Science",
-    "English Language",
-    "English Literature"
+    "Coding"
   ];
 
   const programOptions = [
