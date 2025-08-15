@@ -141,7 +141,7 @@ const Pricing = () => {
           <div className="text-center mb-12">
             <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-4 rounded-lg shadow-lg mx-auto max-w-md mb-6">
               <div className="flex items-center justify-center space-x-3">
-                <span className="text-xl font-bold line-through text-red-200">£30 per hour</span>
+                <span className="text-2xl font-bold line-through text-red-200">£30 per hour</span>
                 <span className="text-2xl font-bold text-yellow-300 animate-pulse">→</span>
                 <span className="text-3xl font-bold text-yellow-300">Special Price!</span>
               </div>
