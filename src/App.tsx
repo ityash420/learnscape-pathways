@@ -5,11 +5,14 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
+import IndexUAE from "./pages/IndexUAE";
+import IndexUSA from "./pages/IndexUSA";
 import Programs from "./pages/Programs";
 import Pricing from "./pages/Pricing";
 import PricingUAE from "./pages/PricingUAE";
 import PricingUSA from "./pages/PricingUSA";
 import RegionalPricingRouter from "./components/RegionalPricingRouter";
+import RegionalIndexRouter from "./components/RegionalIndexRouter";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import StateTutoring from "./pages/StateTutoring";
@@ -34,7 +37,9 @@ function App() {
           <Toaster />
           <BrowserRouter>
             <Routes>
-              <Route path="/" element={<Index />} />
+              <Route path="/" element={<RegionalIndexRouter />} />
+              <Route path="/uae" element={<IndexUAE />} />
+              <Route path="/usa" element={<IndexUSA />} />
               <Route path="/programs" element={<Programs />} />
               <Route path="/pricing" element={<RegionalPricingRouter />} />
               <Route path="/pricing-uae" element={<PricingUAE />} />
