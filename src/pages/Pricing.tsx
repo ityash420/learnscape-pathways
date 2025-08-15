@@ -143,7 +143,7 @@ const Pricing = () => {
               <div className="flex items-center justify-center space-x-3">
                 <span className="text-xl font-bold line-through text-red-200">£30 per hour</span>
                 <span className="text-2xl font-bold text-yellow-300 animate-pulse">→</span>
-                <span className="text-2xl font-bold text-yellow-300">Special Price!</span>
+                <span className="text-3xl font-bold text-yellow-300">Special Price!</span>
               </div>
               <p className="text-sm text-orange-100 mt-2">Limited time offer - Save big!</p>
             </div>
