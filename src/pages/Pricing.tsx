@@ -20,8 +20,9 @@ const Pricing = () => {
   const whatsappNumber = "+917906601283";
   const [selectedLessons, setSelectedLessons] = useState<number>(1);
   const [selectedDuration, setSelectedDuration] = useState<number>(6);
-  const [selectedSubject, setSelectedSubject] = useState<string>("Math");
-  const [selectedProgram, setSelectedProgram] = useState<string>("SAT Preparation");
+  const [selectedSubject, setSelectedSubject] = useState<string>("Mathematics");
+  const [selectedProgram, setSelectedProgram] = useState<string>("GCSE (Key Stage 4)");
+  const [selectedBoard, setSelectedBoard] = useState<string>("AQA");
 
   const lessonOptions = [
     { value: 1, label: "1 lesson per week" },
@@ -35,24 +36,35 @@ const Pricing = () => {
   ];
 
   const subjectOptions = [
-    "Math",
+    "Mathematics",
     "Physics", 
     "Chemistry",
     "Biology",
-    "Coding"
+    "Computer Science",
+    "English Language",
+    "English Literature"
   ];
 
   const programOptions = [
-    "SAT Preparation",
-    "IB Program",
-    "IGCSE Support",
-    "Common Core",
-    "High School (9-12)",
-    "Middle School (6-8)"
+    "Primary (Key Stage 1-2)",
+    "Secondary (Key Stage 3)",
+    "GCSE (Key Stage 4)",
+    "A-Level (Key Stage 5)",
+    "IB Programme",
+    "IGCSE"
+  ];
+
+  const boardOptions = [
+    "AQA",
+    "Edexcel",
+    "OCR",
+    "WJEC",
+    "CIE Cambridge",
+    "IB Organisation"
   ];
 
   const handleGetPricing = () => {
-    const message = `Hi! I'm interested in 1-to-1 tutoring for ${selectedProgram} - ${selectedSubject} with ${selectedLessons} lesson${selectedLessons > 1 ? 's' : ''} per week for ${selectedDuration} months. Can you provide me with pricing details?`;
+    const message = `Hi! I'm interested in 1-to-1 tutoring for ${selectedProgram} - ${selectedSubject} (${selectedBoard} board) with ${selectedLessons} lesson${selectedLessons > 1 ? 's' : ''} per week for ${selectedDuration} months. Can you provide me with pricing details?`;
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
@@ -206,6 +218,27 @@ const Pricing = () => {
                 </div>
               </div>
 
+              {/* Exam Board selection */}
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                  Choose your exam board:
+                </h3>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  {boardOptions.map((board) => (
+                    <Button
+                      key={board}
+                      variant={selectedBoard === board ? "default" : "outline"}
+                      className="h-auto py-3 px-4"
+                      onClick={() => setSelectedBoard(board)}
+                    >
+                      <div className="text-center">
+                        <div className="text-sm font-medium">{board}</div>
+                      </div>
+                    </Button>
+                  ))}
+                </div>
+              </div>
+
               {/* Lessons per week selection */}
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">
@@ -274,6 +307,9 @@ const Pricing = () => {
               {/* Selected plan summary */}
               <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
                 <h4 className="font-semibold text-blue-900 mb-2">Your Selected Plan:</h4>
+                <p className="text-blue-800">
+                  <strong>{selectedProgram}</strong> - <strong>{selectedSubject}</strong> ({selectedBoard})
+                </p>
                 <p className="text-blue-800">
                   <strong>{selectedLessons}</strong> lesson{selectedLessons > 1 ? 's' : ''} per week for <strong>{selectedDuration}</strong> months
                 </p>
