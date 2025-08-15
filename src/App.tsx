@@ -7,6 +7,9 @@ import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import Programs from "./pages/Programs";
 import Pricing from "./pages/Pricing";
+import PricingUAE from "./pages/PricingUAE";
+import PricingUSA from "./pages/PricingUSA";
+import RegionalPricingRouter from "./components/RegionalPricingRouter";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import StateTutoring from "./pages/StateTutoring";
@@ -33,7 +36,9 @@ function App() {
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/programs" element={<Programs />} />
-              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/pricing" element={<RegionalPricingRouter />} />
+              <Route path="/pricing-uae" element={<PricingUAE />} />
+              <Route path="/pricing-usa" element={<PricingUSA />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/how-it-works" element={<HowItWorks />} />
