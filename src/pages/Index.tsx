@@ -216,10 +216,15 @@ const Index = () => {
       </section>
 
       {/* Special Pricing Banner */}
-      <section className="bg-gradient-to-r from-green-600 to-emerald-600 text-white py-8">
+      <section className="bg-gradient-to-r from-red-500 to-orange-500 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-4 mb-2">
+              <span className="text-2xl md:text-3xl font-bold relative">
+                £30 per hour
+                <div className="absolute inset-0 bg-white h-0.5 top-1/2 transform -translate-y-1/2"></div>
+              </span>
+              <span className="text-2xl">→</span>
               <span className="text-2xl md:text-3xl font-bold text-yellow-300">Special Price!</span>
             </div>
             <p className="text-lg font-semibold">Limited time offer - Save big!</p>
