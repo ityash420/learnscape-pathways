@@ -430,8 +430,8 @@ const IndexUAE = () => {
                           <CheckCircle className="h-4 w-4 text-green-600" />
                           <span className="text-gray-700">{subject}</span>
                         </div>
-                      )))}
-                    </div>
+                       ))}
+                     </div>
                     <Button 
                       className="w-full mt-4"
                       onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in ${program.title} tutoring. Can you provide more details?`, '_blank')}
