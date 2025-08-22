@@ -11,11 +11,21 @@ const RegionalProgramsRouter = () => {
   useEffect(() => {
     const getRegion = async () => {
       try {
-        const detectedRegion = await detectUserRegion();
+        // Set a maximum timeout for the entire detection process
+        const timeoutPromise = new Promise<never>((_, reject) =>
+          setTimeout(() => reject(new Error('Detection timeout')), 8000)
+        );
+        
+        const detectedRegion = await Promise.race([
+          detectUserRegion(),
+          timeoutPromise
+        ]);
+        
+        console.log('Final detected region for programs:', detectedRegion);
         setRegion(detectedRegion);
       } catch (error) {
-        console.error('Failed to detect region:', error);
-        setRegion('default'); // fallback to UK/default
+        console.error('Failed to detect region in ProgramsRouter:', error);
+        setRegion('UK'); // fallback to UK/default
       } finally {
         setLoading(false);
       }

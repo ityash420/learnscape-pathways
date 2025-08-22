@@ -19,17 +19,32 @@ const RegionalIndexRouter = () => {
         return;
       }
 
-      const detectedRegion = await detectUserRegion();
-      setRegion(detectedRegion);
-      
-      // Redirect based on detected region
-      if (detectedRegion === 'UAE') {
-        navigate('/uae', { replace: true });
-      } else if (detectedRegion === 'USA') {
-        navigate('/usa', { replace: true });
+      try {
+        // Set a maximum timeout for the entire detection process
+        const timeoutPromise = new Promise<never>((_, reject) =>
+          setTimeout(() => reject(new Error('Detection timeout')), 8000)
+        );
+        
+        const detectedRegion = await Promise.race([
+          detectUserRegion(),
+          timeoutPromise
+        ]);
+        
+        console.log('Final detected region for index:', detectedRegion);
+        setRegion(detectedRegion);
+        
+        // Redirect based on detected region
+        if (detectedRegion === 'UAE') {
+          navigate('/uae', { replace: true });
+        } else if (detectedRegion === 'USA') {
+          navigate('/usa', { replace: true });
+        }
+      } catch (error) {
+        console.error('Region detection failed in IndexRouter:', error);
+        setRegion('UK'); // Force default region
+      } finally {
+        setLoading(false);
       }
-      
-      setLoading(false);
     };
 
     detectAndRedirect();
