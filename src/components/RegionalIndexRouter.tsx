@@ -30,14 +30,19 @@ const RegionalIndexRouter = () => {
           timeoutPromise
         ]);
         
-        console.log('Final detected region for index:', detectedRegion);
+        console.log('🎯 Final detected region for index:', detectedRegion);
+        console.log('🧭 Current pathname:', location.pathname);
         setRegion(detectedRegion);
         
         // Redirect based on detected region
         if (detectedRegion === 'UAE') {
+          console.log('🔄 Redirecting to UAE index...');
           navigate('/uae', { replace: true });
         } else if (detectedRegion === 'USA') {
+          console.log('🔄 Redirecting to USA index...');
           navigate('/usa', { replace: true });
+        } else {
+          console.log('🔄 Staying on UK index...');
         }
       } catch (error) {
         console.error('Region detection failed in IndexRouter:', error);
@@ -62,15 +67,20 @@ const RegionalIndexRouter = () => {
   }
 
   // Render appropriate index page based on current route
+  console.log('🎬 Rendering index page for pathname:', location.pathname);
+  
   if (location.pathname === '/uae') {
+    console.log('🇦🇪 Rendering IndexUAE');
     return <IndexUAE />;
   }
   
   if (location.pathname === '/usa') {
+    console.log('🇺🇸 Rendering IndexUSA'); 
     return <IndexUSA />;
   }
   
   // Default UK index page
+  console.log('🇬🇧 Rendering default UK Index');
   return <Index />;
 };
 

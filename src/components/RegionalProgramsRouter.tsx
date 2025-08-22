@@ -21,7 +21,7 @@ const RegionalProgramsRouter = () => {
           timeoutPromise
         ]);
         
-        console.log('Final detected region for programs:', detectedRegion);
+        console.log('🎯 Final detected region for programs:', detectedRegion);
         setRegion(detectedRegion);
       } catch (error) {
         console.error('Failed to detect region in ProgramsRouter:', error);
@@ -45,12 +45,17 @@ const RegionalProgramsRouter = () => {
     );
   }
 
+  console.log('🎬 Rendering programs page for region:', region);
+  
   switch (region) {
     case 'UAE':
+      console.log('🇦🇪 Rendering ProgramsUAE');
       return <ProgramsUAE />;
     case 'USA':
+      console.log('🇺🇸 Rendering ProgramsUSA');
       return <ProgramsUSA />;
     default:
+      console.log('🇬🇧 Rendering default UK Programs');
       return <Programs />; // UK/Default
   }
 };

@@ -30,14 +30,19 @@ const RegionalPricingRouter = () => {
           timeoutPromise
         ]);
         
-        console.log('Final detected region for pricing:', detectedRegion);
+        console.log('🎯 Final detected region for pricing:', detectedRegion);
+        console.log('🧭 Current pathname:', location.pathname);
         setRegion(detectedRegion);
         
         // Redirect based on detected region
         if (detectedRegion === 'UAE' && location.pathname === '/pricing') {
+          console.log('🔄 Redirecting to UAE pricing...');
           navigate('/pricing-uae', { replace: true });
         } else if (detectedRegion === 'USA' && location.pathname === '/pricing') {
+          console.log('🔄 Redirecting to USA pricing...');
           navigate('/pricing-usa', { replace: true });
+        } else {
+          console.log('🔄 Staying on UK pricing...');
         }
       } catch (error) {
         console.error('Region detection failed in PricingRouter:', error);
@@ -62,15 +67,20 @@ const RegionalPricingRouter = () => {
   }
 
   // Render appropriate pricing page based on current route
+  console.log('🎬 Rendering pricing page for pathname:', location.pathname);
+  
   if (location.pathname === '/pricing-uae') {
+    console.log('🇦🇪 Rendering PricingUAE');
     return <PricingUAE />;
   }
   
   if (location.pathname === '/pricing-usa') {
+    console.log('🇺🇸 Rendering PricingUSA');
     return <PricingUSA />;
   }
   
   // Default UK pricing page
+  console.log('🇬🇧 Rendering default UK Pricing');
   return <Pricing />;
 };
 

@@ -1,28 +1,30 @@
 // Utility to detect user's region based on various methods
 export const detectUserRegion = async (): Promise<'UAE' | 'USA' | 'UK'> => {
+  console.log('🌍 Starting region detection...');
   try {
     // First try timezone detection
     const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    console.log('Detected timezone:', timezone);
+    console.log('🕐 Detected timezone:', timezone);
     
-    if (timezone.includes('Dubai') || timezone.includes('Asia/Dubai')) {
-      console.log('Region detected via timezone: UAE');
+    // Enhanced timezone detection
+    if (timezone.includes('Dubai') || timezone.includes('Asia/Dubai') || timezone.includes('Asia/Muscat')) {
+      console.log('🇦🇪 Region detected via timezone: UAE');
       return 'UAE';
     }
     
     if (timezone.includes('America/') || timezone.includes('US/')) {
-      console.log('Region detected via timezone: USA');
+      console.log('🇺🇸 Region detected via timezone: USA');
       return 'USA';
     }
     
-    if (timezone.includes('Europe/London') || timezone.includes('GMT')) {
-      console.log('Region detected via timezone: UK');
+    if (timezone.includes('Europe/London') || timezone.includes('GMT') || timezone.includes('Europe/')) {
+      console.log('🇬🇧 Region detected via timezone: UK');
       return 'UK';
     }
 
     // Fallback to IP-based detection with timeout
     try {
-      console.log('Attempting IP-based detection...');
+      console.log('🌐 Attempting IP-based detection...');
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 second timeout
       
@@ -40,24 +42,45 @@ export const detectUserRegion = async (): Promise<'UAE' | 'USA' | 'UK'> => {
       }
       
       const data = await response.json();
-      console.log('IP detection response:', data);
+      console.log('🌐 IP detection response:', data);
       
+      // Enhanced country detection
       if (data.country_code === 'AE') {
-        console.log('Region detected via IP: UAE');
+        console.log('🇦🇪 Region detected via IP: UAE');
         return 'UAE';
       }
       
       if (data.country_code === 'US') {
-        console.log('Region detected via IP: USA');
+        console.log('🇺🇸 Region detected via IP: USA');
         return 'USA';
       }
       
       if (data.country_code === 'GB') {
-        console.log('Region detected via IP: UK');
+        console.log('🇬🇧 Region detected via IP: UK');
         return 'UK';
       }
       
-      console.log('Country not in supported regions, defaulting to UK');
+      // Additional country mappings for better coverage
+      const countryToRegionMap: Record<string, 'UAE' | 'USA' | 'UK'> = {
+        'IN': 'UK', // India defaults to UK
+        'PK': 'UK', // Pakistan defaults to UK  
+        'BD': 'UK', // Bangladesh defaults to UK
+        'SA': 'UAE', // Saudi Arabia to UAE
+        'QA': 'UAE', // Qatar to UAE
+        'KW': 'UAE', // Kuwait to UAE
+        'BH': 'UAE', // Bahrain to UAE
+        'OM': 'UAE', // Oman to UAE
+        'CA': 'USA', // Canada to USA
+        'MX': 'USA', // Mexico to USA
+      };
+      
+      const mappedRegion = countryToRegionMap[data.country_code];
+      if (mappedRegion) {
+        console.log(`🗺️ Region mapped via country code ${data.country_code}: ${mappedRegion}`);
+        return mappedRegion;
+      }
+      
+      console.log(`⚠️ Country ${data.country_code} not in supported regions, defaulting to UK`);
     } catch (error) {
       if (error.name === 'AbortError') {
         console.log('IP detection timed out, using default');
@@ -67,10 +90,10 @@ export const detectUserRegion = async (): Promise<'UAE' | 'USA' | 'UK'> => {
     }
 
     // Default to UK if detection fails
-    console.log('Using default region: UK');
+    console.log('🇬🇧 Using default region: UK');
     return 'UK';
   } catch (error) {
-    console.log('Region detection failed completely:', error);
+    console.log('❌ Region detection failed completely:', error);
     return 'UK';
   }
 };
