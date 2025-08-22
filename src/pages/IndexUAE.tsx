@@ -222,8 +222,6 @@ const IndexUAE = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-4 mb-2">
-              <span className="text-2xl md:text-3xl font-bold">AED 110 per hour</span>
-              <span className="text-2xl">→</span>
               <span className="text-2xl md:text-3xl font-bold text-yellow-300">Special Price!</span>
             </div>
             <p className="text-lg font-semibold">Limited time offer - Save big!</p>
