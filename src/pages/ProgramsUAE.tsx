@@ -30,9 +30,9 @@ const ProgramsUAE = () => {
       features: [
         "Mathematics (Core & Extended)",
         "Sciences (Biology, Chemistry, Physics)",
-        "English Language & Literature",
-        "Business Studies & Economics",
-        "Computer Science",
+        "Computer Science & Programming",
+        "Applied Mathematics",
+        "Scientific research methods",
         "Past paper practice and exam technique"
       ],
       targetScore: "A*-A Achievement",
@@ -48,9 +48,9 @@ const ProgramsUAE = () => {
         "Mathematics: Analysis & Approaches",
         "Mathematics: Applications & Interpretation",
         "Sciences (Biology, Chemistry, Physics)",
-        "Extended Essay support",
-        "Internal Assessment guidance",
-        "CAS (Creativity, Activity, Service) planning"
+        "STEM Extended Essay support",
+        "Science Internal Assessment guidance",
+        "Mathematical research projects"
       ],
       targetScore: "38+ Points",
       color: "border-purple-500 bg-purple-50"
@@ -63,10 +63,10 @@ const ProgramsUAE = () => {
       description: "Advanced Level support for UAE students aiming for top UK and international universities.",
       features: [
         "Further Mathematics",
-        "Advanced Sciences",
-        "Economics & Business",
-        "Psychology & Sociology",
-        "University application support",
+        "Advanced Sciences (Physics, Chemistry, Biology)",
+        "Applied Mathematics",
+        "Scientific research & analysis",
+        "STEM University application support",
         "UCAS guidance for UK universities"
       ],
       targetScore: "A*-A Grades",
@@ -81,10 +81,10 @@ const ProgramsUAE = () => {
       features: [
         "Grade 1-12 Mathematics",
         "Science subjects (Biology, Chemistry, Physics)",
-        "Arabic language support",
-        "Social Studies",
-        "EMSAT preparation",
-        "UAE national assessments"
+        "Advanced Mathematical concepts",
+        "Scientific method & analysis",
+        "EMSAT Mathematics & Science preparation",
+        "UAE STEM assessments"
       ],
       targetScore: "Excellence in National Exams",
       color: "border-orange-500 bg-orange-50"
@@ -98,10 +98,10 @@ const ProgramsUAE = () => {
       subjects: [
         "Advanced Mathematics (Algebra, Calculus, Statistics)",
         "Sciences (Biology, Chemistry, Physics)",
-        "English Language & Literature",
-        "Arabic Language (for UAE nationals)",
-        "Business Studies & Economics",
-        "University preparation and guidance"
+        "Applied Mathematics & Statistics",
+        "Computer Science & Programming",
+        "Mathematical Modeling",
+        "STEM University preparation and guidance"
       ],
       benefits: [
         "IGCSE/IB grade improvement",
@@ -115,11 +115,11 @@ const ProgramsUAE = () => {
       description: "Foundation building programme preparing students for IGCSE and advanced studies in UAE.",
       subjects: [
         "Mathematics (Number, Algebra, Geometry)",
-        "English Language development",
-        "Science fundamentals",
-        "Arabic language support",
-        "Critical thinking & problem solving",
-        "Study skills development"
+        "Science fundamentals (Biology, Chemistry, Physics)",
+        "Mathematical problem solving",
+        "Scientific observation & experiments",
+        "STEM critical thinking & problem solving",
+        "Mathematical study skills development"
       ],
       benefits: [
         "Strong academic foundations",

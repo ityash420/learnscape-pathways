@@ -30,9 +30,8 @@ const Programs = () => {
       features: [
         "Mathematics (Foundation & Higher)",
         "Sciences (Biology, Chemistry, Physics)",
-        "English Language & Literature",
-        "Modern Foreign Languages",
-        "Social Sciences",
+        "Advanced Mathematical concepts",
+        "Scientific method & analysis",
         "Past paper practice and exam technique"
       ],
       targetScore: "Grade 7-9 Achievement",
@@ -46,9 +45,9 @@ const Programs = () => {
       description: "Advanced Level support covering all subjects with university preparation focus.",
       features: [
         "Further Mathematics",
-        "Advanced Sciences",
-        "Humanities subjects",
-        "Coursework guidance",
+        "Advanced Sciences (Physics, Chemistry, Biology)",
+        "Applied Mathematics",
+        "Scientific research methods",
         "UCAS application support",
         "University interview preparation"
       ],
@@ -62,11 +61,11 @@ const Programs = () => {
       sessions: "2-3 sessions/week",
       description: "Comprehensive 11+ exam preparation for grammar school and independent school entry.",
       features: [
-        "Verbal Reasoning",
+        "Mathematical Reasoning",
         "Non-Verbal Reasoning",
-        "Mathematics",
-        "English Comprehension",
-        "Creative Writing",
+        "Advanced Mathematics",
+        "Scientific thinking",
+        "Problem-solving strategies",
         "Practice papers and mock exams"
       ],
       targetScore: "Top 25% Performance",
@@ -98,9 +97,9 @@ const Programs = () => {
       subjects: [
         "Advanced Mathematics (Algebra, Geometry, Statistics)",
         "Triple Sciences (Biology, Chemistry, Physics)",
-        "English Language & Literature",
-        "Modern Foreign Languages (French, Spanish, German)",
-        "Humanities (History, Geography, Religious Studies)",
+        "Applied Mathematics & Statistics",
+        "Scientific Research & Analysis",
+        "Mathematical Modeling",
         "Study Skills & Exam Technique"
       ],
       benefits: [
@@ -115,11 +114,11 @@ const Programs = () => {
       description: "Foundation building programme focusing on Key Stage 2 SATs and core academic skills development.",
       subjects: [
         "Mathematics (Number, Algebra, Geometry, Statistics)",
-        "English (Reading, Writing, Grammar, Spelling)",
         "Sciences (Biology, Chemistry, Physics basics)",
-        "Problem-solving & Reasoning",
+        "Mathematical Problem-solving & Reasoning",
+        "Scientific observation & experiments",
         "Study Skills Development",
-        "11+ Preparation (if required)"
+        "11+ Mathematical Preparation (if required)"
       ],
       benefits: [
         "SATs achievement",

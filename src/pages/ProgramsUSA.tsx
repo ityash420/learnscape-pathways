@@ -29,10 +29,10 @@ const ProgramsUSA = () => {
       description: "Comprehensive SAT preparation program focusing on Math, Reading, and Writing sections for US college admissions.",
       features: [
         "SAT Math (Algebra, Geometry, Trigonometry)",
-        "Evidence-Based Reading and Writing",
+        "Advanced Mathematical concepts",
         "Practice tests and score analysis",
-        "Test-taking strategies",
-        "College application guidance",
+        "Mathematical test-taking strategies",
+        "STEM college application guidance",
         "Score improvement guarantee"
       ],
       targetScore: "1400+ SAT Score",
@@ -100,8 +100,8 @@ const ProgramsUSA = () => {
         "AP Calculus AB/BC & Statistics",
         "SAT/ACT Mathematics",
         "AP Sciences (Physics, Chemistry, Biology)",
-        "College application essays",
-        "University preparation & guidance"
+        "Advanced Mathematical Methods",
+        "STEM University preparation & guidance"
       ],
       benefits: [
         "Higher GPA achievement",
@@ -117,9 +117,9 @@ const ProgramsUSA = () => {
         "Pre-Algebra & Algebra I foundations",
         "Geometry basics & spatial reasoning",
         "Statistics & probability introduction",
-        "Problem-solving & critical thinking",
-        "Science fundamentals",
-        "Study skills & organization"
+        "Mathematical problem-solving & critical thinking",
+        "Science fundamentals (Biology, Chemistry, Physics)",
+        "STEM study skills & organization"
       ],
       benefits: [
         "Strong math foundations",
