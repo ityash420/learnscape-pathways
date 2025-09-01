@@ -136,26 +136,31 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Expert Online Math & Science Tutoring | MathBeam.com - SAT, IB, IGCSE, Common Core Preparation</title>
-        <meta name="description" content="Learn maths online with top UK tutors for GCSE, A-Level & KS2–KS4. Flexible, affordable & results-driven. Book your free trial lesson today." />
-        <meta name="keywords" content="online math tutoring, online science tutoring, SAT preparation, IB tutoring, IGCSE support, Common Core tutoring, 1-on-1 tutoring, exam preparation, academic excellence" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://mathbeam.com/" />
-        <meta property="og:title" content="Expert Online Math & Science Tutoring | MathBeam.com - SAT, IB, IGCSE, Common Core" />
-        <meta property="og:description" content="Achieve academic excellence with expert 1-on-1 online math and science tutoring. 98% success rate, 200+ SAT score improvements." />
+        <title>Online Math & Science Tutoring | Expert 1-on-1 Tuition | GCSE, A-Level, IB</title>
+        <meta name="description" content="Expert online math & science tutoring for GCSE, A-Level, IB & all Key Stages. 98% success rate, qualified UK tutors. Book your FREE trial lesson today!" />
+        <meta name="keywords" content="online math tutoring, science tutoring, GCSE maths, A-level maths, IB tutoring, Key Stage tutoring, UK tutors, exam preparation" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="google-site-verification" content="your-google-site-verification-code" />
+        <link rel="canonical" href="https://pupilenroll.com/" />
+        <meta property="og:title" content="Online Math & Science Tutoring | Expert 1-on-1 Tuition | GCSE, A-Level, IB" />
+        <meta property="og:description" content="Expert online math & science tutoring for GCSE, A-Level, IB & all Key Stages. 98% success rate, qualified UK tutors. Book your FREE trial lesson today!" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://mathbeam.com/" />
-        <meta property="og:image" content="https://mathbeam.com/og-image.jpg" />
+        <meta property="og:url" content="https://pupilenroll.com/" />
+        <meta property="og:image" content="https://pupilenroll.com/og-image.jpg" />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:site_name" content="Pupilenroll - Online Math & Science Tutoring" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Expert Online Math & Science Tutoring | MathBeam.com" />
-        <meta name="twitter:description" content="Achieve academic excellence with expert 1-on-1 online math and science tutoring. 98% success rate." />
+        <meta name="twitter:title" content="Online Math & Science Tutoring | Expert 1-on-1 Tuition" />
+        <meta name="twitter:description" content="Expert online math & science tutoring for GCSE, A-Level, IB & all Key Stages. 98% success rate, qualified UK tutors." />
+        <meta name="twitter:image" content="https://pupilenroll.com/og-image.jpg" />
+        <meta name="twitter:site" content="@pupilenroll" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "EducationalOrganization",
-            "name": "MathBeam",
-            "description": "Expert online math and science tutoring platform specializing in SAT, IB, IGCSE, and Common Core preparation",
-            "url": "https://mathbeam.com",
+            "name": "Pupilenroll",
+            "description": "Expert online math and science tutoring platform specializing in GCSE, A-Level, IB, and Key Stage preparation for UK students",
+            "url": "https://pupilenroll.com",
             "telephone": "+917906601283",
             "address": {
               "@type": "PostalAddress",
@@ -188,7 +193,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Excel in Your Academic Journey
+              Online Math & Science Tutoring for Academic Excellence
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
               Expert tutoring for GCSE, A-Level, IB, and all Key Stages across the UK
