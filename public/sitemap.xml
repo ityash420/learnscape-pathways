@@ -14,20 +14,6 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Regional Homepage Variations -->
-  <url>
-    <loc>https://mathbeam.com/uae</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <url>
-    <loc>https://mathbeam.com/usa</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
 
   <!-- Main Service Pages - High Priority -->
   <url>
@@ -37,19 +23,6 @@
     <priority>0.9</priority>
   </url>
 
-  <url>
-    <loc>https://mathbeam.com/programs-uae</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://mathbeam.com/programs-usa</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
 
   <url>
     <loc>https://mathbeam.com/pricing</loc>
@@ -58,19 +31,6 @@
     <priority>0.9</priority>
   </url>
 
-  <url>
-    <loc>https://mathbeam.com/pricing-uae</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://mathbeam.com/pricing-usa</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
 
   <url>
     <loc>https://mathbeam.com/how-it-works</loc>
