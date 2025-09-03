@@ -184,7 +184,7 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-20 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-16 sm:py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-20"
@@ -192,24 +192,23 @@ const Index = () => {
         ></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Online Math & Science Tutoring for Academic Excellence
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+              Science Tutoring for Academic Excellence
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
+            <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-blue-100 max-w-4xl mx-auto">
               Expert tutoring for GCSE, A-Level, IB, and all Key Stages across the UK
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto px-4">
               <Button 
                 size="lg" 
-                className="bg-white text-blue-600 hover:bg-gray-100"
+                className="bg-white text-blue-600 hover:bg-gray-100 w-full sm:w-auto text-center py-4 px-6 text-base font-medium"
                 onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'd like to book a FREE demo session. Please let me know the available time slots.`, '_blank')}
               >
                 Book Your Free Class - Connect with WhatsApp
               </Button>
               <Button 
                 size="lg" 
-                variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-blue-600"
+                className="bg-white text-blue-600 hover:bg-gray-100 w-full sm:w-auto text-center py-4 px-6 text-base font-medium"
                 onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in 1-to-1 tutoring sessions. Can you provide more details?`, '_blank')}
               >
                 <MessageCircle className="mr-2 h-5 w-5" />
