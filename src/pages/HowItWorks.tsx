@@ -229,7 +229,6 @@ const HowItWorks = () => {
               <Button 
                 size="lg" 
                 variant="secondary"
-                className="bg-white text-primary hover:bg-white/90"
                 onClick={() => window.open('https://wa.me/1234567890?text=I%20want%20to%20find%20a%20tutor', '_blank')}
               >
                 Find a Tutor <ArrowRight className="w-5 h-5 ml-2" />

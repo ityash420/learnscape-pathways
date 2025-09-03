@@ -301,7 +301,7 @@ const About = () => {
             Join thousands of students who have achieved their academic goals with our expert guidance
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+            <Button size="lg">
               <GraduationCap className="mr-2 h-5 w-5" />
               Schedule Free Consultation
             </Button>

@@ -29,7 +29,7 @@ const NotFound = () => {
           The page you're looking for seems to have gone on a learning adventure!
         </p>
         <Link to="/">
-          <Button size="lg" className="px-8">
+          <Button size="lg">
             Return to Home
           </Button>
         </Link>

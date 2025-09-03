@@ -329,7 +329,7 @@ Please contact me to discuss my academic goals and how you can help me achieve e
                   />
                 </div>
 
-                <Button type="submit" className="w-full h-14 text-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                <Button type="submit" variant="primary" className="w-full h-14 text-lg">
                   <MessageCircle className="mr-2 h-6 w-6" />
                   Schedule My Free Strategy Session
                 </Button>
