@@ -204,7 +204,8 @@ const Index = () => {
                 className="bg-white text-blue-600 hover:bg-gray-100 w-full sm:w-auto text-center py-4 px-6 text-base font-medium"
                 onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=Hi! I'd like to book a FREE demo session. Please let me know the available time slots.`, '_blank')}
               >
-                Book Your Free Class - Connect with WhatsApp
+                <span className="hidden sm:inline">Book Your Free Class - Connect with WhatsApp</span>
+                <span className="sm:hidden">Book Free Class - WhatsApp</span>
               </Button>
               <Button 
                 size="lg" 
@@ -224,7 +225,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-4 mb-2">
-              <span className="text-2xl md:text-3xl font-bold relative">
+              <span className="text-2xl md:text-3xl font-bold relative whitespace-nowrap">
                 £30 per hour
                 <div className="absolute inset-0 bg-white h-0.5 top-1/2 transform -translate-y-1/2"></div>
               </span>
