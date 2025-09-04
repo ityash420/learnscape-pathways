@@ -15,7 +15,7 @@ const SEOHead = ({
   description, 
   keywords, 
   canonical, 
-  ogImage = "https://mathbeam.com/og-image.jpg",
+  ogImage = "https://pupilenroll.com/og-image.jpg",
   type = "website",
   structuredData 
 }: SEOHeadProps) => {
@@ -25,7 +25,7 @@ const SEOHead = ({
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <meta name="robots" content="index, follow" />
-      <meta name="author" content="MathBeam" />
+      <meta name="author" content="PupilEnroll" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
       {canonical && <link rel="canonical" href={canonical} />}
@@ -36,7 +36,7 @@ const SEOHead = ({
       <meta property="og:type" content={type} />
       {canonical && <meta property="og:url" content={canonical} />}
       <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="MathBeam" />
+      <meta property="og:site_name" content="PupilEnroll" />
       
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />

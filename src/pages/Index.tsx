@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -22,6 +23,44 @@ import studentsSuccess from "@/assets/students-success.jpg";
 
 const Index = () => {
   const whatsappNumber = "+917906601283";
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "PupilEnroll",
+    "description": "Expert online tutoring for GCSE, A-Level, IB, and all Key Stages across the UK. Personalized 1-to-1 tutoring sessions with qualified teachers.",
+    "url": "https://pupilenroll.com",
+    "sameAs": ["https://wa.me/917906601283"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+917906601283",
+      "contactType": "customer service",
+      "availableLanguage": "English"
+    },
+    "areaServed": ["United Kingdom", "United States", "United Arab Emirates"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Tutoring Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "EducationalOccupationalProgram",
+            "name": "GCSE Mathematics Tutoring",
+            "description": "Comprehensive GCSE maths preparation covering all key topics"
+          }
+        },
+        {
+          "@type": "Offer", 
+          "itemOffered": {
+            "@type": "EducationalOccupationalProgram",
+            "name": "A-Level Mathematics Tutoring",
+            "description": "Advanced A-Level mathematics support"
+          }
+        }
+      ]
+    }
+  };
 
   const examSections = [
     {
