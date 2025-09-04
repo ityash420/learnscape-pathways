@@ -27,9 +27,9 @@ const Index = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    "name": "PupilEnroll",
+    "name": "MathBeam",
     "description": "Expert online tutoring for GCSE, A-Level, IB, and all Key Stages across the UK. Personalized 1-to-1 tutoring sessions with qualified teachers.",
-    "url": "https://pupilenroll.com",
+    "url": "https://mathbeam.com",
     "sameAs": ["https://wa.me/917906601283"],
     "contactPoint": {
       "@type": "ContactPoint",
@@ -174,50 +174,14 @@ const Index = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Online Math & Science Tutoring | Expert 1-on-1 Tuition | GCSE, A-Level, IB</title>
-        <meta name="description" content="Expert online math & science tutoring for GCSE, A-Level, IB & all Key Stages. 98% success rate, qualified UK tutors. Book your FREE trial lesson today!" />
-        <meta name="keywords" content="online math tutoring, science tutoring, GCSE maths, A-level maths, IB tutoring, Key Stage tutoring, UK tutors, exam preparation" />
-        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <meta name="google-site-verification" content="your-google-site-verification-code" />
-        <link rel="canonical" href="https://pupilenroll.com/" />
-        <meta property="og:title" content="Online Math & Science Tutoring | Expert 1-on-1 Tuition | GCSE, A-Level, IB" />
-        <meta property="og:description" content="Expert online math & science tutoring for GCSE, A-Level, IB & all Key Stages. 98% success rate, qualified UK tutors. Book your FREE trial lesson today!" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://pupilenroll.com/" />
-        <meta property="og:image" content="https://pupilenroll.com/og-image.jpg" />
-        <meta property="og:locale" content="en_GB" />
-        <meta property="og:site_name" content="Pupilenroll - Online Math & Science Tutoring" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Online Math & Science Tutoring | Expert 1-on-1 Tuition" />
-        <meta name="twitter:description" content="Expert online math & science tutoring for GCSE, A-Level, IB & all Key Stages. 98% success rate, qualified UK tutors." />
-        <meta name="twitter:image" content="https://pupilenroll.com/og-image.jpg" />
-        <meta name="twitter:site" content="@pupilenroll" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "EducationalOrganization",
-            "name": "Pupilenroll",
-            "description": "Expert online math and science tutoring platform specializing in GCSE, A-Level, IB, and Key Stage preparation for UK students",
-            "url": "https://pupilenroll.com",
-            "telephone": "+917906601283",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Visakhapatnam",
-              "addressRegion": "Andhra Pradesh",
-              "addressCountry": "India"
-            },
-            "sameAs": [
-              "https://wa.me/917906601283"
-            ],
-            "offers": {
-              "@type": "Offer",
-              "name": "1-on-1 Online Tutoring",
-              "description": "Personalized online tutoring sessions"
-            }
-          })}
-        </script>
-      </Helmet>
+      <SEOHead 
+        title="Tutoring for Academic Excellence | MathBeam - Expert Online Tutoring"
+        description="Expert online tutoring for GCSE, A-Level, IB, and all Key Stages across the UK. Personalized 1-to-1 sessions with qualified teachers. Book your free class today!"
+        keywords="online tutoring, GCSE maths, A-level tutoring, IB tutoring, UK tutoring, mathematics tutor, academic excellence, personalized learning"
+        canonical="https://mathbeam.com/"
+        ogImage="https://mathbeam.com/og-image.jpg"
+        structuredData={structuredData}
+      />
       
     <div className="min-h-screen bg-white">
       <Navigation />

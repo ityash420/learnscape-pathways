@@ -8,7 +8,7 @@
 
   <!-- Homepage - Highest Priority -->
   <url>
-    <loc>https://pupilenroll.com/</loc>
+    <loc>https://mathbeam.com/</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -17,7 +17,7 @@
 
   <!-- Main Service Pages - High Priority -->
   <url>
-    <loc>https://pupilenroll.com/programs</loc>
+    <loc>https://mathbeam.com/programs</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -25,7 +25,7 @@
 
 
   <url>
-    <loc>https://pupilenroll.com/pricing</loc>
+    <loc>https://mathbeam.com/pricing</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -33,7 +33,7 @@
 
 
   <url>
-    <loc>https://pupilenroll.com/how-it-works</loc>
+    <loc>https://mathbeam.com/how-it-works</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -41,14 +41,14 @@
 
   <!-- Company Information Pages -->
   <url>
-    <loc>https://pupilenroll.com/about</loc>
+    <loc>https://mathbeam.com/about</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://pupilenroll.com/contact</loc>
+    <loc>https://mathbeam.com/contact</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -56,35 +56,35 @@
 
   <!-- UK City Tutoring Pages -->
   <url>
-    <loc>https://pupilenroll.com/london-tutor</loc>
+    <loc>https://mathbeam.com/london-tutor</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://pupilenroll.com/manchester-tutor</loc>
+    <loc>https://mathbeam.com/manchester-tutor</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://pupilenroll.com/birmingham-tutor</loc>
+    <loc>https://mathbeam.com/birmingham-tutor</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://pupilenroll.com/leeds-tutor</loc>
+    <loc>https://mathbeam.com/leeds-tutor</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://pupilenroll.com/bristol-tutor</loc>
+    <loc>https://mathbeam.com/bristol-tutor</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -92,35 +92,35 @@
 
   <!-- USA State Tutoring Pages -->
   <url>
-    <loc>https://pupilenroll.com/tutoring/california</loc>
+    <loc>https://mathbeam.com/tutoring/california</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://pupilenroll.com/tutoring/texas</loc>
+    <loc>https://mathbeam.com/tutoring/texas</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://pupilenroll.com/tutoring/new-york</loc>
+    <loc>https://mathbeam.com/tutoring/new-york</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://pupilenroll.com/tutoring/florida</loc>
+    <loc>https://mathbeam.com/tutoring/florida</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://pupilenroll.com/tutoring/illinois</loc>
+    <loc>https://mathbeam.com/tutoring/illinois</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -128,21 +128,21 @@
 
   <!-- Policy Pages -->
   <url>
-    <loc>https://pupilenroll.com/privacy-policy</loc>
+    <loc>https://mathbeam.com/privacy-policy</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://pupilenroll.com/terms-conditions</loc>
+    <loc>https://mathbeam.com/terms-conditions</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://pupilenroll.com/cookie-policy</loc>
+    <loc>https://mathbeam.com/cookie-policy</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

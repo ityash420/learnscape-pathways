@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # SEO optimized robots.txt for Pupilenroll
-Sitemap: https://pupilenroll.com/sitemap.xml
+Sitemap: https://mathbeam.com/sitemap.xml
 
 # Allow all major search engines
 User-agent: Googlebot
