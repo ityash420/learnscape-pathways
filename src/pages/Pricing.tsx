@@ -183,7 +183,7 @@ const Pricing = () => {
                   {programOptions.map((program) => (
                     <Button
                       key={program}
-                      variant={selectedProgram === program ? "default" : "outline"}
+                      variant={selectedProgram === program ? "selected" : "outline"}
                       className="h-auto py-3 px-4"
                       onClick={() => setSelectedProgram(program)}
                     >
@@ -204,7 +204,7 @@ const Pricing = () => {
                   {subjectOptions.map((subject) => (
                     <Button
                       key={subject}
-                      variant={selectedSubject === subject ? "default" : "outline"}
+                      variant={selectedSubject === subject ? "selected" : "outline"}
                       className="h-auto py-4 px-4"
                       onClick={() => setSelectedSubject(subject)}
                     >
@@ -225,7 +225,7 @@ const Pricing = () => {
                   {boardOptions.map((board) => (
                     <Button
                       key={board}
-                      variant={selectedBoard === board ? "default" : "outline"}
+                      variant={selectedBoard === board ? "selected" : "outline"}
                       className="h-auto py-3 px-4"
                       onClick={() => setSelectedBoard(board)}
                     >
@@ -246,7 +246,7 @@ const Pricing = () => {
                   {lessonOptions.map((option) => (
                     <Button
                       key={option.value}
-                      variant={selectedLessons === option.value ? "default" : "outline"}
+                      variant={selectedLessons === option.value ? "selected" : "outline"}
                       className="h-auto py-4 px-6"
                       onClick={() => setSelectedLessons(option.value)}
                     >
@@ -268,7 +268,7 @@ const Pricing = () => {
                   {durationOptions.map((option) => (
                     <Button
                       key={option.value}
-                      variant={selectedDuration === option.value ? "default" : "outline"}
+                      variant={selectedDuration === option.value ? "selected" : "outline"}
                       className="h-auto py-4 px-6"
                       onClick={() => setSelectedDuration(option.value)}
                     >
