@@ -318,7 +318,7 @@ const Pricing = () => {
 
               {/* Get pricing button */}
               <Button 
-                className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-6"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white text-lg py-6"
                 onClick={handleGetPricing}
               >
                 <MessageCircle className="h-5 w-5 mr-2" />
