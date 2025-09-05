@@ -90,42 +90,6 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- USA State Tutoring Pages -->
-  <url>
-    <loc>https://mathbeam.com/tutoring/california</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://mathbeam.com/tutoring/texas</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://mathbeam.com/tutoring/new-york</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://mathbeam.com/tutoring/florida</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://mathbeam.com/tutoring/illinois</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
   <!-- Policy Pages -->
   <url>
     <loc>https://mathbeam.com/privacy-policy</loc>
