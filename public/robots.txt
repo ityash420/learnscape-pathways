@@ -24,6 +24,3 @@ Allow: /pricing
 Allow: /contact
 Allow: /how-it-works
 Allow: /tutoring/
-
-# Crawl delay for better server performance
-Crawl-delay: 1
