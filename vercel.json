@@ -1,1 +1,10 @@
-{ "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }] }
+{
+  "redirects": [
+    {
+      "source": "https://mathbeam.com/(.*)",
+      "destination": "https://www.mathbeam.com/$1",
+      "permanent": true
+    }
+  ],
+  "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }]
+}
