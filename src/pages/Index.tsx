@@ -29,7 +29,7 @@ const Index = () => {
     "@type": "EducationalOrganization",
     "name": "MathBeam",
     "description": "Expert online tutoring for GCSE, A-Level, IB, and all Key Stages across the UK. Personalized 1-to-1 tutoring sessions with qualified teachers.",
-    "url": "https://mathbeam.com",
+    "url": "https://www.mathbeam.com",
     "sameAs": ["https://wa.me/917906601283"],
     "contactPoint": {
       "@type": "ContactPoint",
@@ -178,7 +178,7 @@ const Index = () => {
         title="Tutoring for Academic Excellence | MathBeam - Expert Online Tutoring"
         description="Expert online tutoring for GCSE, A-Level, IB, and all Key Stages across the UK. Personalized 1-to-1 sessions with qualified teachers. Book your free class today!"
         keywords="online tutoring, GCSE maths, A-level tutoring, IB tutoring, UK tutoring, mathematics tutor, academic excellence, personalized learning"
-        canonical="https://mathbeam.com/"
+        canonical="https://www.mathbeam.com/"
         ogImage="https://mathbeam.com/og-image.jpg"
         structuredData={structuredData}
       />
